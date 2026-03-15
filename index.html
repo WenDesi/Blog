@@ -1,0 +1,31 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+  {% for post in paginator.posts %}
+    {% include post-card.html %}
+  {% endfor %}
+
+  {% if paginator.posts.size == 0 %}
+    {% for post in site.posts %}
+      {% include post-card.html %}
+    {% endfor %}
+  {% endif %}
+
+  <!-- Pagination -->
+  {% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
+    {% endif %}
+    <span class="page-number">
+      Page {{ paginator.page }} of {{ paginator.total_pages }}
+    </span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</div>

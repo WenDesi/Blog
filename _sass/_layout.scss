@@ -1,0 +1,222 @@
+@use "variables" as *;
+
+// Header
+.site-header {
+  background-color: $color-primary;
+  padding: $spacing-unit 0;
+  margin-bottom: $spacing-unit * 2;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  .site-nav {
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      margin-left: $spacing-unit;
+      font-size: $font-size-small;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// Main Content
+.site-content {
+  min-height: calc(100vh - 200px);
+  padding-bottom: $spacing-unit * 3;
+}
+
+// Footer
+.site-footer {
+  background-color: $color-background-alt;
+  border-top: 1px solid $color-border;
+  padding: $spacing-unit * 1.5 0;
+  text-align: center;
+  color: $color-text-light;
+  font-size: $font-size-small;
+
+  p {
+    margin-bottom: $spacing-unit * 0.25;
+  }
+}
+
+// Post Card (for index page)
+.post-card {
+  margin-bottom: $spacing-unit * 2;
+  padding-bottom: $spacing-unit * 2;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .post-card-title {
+    margin-top: 0;
+
+    a {
+      color: $color-primary;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  .post-card-meta {
+    color: $color-text-light;
+    font-size: $font-size-small;
+    margin-bottom: $spacing-unit * 0.5;
+  }
+
+  .post-card-excerpt {
+    color: $color-text-light;
+    margin-bottom: $spacing-unit * 0.5;
+  }
+
+  .read-more {
+    font-size: $font-size-small;
+    font-weight: 600;
+  }
+}
+
+// Single Post
+.post {
+  .post-header {
+    margin-bottom: $spacing-unit * 2;
+  }
+
+  .post-title {
+    margin-top: 0;
+    margin-bottom: $spacing-unit * 0.5;
+  }
+
+  .post-meta {
+    color: $color-text-light;
+    font-size: $font-size-small;
+
+    .tag {
+      display: inline-block;
+      background-color: $color-background-alt;
+      padding: 0.1em 0.6em;
+      border-radius: 3px;
+      font-size: 0.8em;
+      margin-left: 0.25em;
+    }
+  }
+
+  .post-content {
+    margin-bottom: $spacing-unit * 2;
+  }
+
+  .post-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $spacing-unit;
+    border-top: 1px solid $color-border;
+    font-size: $font-size-small;
+
+    .prev-post,
+    .next-post {
+      max-width: 45%;
+    }
+  }
+}
+
+// Page
+.page {
+  .page-header {
+    margin-bottom: $spacing-unit * 1.5;
+  }
+
+  .page-title {
+    margin-top: 0;
+  }
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-unit;
+  margin-top: $spacing-unit * 2;
+  font-size: $font-size-small;
+
+  .page-number {
+    color: $color-text-light;
+  }
+}
+
+// Archive
+.archive-year {
+  margin-bottom: $spacing-unit * 2;
+
+  h2 {
+    border-bottom: 2px solid $color-accent;
+    padding-bottom: $spacing-unit * 0.25;
+    display: inline-block;
+  }
+}
+
+.archive-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: $spacing-unit * 0.5;
+  }
+
+  .archive-date {
+    color: $color-text-light;
+    font-size: $font-size-small;
+    min-width: 100px;
+    font-family: $font-family-code;
+  }
+}
+
+// Responsive
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  .site-header .container {
+    flex-direction: column;
+    gap: $spacing-unit * 0.5;
+  }
+
+  .site-header .site-nav a {
+    margin-left: 0;
+    margin-right: $spacing-unit * 0.75;
+  }
+
+  .post .post-footer {
+    flex-direction: column;
+    gap: $spacing-unit * 0.5;
+
+    .prev-post,
+    .next-post {
+      max-width: 100%;
+    }
+  }
+}
