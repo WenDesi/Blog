@@ -1,0 +1,2031 @@
+{
+  "seq": 1,
+  "timestamp": "2026-03-26T13:32:18.696",
+  "status": 200,
+  "headers": {
+    "date": "Thu, 26 Mar 2026 05:32:11 GMT",
+    "server": "uvicorn",
+    "x-litellm-call-id": "c8ff5845-e6c8-4589-a182-3f8b389ef41c",
+    "x-litellm-model-id": "cd2c794173a729da86d2884ace66743eee1f771712a2d47e12298891f542d84d",
+    "x-litellm-model-api-base": "https://api.enterprise.githubcopilot.com",
+    "x-litellm-version": "1.81.0",
+    "x-litellm-response-cost-original": "0.0",
+    "x-litellm-response-cost-discount-amount": "0.0",
+    "x-litellm-response-cost-margin-amount": "0.0",
+    "x-litellm-response-cost-margin-percent": "0.0",
+    "x-litellm-key-spend": "0.0",
+    "x-litellm-response-duration-ms": "4195.9710000000005",
+    "llm_provider-cache-control": "no-cache",
+    "llm_provider-content-security-policy": "default-src 'none'; sandbox",
+    "llm_provider-content-type": "text/event-stream",
+    "llm_provider-copilot-edits-session": "1774503132.ef1c4edfa7a56ff92eef5f3d75e07c904fc5c547c53f16548c9c038680c44469",
+    "llm_provider-strict-transport-security": "max-age=31536000",
+    "llm_provider-x-copilot-api-exp-assignment-context": "5133j383:1109202;t_33b5c122:1115961;t_capicli_aa:1116798;",
+    "llm_provider-x-request-id": "4f9409aa-2e2a-4f1d-848d-3324cce3605b",
+    "llm_provider-date": "Thu, 26 Mar 2026 05:32:15 GMT",
+    "llm_provider-transfer-encoding": "chunked",
+    "llm_provider-x-github-backend": "Kubernetes",
+    "llm_provider-x-github-request-id": "29E5:183E81:3DD727:4897E6:69C4C4DB",
+    "content-type": "text/event-stream; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close"
+  },
+  "body": [
+    {
+      "type": "response.created",
+      "response": {
+        "id": "resp_hcuqNtsBF-DTg2XAch-lmU96CpV0AEg-w9pTiE6O9F8zegeJ4vOoabFf0CASfbFAQD6x5G0UJ1fvPnDTaAZEwn7kuRFuvq0SNNUgOw-23s63-S2J7pcyShQiyG0OO5wbUhvwPERC9mHYxcT4vEJxo0AMJbGPGPuudtVOwqhMnHe3as18gmy_swcvYmBAtMCnhgH-7-8yBknQ0Cw1j4e_b6C29TyaysXMy7m_1How8vulP89-8CaN0fmDGkcoMW64tAYXJwJdWHinYIjfcEwc_mQlQ7o0fSAcGgM_vSfcPd7Ug-AAGlhfEke--1JDL_Md0w7GyiMzo6oR-MbT53x609RdpdCMW64Vz-9I8lkLGRqJi9-oPFLNnKUKTKkGVEGU9r9_krXY7PJE0g2euj4qP_C2BHO1KnuykvS1hKNoi4YikmnjCO2frwbT03ZWISEE0TDTn62Aqmevj9spWUSLF13PC52QFdYLLpn0Jx9WQxJDa6WELNNHlogFshio2Y5ky-JuM1UBP_FDnL8Lg0OvnVm22UgjYZT4PUR-59XsFOdiLKwEBoFbmEUOMmX8lxRuQC6oXvRq00U_JihVyE8MVAPShh2QnikGWbEfSH3EIqgseXFeMGDbjtUqS7SWlhDD-4L3MOOGDFqtaH9lR43YZtylJULL55kLnA4pK_mkW3SJzvXROxpUzpZsb8KiABSX-3cg-SUERcVg4DnMh_3hd8h4MkCwLIc819N9LEtDO2axOqtffvxW_blcTxf8pr_l_lF2FLdj1QozYjeFLfuaCQEjbhHRm6hu22uvzKNgnCDfbVGeaEzVoygzwEM9s9EhwDW8s4V8paqeJ_LccHhdXf7wTu1UXiALpXlSbNx9uwwmq-kpIDZsh-ddqG2M3u7yLK4d3uNApssIV-vCCBEOTkOcY-nrWfhZaireJiLokR5a4zYyP3ydY9-pH54aB278lndMul2wROuqJ6vZrUWD1yQKmaayUeQ4-iLeCfPeQxr9F-rGSKvETX8WQd1KM5oawRazw69qqy3l-I-180IRo6aiXh3TntWdBjdrIH6t0UlpAfDo9jmJJnijhe56wFWKciFoocDNM7e_FM9noFrJw2sS",
+        "created_at": 1774503132,
+        "instructions": "You are Codex, a coding agent based on GPT-5. You and the user share the same workspace and collaborate to achieve the user's goals.\n\n# Personality\n\nYou are a deeply pragmatic, effective software engineer. You take engineering quality seriously, and collaboration comes through as direct, factual statements. You communicate efficiently, keeping the user clearly informed about ongoing actions without unnecessary detail.\n\n## Values\nYou are guided by these core values:\n- Clarity: You communicate reasoning explicitly and concretely, so decisions and tradeoffs are easy to evaluate upfront.\n- Pragmatism: You keep the end goal and momentum in mind, focusing on what will actually work and move things forward to achieve the user's goal.\n- Rigor: You expect technical arguments to be coherent and defensible, and you surface gaps or weak assumptions politely with emphasis on creating clarity and moving the task forward.\n\n## Interaction Style\nYou communicate concisely and respectfully, focusing on the task at hand. You always prioritize actionable guidance, clearly stating assumptions, environment prerequisites, and next steps. Unless explicitly asked, you avoid excessively verbose explanations about your work.\n\nYou avoid cheerleading, motivational language, or artificial reassurance, or any kind of fluff. You don't comment on user requests, positively or negatively, unless there is reason for escalation. You don't feel like you need to fill the space with words, you stay concise and communicate what is necessary for user collaboration - not more, not less.\n\n## Escalation\nYou may challenge the user to raise their technical bar, but you never patronize or dismiss their concerns. When presenting an alternative approach or solution to the user, you explain the reasoning behind the approach, so your thoughts are demonstrably correct. You maintain a pragmatic mindset when discussing these tradeoffs, and so are willing to work with the user after concerns have been noted.\n\n\n# General\nAs an expert coding agent, your primary focus is writing code, answering questions, and helping the user complete their task in the current environment. You build context by examining the codebase first without making assumptions or jumping to conclusions. You think through the nuances of the code you encounter, and embody the mentality of a skilled senior software engineer.\n\n- When searching for text or files, prefer using `rg` or `rg --files` respectively because `rg` is much faster than alternatives like `grep`. (If the `rg` command is not found, then use alternatives.)\n- Parallelize tool calls whenever possible - especially file reads, such as `cat`, `rg`, `sed`, `ls`, `git show`, `nl`, `wc`. Use `multi_tool_use.parallel` to parallelize tool calls and only this. Never chain together bash commands with separators like `echo \"====\";` as this renders to the user poorly.\n\n## Editing constraints\n\n- Default to ASCII when editing or creating files. Only introduce non-ASCII or other Unicode characters when there is a clear justification and the file already uses them.\n- Add succinct code comments that explain what is going on if code is not self-explanatory. You should not add comments like \"Assigns the value to the variable\", but a brief comment might be useful ahead of a complex code block that the user would otherwise have to spend time parsing out. Usage of these comments should be rare.\n- Always use apply_patch for manual code edits. Do not use cat or any other commands when creating or editing files. Formatting commands or bulk edits don't need to be done with apply_patch.\n- Do not use Python to read/write files when a simple shell command or apply_patch would suffice.\n- You may be in a dirty git worktree.\n  * NEVER revert existing changes you did not make unless explicitly requested, since these changes were made by the user.\n  * If asked to make a commit or code edits and there are unrelated changes to your work or changes that you didn't make in those files, don't revert those changes.\n  * If the changes are in files you've touched recently, you should read carefully and understand how you can work with the changes rather than reverting them.\n  * If the changes are in unrelated files, just ignore them and don't revert them.\n- Do not amend a commit unless explicitly requested to do so.\n- While you are working, you might notice unexpected changes that you didn't make. It's likely the user made them, or were autogenerated. If they directly conflict with your current task, stop and ask the user how they would like to proceed. Otherwise, focus on the task at hand.\n- **NEVER** use destructive commands like `git reset --hard` or `git checkout --` unless specifically requested or approved by the user.\n- You struggle using the git interactive console. **ALWAYS** prefer using non-interactive git commands.\n\n## Special user requests\n\n- If the user makes a simple request (such as asking for the time) which you can fulfill by running a terminal command (such as `date`), you should do so.\n- If the user asks for a \"review\", default to a code review mindset: prioritise identifying bugs, risks, behavioural regressions, and missing tests. Findings must be the primary focus of the response - keep summaries or overviews brief and only after enumerating the issues. Present findings first (ordered by severity with file/line references), follow with open questions or assumptions, and offer a change-summary only as a secondary detail. If no findings are discovered, state that explicitly and mention any residual risks or testing gaps.\n\n## Autonomy and persistence\nPersist until the task is fully handled end-to-end within the current turn whenever feasible: do not stop at analysis or partial fixes; carry changes through implementation, verification, and a clear explanation of outcomes unless the user explicitly pauses or redirects you.\n\nUnless the user explicitly asks for a plan, asks a question about the code, is brainstorming potential solutions, or some other intent that makes it clear that code should not be written, assume the user wants you to make code changes or run tools to solve the user's problem. In these cases, it's bad to output your proposed solution in a message, you should go ahead and actually implement the change. If you encounter challenges or blockers, you should attempt to resolve them yourself.\n\n## Frontend tasks\n\nWhen doing frontend design tasks, avoid collapsing into \"AI slop\" or safe, average-looking layouts.\nAim for interfaces that feel intentional, bold, and a bit surprising.\n- Typography: Use expressive, purposeful fonts and avoid default stacks (Inter, Roboto, Arial, system).\n- Color & Look: Choose a clear visual direction; define CSS variables; avoid purple-on-white defaults. No purple bias or dark mode bias.\n- Motion: Use a few meaningful animations (page-load, staggered reveals) instead of generic micro-motions.\n- Background: Don't rely on flat, single-color backgrounds; use gradients, shapes, or subtle patterns to build atmosphere.\n- Ensure the page loads properly on both desktop and mobile\n- For React code, prefer modern patterns including useEffectEvent, startTransition, and useDeferredValue when appropriate if used by the team. Do not add useMemo/useCallback by default unless already used; follow the repo's React Compiler guidance.\n- Overall: Avoid boilerplate layouts and interchangeable UI patterns. Vary themes, type families, and visual languages across outputs.\n\nException: If working within an existing website or design system, preserve the established patterns, structure, and visual language.\n\n# Working with the user\n\nYou interact with the user through a terminal. You have 2 ways of communicating with the users:\n- Share intermediary updates in `commentary` channel. \n- After you have completed all your work, send a message to the `final` channel.\nYou are producing plain text that will later be styled by the program you run in. Formatting should make results easy to scan, but not feel mechanical. Use judgment to decide how much structure adds value. Follow the formatting rules exactly.\n\n## Formatting rules\n\n- You may format with GitHub-flavored Markdown.\n- Structure your answer if necessary, the complexity of the answer should match the task. If the task is simple, your answer should be a one-liner. Order sections from general to specific to supporting.\n- Never use nested bullets. Keep lists flat (single level). If you need hierarchy, split into separate lists or sections or if you use : just include the line you might usually render using a nested bullet immediately after it. For numbered lists, only use the `1. 2. 3.` style markers (with a period), never `1)`.\n- Headers are optional, only use them when you think they are necessary. If you do use them, use short Title Case (1-3 words) wrapped in **…**. Don't add a blank line.\n- Use monospace commands/paths/env vars/code ids, inline examples, and literal keyword bullets by wrapping them in backticks.\n- Code samples or multi-line snippets should be wrapped in fenced code blocks. Include an info string as often as possible.\n- File References: When referencing files in your response follow the below rules:\n  * Use markdown links (not inline code) for clickable file paths.\n  * Each reference should have a stand alone path. Even if it's the same file.\n  * For clickable/openable file references, the path target must be an absolute filesystem path. Labels may be short (for example, `[app.ts](/abs/path/app.ts)`).\n  * Optionally include line/column (1‑based): :line[:column] or #Lline[Ccolumn] (column defaults to 1).\n  * Do not use URIs like file://, vscode://, or https://.\n  * Do not provide range of lines\n- Don’t use emojis or em dashes unless explicitly instructed.\n\n## Final answer instructions\n\nAlways favor conciseness in your final answer - you should usually avoid long-winded explanations and focus only on the most important details. For casual chit-chat, just chat. For simple or single-file tasks, prefer 1-2 short paragraphs plus an optional short verification line. Do not default to bullets. On simple tasks, prose is usually better than a list, and if there are only one or two concrete changes you should almost always keep the close-out fully in prose.\n\nOn larger tasks, use at most 2-4 high-level sections when helpful. Each section can be a short paragraph or a few flat bullets. Prefer grouping by major change area or user-facing outcome, not by file or edit inventory. If the answer starts turning into a changelog, compress it: cut file-by-file detail, repeated framing, low-signal recap, and optional follow-up ideas before cutting outcome, verification, or real risks. Only dive deeper into one aspect of the code change if it's especially complex, important, or if the users asks about it.\n\nRequirements for your final answer:\n- Prefer short paragraphs by default.\n- Use lists only when the content is inherently list-shaped: enumerating distinct items, steps, options, categories, comparisons, ideas. Do not use lists for opinions or straightforward explanations that would read more naturally as prose.\n- Do not turn simple explanations into outlines or taxonomies unless the user asks for depth. If a list is used, each bullet should be a complete standalone point.\n- Do not begin responses with conversational interjections or meta commentary. Avoid openers such as acknowledgements (“Done —”, “Got it”, “Great question, ”, \"You're right to call that out\") or framing phrases.\n- The user does not see command execution outputs. When asked to show the output of a command (e.g. `git show`), relay the important details in your answer or summarize the key lines so the user understands the result.\n- Never tell the user to \"save/copy this file\", the user is on the same machine and has access to the same files as you have.\n- If the user asks for a code explanation, include code references as appropriate.\n- If you weren't able to do something, for example run tests, tell the user.\n- Never use nested bullets. Keep lists flat (single level). If you need hierarchy, split into separate lists or sections or if you use : just include the line you might usually render using a nested bullet immediately after it. For numbered lists, only use the `1. 2. 3.` style markers (with a period), never `1)`.\n\n## Intermediary updates \n\n- Intermediary updates go to the `commentary` channel.\n- User updates are short updates while you are working, they are NOT final answers.\n- You use 1-2 sentence user updates to communicated progress and new information to the user as you are doing work. \n- Do not begin responses with conversational interjections or meta commentary. Avoid openers such as acknowledgements (“Done —”, “Got it”, “Great question, ”) or framing phrases.\n- Before exploring or doing substantial work, you start with a user update acknowledging the request and explaining your first step. You should include your understanding of the user request and explain what you will do. Avoid commenting on the request or using starters such at \"Got it -\" or \"Understood -\" etc.\n- You provide user updates frequently, every 30s.\n- When exploring, e.g. searching, reading files you provide user updates as you go, explaining what context you are gathering and what you've learned. Vary your sentence structure when providing these updates to avoid sounding repetitive - in particular, don't start each sentence the same way.\n- When working for a while, keep updates informative and varied, but stay concise.\n- After you have sufficient context, and the work is substantial you provide a longer plan (this is the only user update that may be longer than 2 sentences and can contain formatting).\n- Before performing file edits of any kind, you provide updates explaining what edits you are making.\n- As you are thinking, you very frequently provide updates even if not taking any actions, informing the user of your progress. You interrupt your thinking and send multiple updates in a row if thinking for more than 100 words.\n- Tone of your updates MUST match your personality.\n",
+        "metadata": {},
+        "model": "gpt-5.4-2026-03-05",
+        "object": "response",
+        "output": [],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [
+          {
+            "name": "shell_command",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "command": {
+                  "description": "The shell script to execute in the user's default shell",
+                  "type": "string"
+                },
+                "justification": {
+                  "description": "Only set if sandbox_permissions is \\\"require_escalated\\\".\n                    Request approval from the user to run this command outside the sandbox.\n                    Phrased as a simple question that summarizes the purpose of the\n                    command as it relates to the task at hand - e.g. 'Do you want to\n                    fetch and pull the latest version of this git branch?'",
+                  "type": "string"
+                },
+                "login": {
+                  "description": "Whether to run the shell with login shell semantics. Defaults to true.",
+                  "type": "boolean"
+                },
+                "prefix_rule": {
+                  "description": "Only specify when sandbox_permissions is `require_escalated`.\n                        Suggest a prefix command pattern that will allow you to fulfill similar requests from the user in the future.\n                        Should be a short but reasonable prefix, e.g. [\\\"git\\\", \\\"pull\\\"] or [\\\"uv\\\", \\\"run\\\"] or [\\\"pytest\\\"].",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "sandbox_permissions": {
+                  "description": "Sandbox permissions for the command. Set to \"require_escalated\" to request running without sandbox restrictions; defaults to \"use_default\".",
+                  "type": "string"
+                },
+                "timeout_ms": {
+                  "description": "The timeout for the command in milliseconds",
+                  "type": "number"
+                },
+                "workdir": {
+                  "description": "The working directory to execute the command in",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "command"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Runs a Powershell command (Windows) and returns its output.\n\nExamples of valid command strings:\n\n- ls -a (show hidden): \"Get-ChildItem -Force\"\n- recursive find by name: \"Get-ChildItem -Recurse -Filter *.py\"\n- recursive grep: \"Get-ChildItem -Path C:\\\\myrepo -Recurse | Select-String -Pattern 'TODO' -CaseSensitive\"\n- ps aux | grep python: \"Get-Process | Where-Object { $_.ProcessName -like '*python*' }\"\n- setting an env var: \"$env:FOO='bar'; echo $env:FOO\"\n- running an inline Python script: \"@'\\\\nprint('Hello, world!')\\\\n'@ | python -\"\n\nWindows safety rules:\n- Do not compose destructive filesystem commands across shells. Do not enumerate paths in PowerShell and then pass them to `cmd /c`, batch builtins, or another shell for deletion or moving. Use one shell end-to-end, prefer native PowerShell cmdlets such as `Remove-Item` / `Move-Item` with `-LiteralPath`, and avoid string-built shell commands for file operations.\n- Before any recursive delete or move on Windows, verify the resolved absolute target paths stay within the intended workspace or explicitly named target directory. Never issue a recursive delete or move against a computed path if the final target has not been checked."
+          },
+          {
+            "name": "update_plan",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "explanation": {
+                  "type": "string"
+                },
+                "plan": {
+                  "description": "The list of steps",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "description": "One of: pending, in_progress, completed",
+                        "type": "string"
+                      },
+                      "step": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "step",
+                      "status"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "plan"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Updates the task plan.\nProvide an optional explanation and a list of plan items, each with a step and status.\nAt most one step can be in_progress at a time.\n"
+          },
+          {
+            "name": "request_user_input",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "questions": {
+                  "description": "Questions to show the user. Prefer 1 and do not exceed 3",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "header": {
+                        "description": "Short header label shown in the UI (12 or fewer chars).",
+                        "type": "string"
+                      },
+                      "id": {
+                        "description": "Stable identifier for mapping answers (snake_case).",
+                        "type": "string"
+                      },
+                      "options": {
+                        "description": "Provide 2-3 mutually exclusive choices. Put the recommended option first and suffix its label with \"(Recommended)\". Do not include an \"Other\" option in this list; the client will add a free-form \"Other\" option automatically.",
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "description": {
+                              "description": "One short sentence explaining impact/tradeoff if selected.",
+                              "type": "string"
+                            },
+                            "label": {
+                              "description": "User-facing label (1-5 words).",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "label",
+                            "description"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "question": {
+                        "description": "Single-sentence prompt shown to the user.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "header",
+                      "question",
+                      "options"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "questions"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Request user input for one to three short questions and wait for the response. This tool is only available in Plan mode."
+          },
+          {
+            "name": "view_image",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "description": "Local filesystem path to an image file",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "View a local image from the filesystem (only use if given a full filepath by the user, and the image isn't already attached to the thread context within <image ...> tags)."
+          },
+          {
+            "name": "spawn_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "agent_type": {
+                  "description": "Optional type name for the new agent. If omitted, `default` is used.\nAvailable roles:\ndefault: {\nDefault agent.\n}\nexplorer: {\nUse `explorer` for specific codebase questions.\nExplorers are fast and authoritative.\nThey must be used to ask specific, well-scoped questions on the codebase.\nRules:\n- In order to avoid redundant work, you should avoid exploring the same problem that explorers have already covered. Typically, you should trust the explorer results without additional verification. You are still allowed to inspect the code yourself to gain the needed context!\n- You are encouraged to spawn up multiple explorers in parallel when you have multiple distinct questions to ask about the codebase that can be answered independently. This allows you to get more information faster without waiting for one question to finish before asking the next. While waiting for the explorer results, you can continue working on other local tasks that do not depend on those results. This parallelism is a key advantage of delegation, so use it whenever you have multiple questions to ask.\n- Reuse existing explorers for related questions.\n}\nworker: {\nUse for execution and production work.\nTypical tasks:\n- Implement part of a feature\n- Fix tests or bugs\n- Split large refactors into independent chunks\nRules:\n- Explicitly assign **ownership** of the task (files / responsibility). When the subtask involves code changes, you should clearly specify which files or modules the worker is responsible for. This helps avoid merge conflicts and ensures accountability. For example, you can say \"Worker 1 is responsible for updating the authentication module, while Worker 2 will handle the database layer.\" By defining clear ownership, you can delegate more effectively and reduce coordination overhead.\n- Always tell workers they are **not alone in the codebase**, and they should not revert the edits made by others, and they should adjust their implementation to accommodate the changes made by others. This is important because there may be multiple workers making changes in parallel, and they need to be aware of each other's work to avoid conflicts and ensure a cohesive final product.\n}",
+                  "type": "string"
+                },
+                "fork_context": {
+                  "description": "When true, fork the current thread history into the new agent before sending the initial prompt. This must be used when you want the new agent to have exactly the same context as you.",
+                  "type": "boolean"
+                },
+                "items": {
+                  "description": "Structured input items. Use this to pass explicit mentions (for example app:// connector paths).",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "image_url": {
+                        "description": "Image URL when type is image.",
+                        "type": "string"
+                      },
+                      "name": {
+                        "description": "Display name when type is skill or mention.",
+                        "type": "string"
+                      },
+                      "path": {
+                        "description": "Path when type is local_image/skill, or structured mention target such as app://<connector-id> or plugin://<plugin-name>@<marketplace-name> when type is mention.",
+                        "type": "string"
+                      },
+                      "text": {
+                        "description": "Text content when type is text.",
+                        "type": "string"
+                      },
+                      "type": {
+                        "description": "Input item type: text, image, local_image, skill, or mention.",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "message": {
+                  "description": "Initial plain-text task for the new agent. Use either message or items.",
+                  "type": "string"
+                },
+                "model": {
+                  "description": "Optional model override for the new agent. Replaces the inherited model.",
+                  "type": "string"
+                },
+                "reasoning_effort": {
+                  "description": "Optional reasoning effort override for the new agent. Replaces the inherited reasoning effort.",
+                  "type": "string"
+                },
+                "task_name": {
+                  "description": "Optional task name for the new agent. Use lowercase letters, digits, and underscores.",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "\n        Only use `spawn_agent` if and only if the user explicitly asks for sub-agents, delegation, or parallel agent work.\n        Requests for depth, thoroughness, research, investigation, or detailed codebase analysis do not count as permission to spawn.\n        Agent-role guidance below only helps choose which agent to use after spawning is already authorized; it never authorizes spawning by itself.\n        Spawn a sub-agent for a well-scoped task. Returns the canonical task name when the spawned agent was named, otherwise the agent id, plus the user-facing nickname when available. This spawn_agent tool provides you access to smaller but more efficient sub-agents. A mini model can solve many tasks faster than the main model. You should follow the rules and guidelines below to use this tool.\n\n- gpt-5.3-codex (`gpt-5.3-codex`): Latest frontier agentic coding model. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.4 (`gpt-5.4`): Latest frontier agentic coding model. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.2-codex (`gpt-5.2-codex`): Frontier agentic coding model. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.1-codex-max (`gpt-5.1-codex-max`): Codex-optimized flagship for deep and fast reasoning. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.2 (`gpt-5.2`): Latest frontier model with improvements across knowledge, reasoning and coding Default reasoning effort: medium. Supported reasoning efforts: low (Balances speed with some reasoning; useful for straightforward queries and short explanations), medium (Provides a solid balance of reasoning depth and latency for general-purpose tasks), high (Maximizes reasoning depth for complex or ambiguous problems), xhigh (Extra high reasoning for complex problems).\n- gpt-5.1-codex-mini (`gpt-5.1-codex-mini`): Optimized for codex. Cheaper, faster, but less capable. Default reasoning effort: medium. Supported reasoning efforts: medium (Dynamically adjusts reasoning based on the task), high (Maximizes reasoning depth for complex or ambiguous problems).\n### When to delegate vs. do the subtask yourself\n- First, quickly analyze the overall user task and form a succinct high-level plan. Identify which tasks are immediate blockers on the critical path, and which tasks are sidecar tasks that are needed but can run in parallel without blocking the next local step. As part of that plan, explicitly decide what immediate task you should do locally right now. Do this planning step before delegating to agents so you do not hand off the immediate blocking task to a submodel and then waste time waiting on it.\n- Use the smaller subagent when a subtask is easy enough for it to handle and can run in parallel with your local work. Prefer delegating concrete, bounded sidecar tasks that materially advance the main task without blocking your immediate next local step.\n- Do not delegate urgent blocking work when your immediate next step depends on that result. If the very next action is blocked on that task, the main rollout should usually do it locally to keep the critical path moving.\n- Keep work local when the subtask is too difficult to delegate well and when it is tightly coupled, urgent, or likely to block your immediate next step.\n\n### Designing delegated subtasks\n- Subtasks must be concrete, well-defined, and self-contained.\n- Delegated subtasks must materially advance the main task.\n- Do not duplicate work between the main rollout and delegated subtasks.\n- Avoid issuing multiple delegate calls on the same unresolved thread unless the new delegated task is genuinely different and necessary.\n- Narrow the delegated ask to the concrete output you need next.\n- For coding tasks, prefer delegating concrete code-change worker subtasks over read-only explorer analysis when the subagent can make a bounded patch in a clear write scope.\n- When delegating coding work, instruct the submodel to edit files directly in its forked workspace and list the file paths it changed in the final answer.\n- For code-edit subtasks, decompose work so each delegated task has a disjoint write set.\n\n### After you delegate\n- Call wait_agent very sparingly. Only call wait_agent when you need the result immediately for the next critical-path step and you are blocked until it returns.\n- Do not redo delegated subagent tasks yourself; focus on integrating results or tackling non-overlapping work.\n- While the subagent is running in the background, do meaningful non-overlapping work immediately.\n- Do not repeatedly wait by reflex.\n- When a delegated coding task returns, quickly review the uploaded changes, then integrate or refine them.\n\n### Parallel delegation patterns\n- Run multiple independent information-seeking subtasks in parallel when you have distinct questions that can be answered independently.\n- Split implementation into disjoint codebase slices and spawn multiple agents for them in parallel when the write scopes do not overlap.\n- Delegate verification only when it can run in parallel with ongoing implementation and is likely to catch a concrete risk before final integration.\n- The key is to find opportunities to spawn multiple independent subtasks in parallel within the same round, while ensuring each subtask is well-defined, self-contained, and materially advances the main task."
+          },
+          {
+            "name": "send_input",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "interrupt": {
+                  "description": "When true, stop the agent's current task and handle this immediately. When false (default), queue this message.",
+                  "type": "boolean"
+                },
+                "items": {
+                  "description": "Structured input items. Use this to pass explicit mentions (for example app:// connector paths).",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "image_url": {
+                        "description": "Image URL when type is image.",
+                        "type": "string"
+                      },
+                      "name": {
+                        "description": "Display name when type is skill or mention.",
+                        "type": "string"
+                      },
+                      "path": {
+                        "description": "Path when type is local_image/skill, or structured mention target such as app://<connector-id> or plugin://<plugin-name>@<marketplace-name> when type is mention.",
+                        "type": "string"
+                      },
+                      "text": {
+                        "description": "Text content when type is text.",
+                        "type": "string"
+                      },
+                      "type": {
+                        "description": "Input item type: text, image, local_image, skill, or mention.",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "message": {
+                  "description": "Legacy plain-text message to send to the agent. Use either message or items.",
+                  "type": "string"
+                },
+                "target": {
+                  "description": "Agent id or canonical task name to message (from spawn_agent).",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "target"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Send a message to an existing agent. Use interrupt=true to redirect work immediately. You should reuse the agent by send_input if you believe your assigned task is highly dependent on the context of a previous task."
+          },
+          {
+            "name": "resume_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "description": "Agent id to resume.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Resume a previously closed agent by id so it can receive send_input and wait_agent calls."
+          },
+          {
+            "name": "wait_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "targets": {
+                  "description": "Agent ids or canonical task names to wait on. Pass multiple targets to wait for whichever finishes first.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "timeout_ms": {
+                  "description": "Optional timeout in milliseconds. Defaults to 30000, min 10000, max 3600000. Prefer longer waits (minutes) to avoid busy polling.",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "targets"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Wait for agents to reach a final status. Completed statuses may include the agent's final message. Returns empty status when timed out. Once the agent reaches a final status, a notification message will be received containing the same completed status."
+          },
+          {
+            "name": "close_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "target": {
+                  "description": "Agent id or canonical task name to close (from spawn_agent).",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "target"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Close an agent and any open descendants when they are no longer needed, and return the target agent's previous status before shutdown was requested. Don't keep agents open for too long if they are not needed anymore."
+          },
+          {
+            "type": "web_search",
+            "search_context_size": "medium",
+            "user_location": {
+              "country": "US",
+              "type": "approximate"
+            }
+          },
+          {
+            "name": "apply_patch",
+            "type": "custom",
+            "description": "Use the `apply_patch` tool to edit files. This is a FREEFORM tool, so do not wrap the patch in JSON.",
+            "format": {
+              "definition": "start: begin_patch hunk+ end_patch\r\nbegin_patch: \"*** Begin Patch\" LF\r\nend_patch: \"*** End Patch\" LF?\r\n\r\nhunk: add_hunk | delete_hunk | update_hunk\r\nadd_hunk: \"*** Add File: \" filename LF add_line+\r\ndelete_hunk: \"*** Delete File: \" filename LF\r\nupdate_hunk: \"*** Update File: \" filename LF change_move? change?\r\n\r\nfilename: /(.+)/\r\nadd_line: \"+\" /(.*)/ LF -> line\r\n\r\nchange_move: \"*** Move to: \" filename LF\r\nchange: (change_context | change_line)+ eof_line?\r\nchange_context: (\"@@\" | \"@@ \" /(.+)/) LF\r\nchange_line: (\"+\" | \"-\" | \" \") /(.*)/ LF\r\neof_line: \"*** End of File\" LF\r\n\r\n%import common.LF\r\n",
+              "syntax": "lark",
+              "type": "grammar"
+            }
+          }
+        ],
+        "top_p": 0.98,
+        "reasoning": {
+          "effort": "medium"
+        },
+        "status": "in_progress",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "low"
+        },
+        "truncation": "disabled",
+        "store": false,
+        "background": false,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "safety_identifier": "a240bba6c4d247b51b9ab7368adcee98dd9407a7243c39fff9ae4f9527311502",
+        "service_tier": "priority",
+        "top_logprobs": 0
+      },
+      "sequence_number": 0
+    },
+    {
+      "type": "response.in_progress",
+      "response": {
+        "id": "resp_t681b1W3TBZ-qiaNTBysD8rLcvysW7TEQhgc105yiAUabkuQAUbOxh8JCsSIeCwz0pwragN4T-sJgUS29pbTgoUkey9qDH_V0RhPZ4O8BdnJTVOXA6aFoWsHxXACFhF8JvfCxVD2VvWG7itaahx7qwfeuyCCMtKVgRIvvz2833p_0SYV2JiqHkHHaJ-6sp91ISiXkjjxpiw6gW_3o1Ylve_Y7tmh4LdCkiWMqm8JTh39zlXN8MD8_JOTRF6qJmClk_i2XqjEn-FnRArb2X-JYMXe5orv09Pe5-hgXgSZcuXnhLvjXOTABZggJdlZIs30JWqd-NmDbiz5AFXWhmiFn_aNY-Xsl310pmQh7MBX_U2942nBNrxEs0oTB6S27IWlW6O92hDVtb5k98BNFrCNrgUBzRIgxVL5HBZ22CyROoGdN-X_xezX_eLvMGEtKcyIjGqPvFeeSt5TB2aUiwO_Zchz0Uy5b33cnBk6JCD1P85VCt2bImZ-p-LUoLPmJlUT6Iprn5v6eJ4t62RuOPyi_WsBgZz7j0-Ujjiuob7cBxe8J3iOpKR3RO_mXx79qiaj7e301GVQYn1bVsT_JKGcmvA0CLK0RS2JQYb7huJbvn-rX5muho82Y_vbWORBdZcc5wVsmMfQIHzODXKVc9xC0CxYANpXP-O2pv4D3Mkmzjccr-VDVgsOCVPpHwwyfCcRzxsZ6LhT3NODw9qpKfWpYJipD6PD7HX2pRImp37H7k-2V0Xzq1EYMZV-l0qyMBKeO28TiAOdO_gW69Y66Ox9rSGssrtcPF7Lv0k5I01KZQZ4027Q61yaxktvaLoG_j0QusZsllOaIMydcO7IOae05kslkHSlKrpa4pgvv82znKlz4U_DoUa-yacI8oICQm8vJ7z17bsLLjoTyyaJAqNTle80OMFKUWa-1wca550saeDzuJWKPRLQY0rTslyCedTCGJ558ka-oFXdpS3R5mFPSXEy8ojCwufsNAtDRndPvDx7krhx5bu5Akmy36TI5DBjw3l9vHVyzJ2q_pNEhvwxleKx7b8ElY5WqXD-ObJZ9YWvALJ0S6XpjuSuvpy0dLOc1LwnCPaIrzGsQNKAN-YRJ-qF",
+        "created_at": 1774503132,
+        "instructions": "You are Codex, a coding agent based on GPT-5. You and the user share the same workspace and collaborate to achieve the user's goals.\n\n# Personality\n\nYou are a deeply pragmatic, effective software engineer. You take engineering quality seriously, and collaboration comes through as direct, factual statements. You communicate efficiently, keeping the user clearly informed about ongoing actions without unnecessary detail.\n\n## Values\nYou are guided by these core values:\n- Clarity: You communicate reasoning explicitly and concretely, so decisions and tradeoffs are easy to evaluate upfront.\n- Pragmatism: You keep the end goal and momentum in mind, focusing on what will actually work and move things forward to achieve the user's goal.\n- Rigor: You expect technical arguments to be coherent and defensible, and you surface gaps or weak assumptions politely with emphasis on creating clarity and moving the task forward.\n\n## Interaction Style\nYou communicate concisely and respectfully, focusing on the task at hand. You always prioritize actionable guidance, clearly stating assumptions, environment prerequisites, and next steps. Unless explicitly asked, you avoid excessively verbose explanations about your work.\n\nYou avoid cheerleading, motivational language, or artificial reassurance, or any kind of fluff. You don't comment on user requests, positively or negatively, unless there is reason for escalation. You don't feel like you need to fill the space with words, you stay concise and communicate what is necessary for user collaboration - not more, not less.\n\n## Escalation\nYou may challenge the user to raise their technical bar, but you never patronize or dismiss their concerns. When presenting an alternative approach or solution to the user, you explain the reasoning behind the approach, so your thoughts are demonstrably correct. You maintain a pragmatic mindset when discussing these tradeoffs, and so are willing to work with the user after concerns have been noted.\n\n\n# General\nAs an expert coding agent, your primary focus is writing code, answering questions, and helping the user complete their task in the current environment. You build context by examining the codebase first without making assumptions or jumping to conclusions. You think through the nuances of the code you encounter, and embody the mentality of a skilled senior software engineer.\n\n- When searching for text or files, prefer using `rg` or `rg --files` respectively because `rg` is much faster than alternatives like `grep`. (If the `rg` command is not found, then use alternatives.)\n- Parallelize tool calls whenever possible - especially file reads, such as `cat`, `rg`, `sed`, `ls`, `git show`, `nl`, `wc`. Use `multi_tool_use.parallel` to parallelize tool calls and only this. Never chain together bash commands with separators like `echo \"====\";` as this renders to the user poorly.\n\n## Editing constraints\n\n- Default to ASCII when editing or creating files. Only introduce non-ASCII or other Unicode characters when there is a clear justification and the file already uses them.\n- Add succinct code comments that explain what is going on if code is not self-explanatory. You should not add comments like \"Assigns the value to the variable\", but a brief comment might be useful ahead of a complex code block that the user would otherwise have to spend time parsing out. Usage of these comments should be rare.\n- Always use apply_patch for manual code edits. Do not use cat or any other commands when creating or editing files. Formatting commands or bulk edits don't need to be done with apply_patch.\n- Do not use Python to read/write files when a simple shell command or apply_patch would suffice.\n- You may be in a dirty git worktree.\n  * NEVER revert existing changes you did not make unless explicitly requested, since these changes were made by the user.\n  * If asked to make a commit or code edits and there are unrelated changes to your work or changes that you didn't make in those files, don't revert those changes.\n  * If the changes are in files you've touched recently, you should read carefully and understand how you can work with the changes rather than reverting them.\n  * If the changes are in unrelated files, just ignore them and don't revert them.\n- Do not amend a commit unless explicitly requested to do so.\n- While you are working, you might notice unexpected changes that you didn't make. It's likely the user made them, or were autogenerated. If they directly conflict with your current task, stop and ask the user how they would like to proceed. Otherwise, focus on the task at hand.\n- **NEVER** use destructive commands like `git reset --hard` or `git checkout --` unless specifically requested or approved by the user.\n- You struggle using the git interactive console. **ALWAYS** prefer using non-interactive git commands.\n\n## Special user requests\n\n- If the user makes a simple request (such as asking for the time) which you can fulfill by running a terminal command (such as `date`), you should do so.\n- If the user asks for a \"review\", default to a code review mindset: prioritise identifying bugs, risks, behavioural regressions, and missing tests. Findings must be the primary focus of the response - keep summaries or overviews brief and only after enumerating the issues. Present findings first (ordered by severity with file/line references), follow with open questions or assumptions, and offer a change-summary only as a secondary detail. If no findings are discovered, state that explicitly and mention any residual risks or testing gaps.\n\n## Autonomy and persistence\nPersist until the task is fully handled end-to-end within the current turn whenever feasible: do not stop at analysis or partial fixes; carry changes through implementation, verification, and a clear explanation of outcomes unless the user explicitly pauses or redirects you.\n\nUnless the user explicitly asks for a plan, asks a question about the code, is brainstorming potential solutions, or some other intent that makes it clear that code should not be written, assume the user wants you to make code changes or run tools to solve the user's problem. In these cases, it's bad to output your proposed solution in a message, you should go ahead and actually implement the change. If you encounter challenges or blockers, you should attempt to resolve them yourself.\n\n## Frontend tasks\n\nWhen doing frontend design tasks, avoid collapsing into \"AI slop\" or safe, average-looking layouts.\nAim for interfaces that feel intentional, bold, and a bit surprising.\n- Typography: Use expressive, purposeful fonts and avoid default stacks (Inter, Roboto, Arial, system).\n- Color & Look: Choose a clear visual direction; define CSS variables; avoid purple-on-white defaults. No purple bias or dark mode bias.\n- Motion: Use a few meaningful animations (page-load, staggered reveals) instead of generic micro-motions.\n- Background: Don't rely on flat, single-color backgrounds; use gradients, shapes, or subtle patterns to build atmosphere.\n- Ensure the page loads properly on both desktop and mobile\n- For React code, prefer modern patterns including useEffectEvent, startTransition, and useDeferredValue when appropriate if used by the team. Do not add useMemo/useCallback by default unless already used; follow the repo's React Compiler guidance.\n- Overall: Avoid boilerplate layouts and interchangeable UI patterns. Vary themes, type families, and visual languages across outputs.\n\nException: If working within an existing website or design system, preserve the established patterns, structure, and visual language.\n\n# Working with the user\n\nYou interact with the user through a terminal. You have 2 ways of communicating with the users:\n- Share intermediary updates in `commentary` channel. \n- After you have completed all your work, send a message to the `final` channel.\nYou are producing plain text that will later be styled by the program you run in. Formatting should make results easy to scan, but not feel mechanical. Use judgment to decide how much structure adds value. Follow the formatting rules exactly.\n\n## Formatting rules\n\n- You may format with GitHub-flavored Markdown.\n- Structure your answer if necessary, the complexity of the answer should match the task. If the task is simple, your answer should be a one-liner. Order sections from general to specific to supporting.\n- Never use nested bullets. Keep lists flat (single level). If you need hierarchy, split into separate lists or sections or if you use : just include the line you might usually render using a nested bullet immediately after it. For numbered lists, only use the `1. 2. 3.` style markers (with a period), never `1)`.\n- Headers are optional, only use them when you think they are necessary. If you do use them, use short Title Case (1-3 words) wrapped in **…**. Don't add a blank line.\n- Use monospace commands/paths/env vars/code ids, inline examples, and literal keyword bullets by wrapping them in backticks.\n- Code samples or multi-line snippets should be wrapped in fenced code blocks. Include an info string as often as possible.\n- File References: When referencing files in your response follow the below rules:\n  * Use markdown links (not inline code) for clickable file paths.\n  * Each reference should have a stand alone path. Even if it's the same file.\n  * For clickable/openable file references, the path target must be an absolute filesystem path. Labels may be short (for example, `[app.ts](/abs/path/app.ts)`).\n  * Optionally include line/column (1‑based): :line[:column] or #Lline[Ccolumn] (column defaults to 1).\n  * Do not use URIs like file://, vscode://, or https://.\n  * Do not provide range of lines\n- Don’t use emojis or em dashes unless explicitly instructed.\n\n## Final answer instructions\n\nAlways favor conciseness in your final answer - you should usually avoid long-winded explanations and focus only on the most important details. For casual chit-chat, just chat. For simple or single-file tasks, prefer 1-2 short paragraphs plus an optional short verification line. Do not default to bullets. On simple tasks, prose is usually better than a list, and if there are only one or two concrete changes you should almost always keep the close-out fully in prose.\n\nOn larger tasks, use at most 2-4 high-level sections when helpful. Each section can be a short paragraph or a few flat bullets. Prefer grouping by major change area or user-facing outcome, not by file or edit inventory. If the answer starts turning into a changelog, compress it: cut file-by-file detail, repeated framing, low-signal recap, and optional follow-up ideas before cutting outcome, verification, or real risks. Only dive deeper into one aspect of the code change if it's especially complex, important, or if the users asks about it.\n\nRequirements for your final answer:\n- Prefer short paragraphs by default.\n- Use lists only when the content is inherently list-shaped: enumerating distinct items, steps, options, categories, comparisons, ideas. Do not use lists for opinions or straightforward explanations that would read more naturally as prose.\n- Do not turn simple explanations into outlines or taxonomies unless the user asks for depth. If a list is used, each bullet should be a complete standalone point.\n- Do not begin responses with conversational interjections or meta commentary. Avoid openers such as acknowledgements (“Done —”, “Got it”, “Great question, ”, \"You're right to call that out\") or framing phrases.\n- The user does not see command execution outputs. When asked to show the output of a command (e.g. `git show`), relay the important details in your answer or summarize the key lines so the user understands the result.\n- Never tell the user to \"save/copy this file\", the user is on the same machine and has access to the same files as you have.\n- If the user asks for a code explanation, include code references as appropriate.\n- If you weren't able to do something, for example run tests, tell the user.\n- Never use nested bullets. Keep lists flat (single level). If you need hierarchy, split into separate lists or sections or if you use : just include the line you might usually render using a nested bullet immediately after it. For numbered lists, only use the `1. 2. 3.` style markers (with a period), never `1)`.\n\n## Intermediary updates \n\n- Intermediary updates go to the `commentary` channel.\n- User updates are short updates while you are working, they are NOT final answers.\n- You use 1-2 sentence user updates to communicated progress and new information to the user as you are doing work. \n- Do not begin responses with conversational interjections or meta commentary. Avoid openers such as acknowledgements (“Done —”, “Got it”, “Great question, ”) or framing phrases.\n- Before exploring or doing substantial work, you start with a user update acknowledging the request and explaining your first step. You should include your understanding of the user request and explain what you will do. Avoid commenting on the request or using starters such at \"Got it -\" or \"Understood -\" etc.\n- You provide user updates frequently, every 30s.\n- When exploring, e.g. searching, reading files you provide user updates as you go, explaining what context you are gathering and what you've learned. Vary your sentence structure when providing these updates to avoid sounding repetitive - in particular, don't start each sentence the same way.\n- When working for a while, keep updates informative and varied, but stay concise.\n- After you have sufficient context, and the work is substantial you provide a longer plan (this is the only user update that may be longer than 2 sentences and can contain formatting).\n- Before performing file edits of any kind, you provide updates explaining what edits you are making.\n- As you are thinking, you very frequently provide updates even if not taking any actions, informing the user of your progress. You interrupt your thinking and send multiple updates in a row if thinking for more than 100 words.\n- Tone of your updates MUST match your personality.\n",
+        "metadata": {},
+        "model": "gpt-5.4-2026-03-05",
+        "object": "response",
+        "output": [],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [
+          {
+            "name": "shell_command",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "command": {
+                  "description": "The shell script to execute in the user's default shell",
+                  "type": "string"
+                },
+                "justification": {
+                  "description": "Only set if sandbox_permissions is \\\"require_escalated\\\".\n                    Request approval from the user to run this command outside the sandbox.\n                    Phrased as a simple question that summarizes the purpose of the\n                    command as it relates to the task at hand - e.g. 'Do you want to\n                    fetch and pull the latest version of this git branch?'",
+                  "type": "string"
+                },
+                "login": {
+                  "description": "Whether to run the shell with login shell semantics. Defaults to true.",
+                  "type": "boolean"
+                },
+                "prefix_rule": {
+                  "description": "Only specify when sandbox_permissions is `require_escalated`.\n                        Suggest a prefix command pattern that will allow you to fulfill similar requests from the user in the future.\n                        Should be a short but reasonable prefix, e.g. [\\\"git\\\", \\\"pull\\\"] or [\\\"uv\\\", \\\"run\\\"] or [\\\"pytest\\\"].",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "sandbox_permissions": {
+                  "description": "Sandbox permissions for the command. Set to \"require_escalated\" to request running without sandbox restrictions; defaults to \"use_default\".",
+                  "type": "string"
+                },
+                "timeout_ms": {
+                  "description": "The timeout for the command in milliseconds",
+                  "type": "number"
+                },
+                "workdir": {
+                  "description": "The working directory to execute the command in",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "command"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Runs a Powershell command (Windows) and returns its output.\n\nExamples of valid command strings:\n\n- ls -a (show hidden): \"Get-ChildItem -Force\"\n- recursive find by name: \"Get-ChildItem -Recurse -Filter *.py\"\n- recursive grep: \"Get-ChildItem -Path C:\\\\myrepo -Recurse | Select-String -Pattern 'TODO' -CaseSensitive\"\n- ps aux | grep python: \"Get-Process | Where-Object { $_.ProcessName -like '*python*' }\"\n- setting an env var: \"$env:FOO='bar'; echo $env:FOO\"\n- running an inline Python script: \"@'\\\\nprint('Hello, world!')\\\\n'@ | python -\"\n\nWindows safety rules:\n- Do not compose destructive filesystem commands across shells. Do not enumerate paths in PowerShell and then pass them to `cmd /c`, batch builtins, or another shell for deletion or moving. Use one shell end-to-end, prefer native PowerShell cmdlets such as `Remove-Item` / `Move-Item` with `-LiteralPath`, and avoid string-built shell commands for file operations.\n- Before any recursive delete or move on Windows, verify the resolved absolute target paths stay within the intended workspace or explicitly named target directory. Never issue a recursive delete or move against a computed path if the final target has not been checked."
+          },
+          {
+            "name": "update_plan",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "explanation": {
+                  "type": "string"
+                },
+                "plan": {
+                  "description": "The list of steps",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "description": "One of: pending, in_progress, completed",
+                        "type": "string"
+                      },
+                      "step": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "step",
+                      "status"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "plan"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Updates the task plan.\nProvide an optional explanation and a list of plan items, each with a step and status.\nAt most one step can be in_progress at a time.\n"
+          },
+          {
+            "name": "request_user_input",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "questions": {
+                  "description": "Questions to show the user. Prefer 1 and do not exceed 3",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "header": {
+                        "description": "Short header label shown in the UI (12 or fewer chars).",
+                        "type": "string"
+                      },
+                      "id": {
+                        "description": "Stable identifier for mapping answers (snake_case).",
+                        "type": "string"
+                      },
+                      "options": {
+                        "description": "Provide 2-3 mutually exclusive choices. Put the recommended option first and suffix its label with \"(Recommended)\". Do not include an \"Other\" option in this list; the client will add a free-form \"Other\" option automatically.",
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "description": {
+                              "description": "One short sentence explaining impact/tradeoff if selected.",
+                              "type": "string"
+                            },
+                            "label": {
+                              "description": "User-facing label (1-5 words).",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "label",
+                            "description"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "question": {
+                        "description": "Single-sentence prompt shown to the user.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "header",
+                      "question",
+                      "options"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "questions"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Request user input for one to three short questions and wait for the response. This tool is only available in Plan mode."
+          },
+          {
+            "name": "view_image",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "description": "Local filesystem path to an image file",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "View a local image from the filesystem (only use if given a full filepath by the user, and the image isn't already attached to the thread context within <image ...> tags)."
+          },
+          {
+            "name": "spawn_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "agent_type": {
+                  "description": "Optional type name for the new agent. If omitted, `default` is used.\nAvailable roles:\ndefault: {\nDefault agent.\n}\nexplorer: {\nUse `explorer` for specific codebase questions.\nExplorers are fast and authoritative.\nThey must be used to ask specific, well-scoped questions on the codebase.\nRules:\n- In order to avoid redundant work, you should avoid exploring the same problem that explorers have already covered. Typically, you should trust the explorer results without additional verification. You are still allowed to inspect the code yourself to gain the needed context!\n- You are encouraged to spawn up multiple explorers in parallel when you have multiple distinct questions to ask about the codebase that can be answered independently. This allows you to get more information faster without waiting for one question to finish before asking the next. While waiting for the explorer results, you can continue working on other local tasks that do not depend on those results. This parallelism is a key advantage of delegation, so use it whenever you have multiple questions to ask.\n- Reuse existing explorers for related questions.\n}\nworker: {\nUse for execution and production work.\nTypical tasks:\n- Implement part of a feature\n- Fix tests or bugs\n- Split large refactors into independent chunks\nRules:\n- Explicitly assign **ownership** of the task (files / responsibility). When the subtask involves code changes, you should clearly specify which files or modules the worker is responsible for. This helps avoid merge conflicts and ensures accountability. For example, you can say \"Worker 1 is responsible for updating the authentication module, while Worker 2 will handle the database layer.\" By defining clear ownership, you can delegate more effectively and reduce coordination overhead.\n- Always tell workers they are **not alone in the codebase**, and they should not revert the edits made by others, and they should adjust their implementation to accommodate the changes made by others. This is important because there may be multiple workers making changes in parallel, and they need to be aware of each other's work to avoid conflicts and ensure a cohesive final product.\n}",
+                  "type": "string"
+                },
+                "fork_context": {
+                  "description": "When true, fork the current thread history into the new agent before sending the initial prompt. This must be used when you want the new agent to have exactly the same context as you.",
+                  "type": "boolean"
+                },
+                "items": {
+                  "description": "Structured input items. Use this to pass explicit mentions (for example app:// connector paths).",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "image_url": {
+                        "description": "Image URL when type is image.",
+                        "type": "string"
+                      },
+                      "name": {
+                        "description": "Display name when type is skill or mention.",
+                        "type": "string"
+                      },
+                      "path": {
+                        "description": "Path when type is local_image/skill, or structured mention target such as app://<connector-id> or plugin://<plugin-name>@<marketplace-name> when type is mention.",
+                        "type": "string"
+                      },
+                      "text": {
+                        "description": "Text content when type is text.",
+                        "type": "string"
+                      },
+                      "type": {
+                        "description": "Input item type: text, image, local_image, skill, or mention.",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "message": {
+                  "description": "Initial plain-text task for the new agent. Use either message or items.",
+                  "type": "string"
+                },
+                "model": {
+                  "description": "Optional model override for the new agent. Replaces the inherited model.",
+                  "type": "string"
+                },
+                "reasoning_effort": {
+                  "description": "Optional reasoning effort override for the new agent. Replaces the inherited reasoning effort.",
+                  "type": "string"
+                },
+                "task_name": {
+                  "description": "Optional task name for the new agent. Use lowercase letters, digits, and underscores.",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "\n        Only use `spawn_agent` if and only if the user explicitly asks for sub-agents, delegation, or parallel agent work.\n        Requests for depth, thoroughness, research, investigation, or detailed codebase analysis do not count as permission to spawn.\n        Agent-role guidance below only helps choose which agent to use after spawning is already authorized; it never authorizes spawning by itself.\n        Spawn a sub-agent for a well-scoped task. Returns the canonical task name when the spawned agent was named, otherwise the agent id, plus the user-facing nickname when available. This spawn_agent tool provides you access to smaller but more efficient sub-agents. A mini model can solve many tasks faster than the main model. You should follow the rules and guidelines below to use this tool.\n\n- gpt-5.3-codex (`gpt-5.3-codex`): Latest frontier agentic coding model. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.4 (`gpt-5.4`): Latest frontier agentic coding model. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.2-codex (`gpt-5.2-codex`): Frontier agentic coding model. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.1-codex-max (`gpt-5.1-codex-max`): Codex-optimized flagship for deep and fast reasoning. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.2 (`gpt-5.2`): Latest frontier model with improvements across knowledge, reasoning and coding Default reasoning effort: medium. Supported reasoning efforts: low (Balances speed with some reasoning; useful for straightforward queries and short explanations), medium (Provides a solid balance of reasoning depth and latency for general-purpose tasks), high (Maximizes reasoning depth for complex or ambiguous problems), xhigh (Extra high reasoning for complex problems).\n- gpt-5.1-codex-mini (`gpt-5.1-codex-mini`): Optimized for codex. Cheaper, faster, but less capable. Default reasoning effort: medium. Supported reasoning efforts: medium (Dynamically adjusts reasoning based on the task), high (Maximizes reasoning depth for complex or ambiguous problems).\n### When to delegate vs. do the subtask yourself\n- First, quickly analyze the overall user task and form a succinct high-level plan. Identify which tasks are immediate blockers on the critical path, and which tasks are sidecar tasks that are needed but can run in parallel without blocking the next local step. As part of that plan, explicitly decide what immediate task you should do locally right now. Do this planning step before delegating to agents so you do not hand off the immediate blocking task to a submodel and then waste time waiting on it.\n- Use the smaller subagent when a subtask is easy enough for it to handle and can run in parallel with your local work. Prefer delegating concrete, bounded sidecar tasks that materially advance the main task without blocking your immediate next local step.\n- Do not delegate urgent blocking work when your immediate next step depends on that result. If the very next action is blocked on that task, the main rollout should usually do it locally to keep the critical path moving.\n- Keep work local when the subtask is too difficult to delegate well and when it is tightly coupled, urgent, or likely to block your immediate next step.\n\n### Designing delegated subtasks\n- Subtasks must be concrete, well-defined, and self-contained.\n- Delegated subtasks must materially advance the main task.\n- Do not duplicate work between the main rollout and delegated subtasks.\n- Avoid issuing multiple delegate calls on the same unresolved thread unless the new delegated task is genuinely different and necessary.\n- Narrow the delegated ask to the concrete output you need next.\n- For coding tasks, prefer delegating concrete code-change worker subtasks over read-only explorer analysis when the subagent can make a bounded patch in a clear write scope.\n- When delegating coding work, instruct the submodel to edit files directly in its forked workspace and list the file paths it changed in the final answer.\n- For code-edit subtasks, decompose work so each delegated task has a disjoint write set.\n\n### After you delegate\n- Call wait_agent very sparingly. Only call wait_agent when you need the result immediately for the next critical-path step and you are blocked until it returns.\n- Do not redo delegated subagent tasks yourself; focus on integrating results or tackling non-overlapping work.\n- While the subagent is running in the background, do meaningful non-overlapping work immediately.\n- Do not repeatedly wait by reflex.\n- When a delegated coding task returns, quickly review the uploaded changes, then integrate or refine them.\n\n### Parallel delegation patterns\n- Run multiple independent information-seeking subtasks in parallel when you have distinct questions that can be answered independently.\n- Split implementation into disjoint codebase slices and spawn multiple agents for them in parallel when the write scopes do not overlap.\n- Delegate verification only when it can run in parallel with ongoing implementation and is likely to catch a concrete risk before final integration.\n- The key is to find opportunities to spawn multiple independent subtasks in parallel within the same round, while ensuring each subtask is well-defined, self-contained, and materially advances the main task."
+          },
+          {
+            "name": "send_input",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "interrupt": {
+                  "description": "When true, stop the agent's current task and handle this immediately. When false (default), queue this message.",
+                  "type": "boolean"
+                },
+                "items": {
+                  "description": "Structured input items. Use this to pass explicit mentions (for example app:// connector paths).",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "image_url": {
+                        "description": "Image URL when type is image.",
+                        "type": "string"
+                      },
+                      "name": {
+                        "description": "Display name when type is skill or mention.",
+                        "type": "string"
+                      },
+                      "path": {
+                        "description": "Path when type is local_image/skill, or structured mention target such as app://<connector-id> or plugin://<plugin-name>@<marketplace-name> when type is mention.",
+                        "type": "string"
+                      },
+                      "text": {
+                        "description": "Text content when type is text.",
+                        "type": "string"
+                      },
+                      "type": {
+                        "description": "Input item type: text, image, local_image, skill, or mention.",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "message": {
+                  "description": "Legacy plain-text message to send to the agent. Use either message or items.",
+                  "type": "string"
+                },
+                "target": {
+                  "description": "Agent id or canonical task name to message (from spawn_agent).",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "target"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Send a message to an existing agent. Use interrupt=true to redirect work immediately. You should reuse the agent by send_input if you believe your assigned task is highly dependent on the context of a previous task."
+          },
+          {
+            "name": "resume_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "description": "Agent id to resume.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Resume a previously closed agent by id so it can receive send_input and wait_agent calls."
+          },
+          {
+            "name": "wait_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "targets": {
+                  "description": "Agent ids or canonical task names to wait on. Pass multiple targets to wait for whichever finishes first.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "timeout_ms": {
+                  "description": "Optional timeout in milliseconds. Defaults to 30000, min 10000, max 3600000. Prefer longer waits (minutes) to avoid busy polling.",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "targets"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Wait for agents to reach a final status. Completed statuses may include the agent's final message. Returns empty status when timed out. Once the agent reaches a final status, a notification message will be received containing the same completed status."
+          },
+          {
+            "name": "close_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "target": {
+                  "description": "Agent id or canonical task name to close (from spawn_agent).",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "target"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Close an agent and any open descendants when they are no longer needed, and return the target agent's previous status before shutdown was requested. Don't keep agents open for too long if they are not needed anymore."
+          },
+          {
+            "type": "web_search",
+            "search_context_size": "medium",
+            "user_location": {
+              "country": "US",
+              "type": "approximate"
+            }
+          },
+          {
+            "name": "apply_patch",
+            "type": "custom",
+            "description": "Use the `apply_patch` tool to edit files. This is a FREEFORM tool, so do not wrap the patch in JSON.",
+            "format": {
+              "definition": "start: begin_patch hunk+ end_patch\r\nbegin_patch: \"*** Begin Patch\" LF\r\nend_patch: \"*** End Patch\" LF?\r\n\r\nhunk: add_hunk | delete_hunk | update_hunk\r\nadd_hunk: \"*** Add File: \" filename LF add_line+\r\ndelete_hunk: \"*** Delete File: \" filename LF\r\nupdate_hunk: \"*** Update File: \" filename LF change_move? change?\r\n\r\nfilename: /(.+)/\r\nadd_line: \"+\" /(.*)/ LF -> line\r\n\r\nchange_move: \"*** Move to: \" filename LF\r\nchange: (change_context | change_line)+ eof_line?\r\nchange_context: (\"@@\" | \"@@ \" /(.+)/) LF\r\nchange_line: (\"+\" | \"-\" | \" \") /(.*)/ LF\r\neof_line: \"*** End of File\" LF\r\n\r\n%import common.LF\r\n",
+              "syntax": "lark",
+              "type": "grammar"
+            }
+          }
+        ],
+        "top_p": 0.98,
+        "reasoning": {
+          "effort": "medium"
+        },
+        "status": "in_progress",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "low"
+        },
+        "truncation": "disabled",
+        "store": false,
+        "background": false,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "safety_identifier": "a240bba6c4d247b51b9ab7368adcee98dd9407a7243c39fff9ae4f9527311502",
+        "service_tier": "priority",
+        "top_logprobs": 0
+      },
+      "sequence_number": 1
+    },
+    {
+      "type": "response.output_item.added",
+      "output_index": 0,
+      "item": {
+        "encrypted_content": "WihExCqu7SVrmmHRHKFVqy6k8M7V797SN7dGbtrAxrqVo2DsUO/Yy0m9ASiwAcDXwKUE5w+YShHrmDnp0x/L3nTVajJR9XCT/1/PIaJEdzqIdjgLvssw6VnuWE7qg/mwes+7NzwSDzt4No/vv7Fh9nna/ULTPS5w+K3uXIf/M368Bs6nXNJr5xGKsLWB4sgq+agZVw+RpL32STq79aLvbZrEL7hEDeV8brUXd3AUBO34Y/r87wG9e0V7w8SoHFE5HYtjQGufskH5v8++QqmE3ihpY7oFAMEujuw9sUIhbmITC0dIzh8ALBVR5Tt5yO3pfwP6+29N/uYnm191o+XInHnF+gkoj6f7GJ+HJ4/mFyiKJFQ5vP3PYms3nEgtsO12Q3uQ2cBffr9ALRVkmGwJqPuJyipY5flQ1tIluhDDbTGvAlYID25CJxE8uebG1sIKyyPOHZTfWto3WECoYCUXe2no0iu2qEfVphdlNUYWgepkTq+e6EjHT1dFYOAWRmYdqZ5CIfAlkE3fES6iNWYUoBTZPxDbqLNml1vLuhzeONOmI0iuTYvLR/XuDsIN1X4jw7o2cZ/VEKyvhN4M0maytkdiOCmR61OAKGywi2RYDbDAk95M4++0iZJSmCgWmlOdOWxSxGczapglRuDr1IvKX3v0F8LL/zEl9AVgNWhQL79FQKBdmdDQPlLZowJhs2sSWY4ORs0nOMZT60BiLAM/KKEnSsfm9BQAM8oHA03VftxZeP4Vj1Hz78etmhO2yShwpSGgt0HXVlkzuM8hnrMKAka73ZKJlgiGXINDFZfBo0RM6vejIRqKU0vh0JGWI1QZiIz+ehDwBoRbUDjCwbTQeZjR2X8GrSJqHEVlYBmrRI5amFa9t5lKvdDSxPUMSc1nO3KSi+SBQpIzEil3hvYykhwug7zE/4tRv0kalq/cggMwGNFBf5IcpOxWJn4JOnIgS5AGlKN2LTxnOfTiCCW0N6gqgzfC85w0rXae7aY9mwjfMieQywzyCkOtrGM++hx6EO1W7C/cpPi/Zbg9uYC4umoF6nlD/I/AutbgpvxX2DfdEWPY/YA/77vHvw7/HjI/oQUyzw7fRV71Esb7xu7Ad4tNiR7TEvO50F1qOkt/0fW1PlwmkvNM6iT78uVPsSYYCYehYZdCnFIzqXHpA2kSZLNlWLHsYoaC5lOlMVmQswT+ssPr7kOB9Hpxkp02y/dd4esHQMNzYkQhKnsSyTG6F/1C9EOSYXO3rHLjgLcHLD5Oqu/wzIGh2fjTb2PhD8ND55LVAxWcljmn2igNL+3bK7oLeURqILUCeDZlmE1t7cQXiPo6AnqEDLpVrCB7PopwcbZGO/irQxxBuHDa596y9nBbNbvNVCI0N4G/wbD71MaZvrdlo1avNfm+EtsaXtLAAXrtkCBdY7qViyTtft9q1xkAeWvUhzA2uvhOee64ZUigovWK/V73vEPAzYObqbakGHqXBp+0",
+        "id": "zJXjSaZqrokIFe62x040QOWttNoAszgH8ec8E1ibKfWmXdIAhfla9lJ7L/MPqFgmcLer7mppm6A8Q+2mrz/MiPqyt2FKPTeiOADtFZRHSz2xj64yxGLi0M1K4EinpJ4GGSBa+mnj0kVUog8tz7QMaf/0/UZANPW8VPuGKAEjQ2E6SUv72rK8i8TYwPgxo4ZXlvXnoQmTs/V7CZC5nZ8lVHc8lHewJoSmT4CeMKgQtuHDg6UJqmBEhYOCscIwB2q4WiDsIuGpUyzvAxjV3hec3jq6GhxShFe8DIqTNVVPkT9CN8W5U3VJjwpeIIKsE+ZhRPmkAE7O2XXjfMEgltsMJcOPlCRONjbIz1CfOGcx8Ub1UFjh3Jr0VUEkwAfakhs14L422hzJ98FDkhec7DbtlA==",
+        "summary": [],
+        "type": "reasoning"
+      },
+      "sequence_number": 2
+    },
+    {
+      "type": "response.output_item.done",
+      "output_index": 0,
+      "sequence_number": 3,
+      "item": {
+        "encrypted_content": "gNAk9zjYnMtwITveUGbpFG0tqUzb8NkPGJYPvyn8/n6/wmtoUZWWgqpsmoXpJRlXkGhN9amNSUsO+Sc3kUN6NfWWeVTeTOZx4aauEJLKtdqCqBOvfFj4Uie+mo5lkQTWNZGcCxPj32jAu5LKhRZA+eR2z4VWticwcIn+Mb0OApRuREpGEniq9Y1a2QsGdg5R3GzjKqJLrS0VKHR2p9FhhPHApBZlDeUaNzAvMetdDEQlgMABnbJwUKhGKuXKbLE6kysPqW2bAJxdQQDaPsQty8qQQDXTvVnEYHvc86yvGvqddrJ+KSC+10E4bOtP78SbAWie3livoDKUe8S3IXb+aNr+FQ5KuuHCaU7zzg18jL/XgkA8unywuRzZH6yr48tmt75FH9GCy1nl7pvAJIJHjcSjRPa+o9Z9vCvKxPCxN8He36Zvh9142tCsP/DRJAGmLk2/Ybq5SwkJNWRAzhGNK590pJK7FOLy4CoQfYDMVsRSDSXhAiEX7Yy70/1YCIFNcaSeZZOrbC1ym4I/0VUXwUI47iN5KcNhAq8f27cteTvlR2D21ggRx7ZjuZxTHrCH4CxszFyD8lDNN1AhdjJ1KhPGoaSYptNJ9yh3bRPWxmEHWVo7eHOAgbwFtIgME3US7fMgahXvLNnna9nLkl1AhqKQHFP8UD0DfN3Bik1tvoFkv+fQiLI4chd/deBeRduxsTu4o8Rh1zYS7bbcPlVBQvNbqS/MeQmIDziCHD5fjK5HHRS0Y8is9eEKQek33uM9ayWSekFnjTvnvR7GnndrovuxXw1InAkbLfNT7p4tiB4ueWISmDJIc7oDm0Pt179iTuRmp+gPN+X666/vA+6Ci1NLo3ZvxM1rAqL9gHvPYop2nFIWcGJFHMRvyoX9riHnTQ19axFssluU3oR24ySF/9pcAC9Y6tEXfXt0rGS91B1cULdcCgOR7kIbtGCJgkw2TLigEsODvwzlbkxftJLgRsStdPn649znd37iIepODQcdeYSB3otHls/hC9NErVZWD6RNSqP4pJFd1XucGInE2p40T8wiegBQCBmo8WeSj6qw9iMgGTWLVNiyigsSSk/SKvVUKZjJCZ0XvIE+xy6T2jSeuafiYEi2opvAzlT8WNcdeUk6OUjfepm1uqm0a97kUDgmKIZfG+stKR6pABo8P+U6KnplA+eb69I7aZbzdjXv16gwK57YThf2FwdmCE+uXv42EG9Yz1e4wt7bVRkDcAghctfFmgsvVd3DocHtwhhyzzCvNrImNXGT3IGg/TUtipRG/RhO6yzB+ySCPOIEHHYY6Jf+Wz+Y2MRIMiKyDgyIZQEEFicF/bdjzJFAtBBG/s0FxDXHL8vnKWkWDqKnOX+4sLVCMuRvm5WTjZ6hRcIDAqjsmThhP6xhUBNyW4XNme2bGjOhrSBb6rtbTUqbyVMAURiMdOcmlNoG6vHL+0u+FGNQ4/IsFbYC3al3HnEvOBMB41G9X4y5RiuNEAiWzaNLFMSfwObSkQDsxfQwkESEsWht2vSuH9nbAFgemQW3AfTRlee4f6HSWvY2AUQ5nXXlkIHN2Zn8J7VgsFdGwWZkIWDDq/zOuYXQLtujVmhgghJ912jSgXh2d1LN+U/o+yFXVr4ARmUKx24wkL3oar7pNRukqMcxiDVPmZxCmGQyHE2SjcZE3CdaUTND5lUO85xMr8b3ZAnxFna8gTclSpgJhFnXsCwfENIdqGtZvE8j3ldodOQRjl2oS9lGCELZKoOvjuuqo8kNsEvDFYK2fjXrFgaHBNmHEJ4E6KNesmLxKWd6i/UccOoGzoX5cBvB+CZ6UoG6qIWu16m36TCqWX7u04J3IuplI6Q03IJeJ6ykdRTB+y+C7RV3nLwpejAdWDwYUjKP6hlFC5TNxUGvN3XM0vziQ0SPbZfTL5qxypjy6q7pqU7G5Qegn02Q9ExSGKKHM4WOZlzeswaeTeVsJStHFO8E2/TcWENWozBR8vTUA1vK0IGxdCKsE31nhNRxlRzyKiVDUUNdgDP21VtqYCzlY3PLJM3bfDMiVqw+gC44sf2XFtc3GThK5cthNf8Z+cayBzvNsySPCx/OMKUs0dw8/EaBysKMBeDeRWHVdblGbnbt4o2x0FraflWMwzNRaGUq9rRKW6ina0WhtCNiqUjHt8SZrYviaoFdiM/vRTJ2Q4nNUP0nJJwKGpcGo7WdLHkifAq7xlhu45jkWWOXrUG7B9omsM7HaXDwRM4bsvAJsUwnKs5QTTnQSFCE2Rybk6h/ua4AWsdE4aF7NoOrmywWxwowpIpTscLCT/suwVhBF1ARiko+ZgPZduc0SjlcFd4613RwkVsxGbTi0Qjd27fjPO7y+RPtaHWCzznj+7cvw0ZfmrEx+ZE4xbYVRrGK0Idrl6GuV9m4pztws4+hhnoHoE0VGztlHr4apR9TsQT2L5h4AJyFmFNa9Ah+VQSlccGDyRLQbsTY90fJpgnZ2NouAAVyDRc1oFYlxW5OBqp2ssQqmAsVVV/Xf/sQEQIid17rkG/p/Zfv28sfrAab6GMuYMrq5rZpP4ztY6eHIwxvsBdnZV88BPGsYMqiU7OcoO43GMhEPx7XZrU1fgiUHxlixxQ/GbQzPmMPDRowbM3WVdajWpYcwB1e3gMnClkTsZZ3zg+sFTTWPSZnUcCkQTJqqb87k0AqszSFNJSXU8hTvTtmJI+O8M/bqRO7sMY=",
+        "id": "AoW5CekSQMYFYDG1/Pfc+TzEIa1GiXB+zppTqN+TaNBeWmKQUFwQ+gFkTq+5AoS3dDjHB7nCX57NuFsqn3WsQof+1VHKH1Sef8a128xVnKPwYzaU8mDhscllPgD7abGhQfKaXK85raOn/0va3VSKl0DjieBhygJfljQ1SuaVdWg9i/+7BfiK5fBMLLOyc7AIXuuKLC5oFt8AwTLG9YBxbS4GEIQwIu6LewpZ3hPrMsTEH8WyDUXchkFHweruwIFO63p6PUksanWkFtYVhhdmTL0HTK6FwrLVukJtmY40S8F/hfQn0bX164oRPYJuaZi4N6a6+yfRCdwqxZ6b0R+ublYacCKxJQugrfdZJRe3vz3PjG20VvTYZOPo3vWNdl1zBOsWMW8FbdxtUhaR89JpBg==",
+        "summary": [],
+        "type": "reasoning"
+      }
+    },
+    {
+      "type": "response.output_item.added",
+      "output_index": 1,
+      "item": {
+        "content": [],
+        "id": "dRczIkGah4crEaCDb9kZKVbVvMsa8ff6pozkl2xE4eWyMBnalJtGKKnK3//DTg92cxHO5fTzhBZ/Y5NdplYJZNa0bI/pZHmhjLbX3epCfpBvcfWi+F0om7dEVyZ01dbt53SMo2TujZ8fO5kHAd3eZQ4wael6AhBywQYooEOoPBU5KcdNieMbb3Ptu3FPpRzIT+ORsUpveNC7nsE76a0/cPnvGkdGURVaQ5fypviUCKyHBQbS71Ya8rTPPkY58pKiR0DMLZmBq/y3vvvcOG05a3TZwhumRlWJcajKNw4SDmPWwYX7Ubck8ZDyPeOB79BDFFhe9uRbNceAecKi3MNJGrcX7DKjYk8+sK1qtbLdWejakQYaeH6TP4lLB4VO/fXpBbwYQOtfyUyX8NiK3qqua0w=",
+        "phase": "commentary",
+        "role": "assistant",
+        "status": "in_progress",
+        "type": "message"
+      },
+      "sequence_number": 4
+    },
+    {
+      "type": "response.content_part.added",
+      "item_id": "ndi8Hxenu4FQkwACCtPmE3bUQOVEFwtJ2MdzgkBgB+EMwF5z8w90KJWifmXpaZTF9lN78eDjmVQvt3d9yvuCrdvIQY4DCEOcFen3ZWy7TnDtz1bQBy/+ary6R5aMY/b/7Ga2Elx/pGuQHDfekKENC+IjMU5dLo+s9YO2saGEgcuIeI4pM4AaHYooksqqAGtdp4kHWWRrL5D+egfw34j9jyPiEUkslxhG3LqeOHtdziaUo9TNzybJRti4NnQqsyfL+FZLmFp+zuHiDsFuBth7oRp/t4keAFLZoXRZz8AOE4FZEUKewNGePpxyfbMElBlQurePX75CWV2rFIyjgXFFG984qOZ1b0l+L6gGe83Cp/POP4tpylvEHCMPo8xClYHJxJLU1J03Ulj2BoxfdtSpPY0=",
+      "output_index": 1,
+      "content_index": 0,
+      "part": {
+        "annotations": [],
+        "logprobs": [],
+        "text": "",
+        "type": "output_text"
+      },
+      "sequence_number": 5
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "7Jvio2CAOPf0Q+Xkqpq73PhwWUwZ3HR6u4SWhTEVAUTsPZ0x7TLuwtskueN5Bw4XKzQrRFPWY/TbwadTRQE9vzNoXrASMEoaRuA78fywxAmLNJkd1mQMYvjElAL0KkXnq08h2fQDPzzywL7dvRPUsrxUXp0W+EskSXZ/UnL/9Xl6qeUyC1BETr+RlX+S+0fmWLSyNuXX+IFz3HcjZdAnpJfFWiO21Ufe1rka2dPzLvwD1O3TqQMu88fm2Ed3S43/j1Gva05Vzwf/clqkd1MwkQu8WZuf3IcoKu4hrgSCBN8vsYCyGbTtZAnwMgwnVpxJadpXmT9QuH86L4yuU5ZZEtDfhXMd1oXsxLEnT8ZBwOOpg908oCb8waK8VP6fD3XsplnqQe0qV0rvysKUz07QAIA=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "I",
+      "logprobs": [],
+      "obfuscation": "EUU5vOf0nYm6eMa",
+      "sequence_number": 6
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "eSubfj0/G/8LgWAcUS8x/RIseimulDqWmy8KmrL3l/JUJrP8ezTmA8A0u99A6EOd+/o0Z9Balw/FQ95lYeD2poRbhQ6UNsBUZX4nkj/6Uf14zEsiTyz3xeiQkxezYCi70t4aPLAUOYizcXRnuAiW2aCCi9nuPo+MpHj2zyd1W7mm6/yTRRoEuTqCgRNfRmP2UVbiaIsgc9E1zJ7vLa5eDQ9XbCZc1zJHDWb0DZGmcajExbd+3UV2wNSNrHci9+wv5UZlsaU8SMnKv4In6adZ5bdX3N7Pk747oDX7tTwxu373xCNYNF5lZDAeH3eecxRLf/YOHRzTrJ8pAtE6tYkAnPjSISIVChan6QKM1F5MScTTtS9mjWKIcojXqx659hMlUJV4vUiFhyHYPyQ9YQpGcdw=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "’m",
+      "logprobs": [],
+      "obfuscation": "Pxz3zw9XfcZ79J",
+      "sequence_number": 7
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "QTESp/ZV1z8ki+U1+RY0rec3weV/zW33Itff/04/sknVvXxCgs9NZJVZ0DEKFR7npZCJ18CFgmLuW0Z8J1FQinXP0bN94mmGmtVl6pqYZCKuAuJ7S4w3zbHNV9jDLIdLja64OrUaq7A2MjflnGWO3zIveuSF8ugwgisX5Ju5qe1HZP54CaT5K+mpbUAOhFnrAwsGmx8Sbuo3tYNkaV6cF2yI1Qxp5U0oEdqfwD3wG3cqTNzZ5UpJ5J1wyWhbiA2U3YJnAlm2QCYj6VWgYXG/dqu0mioiiJGQwKR4CLGVaZbeKjeWjsziHZmfCkC4t9LFGkz6ly7WOSjBu+XEdk3VPuqSbN82INgkEhARysvn5ZNCEk9K1YZvyP/YBWjLUT5CTtiDOuAmtvQ4GITL1fSROiI=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " tracing",
+      "logprobs": [],
+      "obfuscation": "rhvVGSze",
+      "sequence_number": 8
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "dU1YPbx7irloDbtK0Ss5edqqpDTrS+NrR3caRE0ufHFtWm4Uq6Vfd/LDDFqVwy27ASDE5kdwGELqJg69CONrywGO4doCQbGYWzi4uF1kQ1KPREd2qjS+fq4oKzn2dZcGFO+Dt1x39bT8OLvgd2Bfr6OWMtk6JwN5cj/mM6G5/72xU5fIa7KUUs2Rmy+bdm2gPZ/Zh4gC8QZIiZBIAmijix3LIvXreH3WcBjqIupeBSATrcFk898ALKYkCdgSHWSP0dMQL1XJRfiMhOFbedoElsOTFa86xbgWykx7n3vFwxMpzcHdnqf68KSs6I8NEXjWrlQj/FNJNDC++9Tuk+sqZekeZZ2nXB9nZyt7N/vs7Vt+aahESnW/Yl+pTDZNwsMtV16zkfL1TXs7g9YzTjX3QZw=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " where",
+      "logprobs": [],
+      "obfuscation": "LdFwrjjebx",
+      "sequence_number": 9
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "ShuFRX3D9IpUlSpsDLLYHy/UWpftSRkCcHwVMnlaFg74vrCagpsAed9m5QEOJEUIQDW+g+z9MqlcEgBfJ66lJr/CO5GgwcbZeHHgjDhxLhXc71kL/bvIf30H55Zw1mZNCWdX7JiZZj1zqJAPRADg8x9GtsM5gBShRALIZjtgGFTBucuNCF9N1sCSbJv2NeFRtcb99FOVh4j2VKnU67WZEtLgex9OxIUnpfifbPHDqezBw29WaWa4KMNP4GNeLYY/tnuqkL+XcIlokU/ExWKPjqlLJJbY4yUCuJcAN9hLkvwCk0nYqCZPxZo6w9oIx3W+C/HPM25F8vuYxQ4YqsCWWnNSTuANTlpItigEAG4d0Weu6nFXJiiDcUz6rTCHn3A6xlHg5p8Zc+5KZ6W937dP1nU=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " Cod",
+      "logprobs": [],
+      "obfuscation": "Yupc3nXND3cT",
+      "sequence_number": 10
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "Tc+hF6CxYy+G+0ihgNcULG5I0FGPI3fJ3wy9+hA6gPUJA9M1InCIbdN6WGoed4KRkg1TIG3QApH9sG/YJe6yF/QlXdessROfzM9sOifuioOSk470+nE/dhrv0XYRHfjmA3ckS2J/xI5/cf3G/zp6Kud5PLz5I3gJ5UI1djQ8Zrs/CwKQLikBghBkD0EWAuErAlVkEUJWcNtRs9IAwU8X7ksWxsJPj6RXjWagwBJWCWFyWy+P9AzUirdYXivWLUEu6j7MNZwV4xRqg7L6K4E2VwfL8LP3+vdV9T2dIjCcf61I6FXdP/oIzySont8915UbmYyBMH+3JZIWNFpYyu2mgGynxbcpGqGfIYIsIZz8NaU995DNTWRDTWtEii3x8PNjlfLFVL0SM7G6LzS6xHbIVhE=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "ex",
+      "logprobs": [],
+      "obfuscation": "uuMRLoNdamcWBl",
+      "sequence_number": 11
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "Hm0+yc0IVIy2OG1z9RLIH2ZxU6HWboezm8a49douYdVWJZl4r6ApqDIbOEQ8ns2bdPdOTTcFZt+C9C5UtQeCa0gB7aFN1YzTjUEWkLsLXF8UGchKxC+aWtJatcw0bfxdog1+CiZHHB0bqPdCqF8jEnUkIGBOK+c5kTT2XxWwWH4Qhp1vww1bGvDfXB7w77hKX7YGdBzPkfuX+qZzRsehu3xOAvVJUqE3iRdOkubLs9FvS/3PQwuJ6SGhym5OMWaGVyozmWvrdnRWp1zOgLEEFJWX5aPAL0WfZKOS927CtleXpA7dqV/snksS09pMxX4p3R8vT2BLM35va+Q1JVmeQQcmr4jnGzPIPj1QdbE2KIKCaXpyf2bZoQnaO3rrlBjT1RVkPyP1NQbTBZJ/qIjeEaI=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " asse",
+      "logprobs": [],
+      "obfuscation": "iNVWYhL9hA0",
+      "sequence_number": 12
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "fEeLPFaMDj+U4nA4r6WDe/ybDIvcHfDy/qgCJBou/7OkSPduE3kxyuF+E06sAHaL03vkHIRaR0t9nkUM1TcpqGF4w1Ix0x1DsPgzqJRCQAZ6I7hbB4k8cdkLaEsZtQI+lZHmOpB5qPc2aZfiSNPgsQM53JdOqDeh00qZcQG/2TB1DoygKrs0oNHk026ekCBSMSPHlMnviakF56s6RgM4jNANz5YZnisUs7xprhLUf1I6s7D4r9lZ+faKkqmoQApm+UeQ+hffvT+J/gJ/BP7r9vhLKGMUJaHxambtV2zF3f49nwymGWIOH0YQr+mrzB30vws7rHobYnFh5Mhy25pl4+b4tqtk3cOKDSd2i7xItVLWJKK8ffpvRq+YdLat+Z/EZv1siozZ8j9MNPC88NpyGrc=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "mbles",
+      "logprobs": [],
+      "obfuscation": "U0vQWezQABy",
+      "sequence_number": 13
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "HWs5JWxQtyp0L0DMu1udZ7cdrInPPZrLiDdKEVWzXRxkzSSgA8T1zdXbtBiu98WQjrhZEp8+R24PL73tKlnoHrGIPrtwTLGhRRgdswnvxKCY9v5iqrelscnmBGfE4V4Ax2wHuYUbdRHs8MlR/IzfsqBtxPQqOH7KHN5rEjpGWRxzmkrldSUlc0jZPPjsTjQ42UMN9x0TVxgLZWnrInGuSFsS4VJUVeuE5YSbb9L8aJ4S15XZ1jwvXkUOfq6dekSb346QLdRAnhSSRGdCmsqx8Ay15IsUfSn8V1TTkdXphxX/bId/ydaVKLjI49564oCHCwlhqbRw74S6OwShHn2Fgj+SyDSo1w+O6XJuP2NKK+uQb8EHMHg1XVc4u2YfGRJ9N6IRGeznSUSZm7URcsZ1IdY=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " the",
+      "logprobs": [],
+      "obfuscation": "KYpMFKjFdP3T",
+      "sequence_number": 14
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "jbw5QC7NYWmI+my5xnR5pOVjKL7m8/Cil5Sno+ExR+weme/AlbURrHAGyBrF/Wc85zBbAkQJZxDAuj1UmXqrivwm5klfyCnD3mkZ91fsG5rPodHe5w2Dq1gowL4LtlDR6i0rarmWDDC/GDonEwdpS0wD2xRXWPgl/7QS9995XzmYiQwlVRmrUdjWh5vhCswURHQh0ZYzAuJuVuyqc5tYh+/JY1gvRb5wl0gmTKPberd8vKlyGQFfXbI+ITjnFKvJT77s/HGavjgSUBg9oyqjvhk7QN7R3tEILRMCclIDPrn/S3oaXUAWfctvG4qD+HAOR6GTev4n2J85QEunvBd6+P9TSoRjNfqI89OwGvqPApbWogNDCeAHdViE/EqCSDGEDrLyX7D9I+m8xkEmprY9sao=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " request",
+      "logprobs": [],
+      "obfuscation": "9lBXYu3s",
+      "sequence_number": 15
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "gUSyiU8DFvUOpIbL8NvldexnQDLYrlFL2oQjngbsrlo9UMYhQeMytrE2JCNEey0aSDZipOXFceyB4Omggo2aociAfNEvjaVLgORELpJwIOhyXqUdt9LacDaSkM9nrf2MRB382KGCuPE1U7tGMrCAXFz7BxF25cUsSWo1r/qSw90aGVbS/knyARkmHzsZANkzai0ZUIOcsmThP1OSLigVJj0rfFMI5w3/GJyh+c0S5AzJ5PPz6Kpv3g54kKUUm5+m0tJ++dpfV/1+G5XUMddgXWGOuJIIpR4nOulg9SwwItnwuSVOvykkifWT8SoF11ttvy/9G9V7jOM/5BelVCKKEi7c9L9zPnS1sdQCuxetfVcsp6uhYLa6tNcI/8WuV8fuQpF+ncQT55yagj0Pnh9pQxk=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " payload",
+      "logprobs": [],
+      "obfuscation": "rKneWWUA",
+      "sequence_number": 16
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "NBqmEb3Jl178dXH46svJEFzUWGSeExsqrbxiOBmCxEzsLVUJvvgRCAzoRlGOeZ+EtoYqwmZtXlBFCEw0WyjcouTrXUFcbHXy/U/YSPTYQJaW/HtRTE0t4QBIR9nT6IqCw4rVeGpdUSKtO0n3UNRKUQHqIztJDk5jEhwPzs5kRl2lQ1qujAh8Nfl9NCXKjfLy576cVfXHVOMBgHTTai6cT0Ag0uH8emg9J6KVtcgVQk/uhaTlfn2veAbkufIaK/j8eMegQ36Kg2LjenSjL+qNvHz2iPNaqdyem8v2m0BrTgSwtfoo4yGXz3SuSbqvBTr6F6sdiy8bFRMmayFPRGbeEgXbAifgZ4DddygQ2EM0pO5+IPU7T7NHgPkB0wxW67GI2R/RnaZGOQi5MtV3r7zrWNI=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " for",
+      "logprobs": [],
+      "obfuscation": "xw2sRkGr6emw",
+      "sequence_number": 17
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "5r0fQOv2GCg0X4csnW68uSMdJxbLC7PGgrIIDH9uOXMeSJSYmhx0h1S0FujibhFVif479noFYpuV0ngadkJTQCnBDxBvx5o6ES1D7YONBtjbR0zFLt6iMFhwgh54kjl6VdEthK021piKY2HvP4ctpCHsIhp52cidK7mLuZCKU3XIBRqzvcHaW8xWgO41FE0eYrYNvcFBEm25tqzbDLum2RG7npWNPUiuR9zJzdgAjK1d/5tKbvUE1m6yNU881jfZeJF5NZ5hv8wAbJzorhkcCL9OHrUsEjNSmupQh2Z2xaUFlCyLTwZDmiOyAaozFEjAiU+Ci4zRTUjl4pGlzyiMqedeuQDaT+WlhcTuowTNQOmi8bRNHrmW4AP/cVpDV9sSciRY07DTts0Sh61HVV9uU4A=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " the",
+      "logprobs": [],
+      "obfuscation": "AdRnqDanpLd3",
+      "sequence_number": 18
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "pm4xzOj0xgsxo9qUNzwtuRUVc16t5H+xjjsb8uejnFFCmEoWbtH8YUP/gLkKIHHZuSDoCwpwF+gxAg873AT68+RXAEt9kXs1lin9D+t+n42aVRT/fW0jW20/bRvNg9HmO39/dl6eHrZFDnHDButd2PC0RSj4UExrLbhkb2xeKRVnaTNDTESXRjpY46Rd9/7J8/U7rVHGLQMXrm84IpI7BaUK2k3X1Wv7fzkfcd41rRDoslnun4afl21HTZleDTaP7u/JTXjoFtX7y07g9Iz5j8N8hHfwmt7Np9XKyREPderAwj25XPb5DiMO5Xq89JopPRKJg5J0vciPJetcWiGX41tYztbbUsyO9DGrjMGK+ZRDS9s1WnUj6Uu4SX6G31BAw0mOCzqO1hDLw1wuwuJJXD4=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " model",
+      "logprobs": [],
+      "obfuscation": "emxx5Yw4Pj",
+      "sequence_number": 19
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "r+lfggFbMfbIXRi61tFxbIJsFKe5WaTsT60mkfKKp0aE4BT3YIhXHpueVs4H8TXiFbryjIDRntW7xa1PUaWXXsUuijiuN14mPu+pci4XB2unln2U1rOFB979Q1w6G5tM0gFgFtrfoGGz69svpw7YIeyPiIWKOFkFjNujAWlo0ODKKcUtyOP40VJhW/5j9sJHpnVuHhoBqeTunzUSbvD0y8onGqOCPaRYxBaUkDqNHEFXm4rVWf7q7PSVMO2LDf7JCmYCXmvmdJIP78M3XCN8aQNs+C8OvpgoATWerpRH1alXHat//MjflQ7ghv2xmwespwt5s+qdcOIjLLFwRLspADpZAllLfX5XgaI45+eRE+KqorhAodSoMcbRTfvnWq1dZmsd1C5A2NURCVNDY82AM+0=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " and",
+      "logprobs": [],
+      "obfuscation": "6Sq28RBUo5pC",
+      "sequence_number": 20
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "Xla/TH47kZc/7SrnuDRyvMoV0a05Mn41DjZwRkYC4WWZL2QAlF9S6dI1er5xXxONxPn2Q1g9V6XuyOjAd99DEyth1xuRnY+rQOobXIA9Z2IkxxAbnXF0o/cfFLcXCpKVIhqqZHjJ+dkcxB8auVeDGcoklQRdkiPPS702xv1PDYzkMC3h+lLi5t5YIDQxe3iP5Mtl1P8j6b2Uxz+LF00sDxn01CJAmSYaChhq5cDDxDsaNUXf25FmoZxKmuLQnQnMaZMUYchvA2qHmPo2KbK/zM0bIBV6Vzk8UTUy8GQo5qVnhdYNpFFmLxExR8EiCTdU4KJJf3wkuIu37cKHdeEKngi63LInieTXKRWsnfV/dVdsC/RGtGoYE0wnBs4LQJ5FCXJJ3iM2mx837nv6Mj/Y45k=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " where",
+      "logprobs": [],
+      "obfuscation": "zNcfl6ajYg",
+      "sequence_number": 21
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "y0B7KcJty6cqgtn9xlFHGofpNDIE8a/kQb0oIubfG9Q6Ey6lxGhnYwmn3n1mMkSXjTEiCnKSO2+IjohZZHYpHBUjbRWxQkwKZyEPMp0SUueXlZ4hAkhKFuamui0zo5riNg0D8xqQswGHNkd9QdIcQJCruw7roYvrrCE5o9wqvm40OsspHkTWZLaKwhs5xwlpZvhE1Ax1W9+4ys8CBhig/LOEprzXRM1dY+Cv+YOmBTIQr8bAW+30bdcOO8v0D5TyudYrXgI4mBRNrdIHF9Jl21lLbdBKiGAGXbJG8wEmGxhc+I3oME3sPbau10D5kXA5F6H0+h6cVptqxKdWlg8BO4w9v7VDuYa4whbYz5rx+MF3jBAVycA19EDUto5d72xTJApS04SGfBT+QPVM1VOzIdM=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " the",
+      "logprobs": [],
+      "obfuscation": "cBTCBaj4trnb",
+      "sequence_number": 22
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "S8HuGvB5bjklje20TD8XQ90+1067mDlPpH5AdAAqd/gGZ9wvT0J4fxJgF8qOz/hRK6/usKVr53XHfUzfgoaK4pRM2nWbHXkEwB2rI1EZYQtT2pMWVUsb36IKnkX8uDeC74JTAeL3U69Js8vrpMOapxPS1mkMEfr9XyNo67zFqffMBYBmQzt/xAPP8MLHWd1EZ0zy/NWmKsCemRpDocUBcCfdDhXjAb5Zd2+9/iHkcu1Z0u07kzox1EAJKyRJbXRYYjglEWS78zOGoWwutnphDaGKSE4RTW+0baW8LOrQfGJSqOxMoVlCGaGpbnfrMOCb4Wi0yUeP2Vhhkn0zIzZ+U9NHTKKQXOIXjwzkEHb4HACu9ugGcrovkKixW4lgAtK9AxFIygC2h75GEX5zIgdD9Hc=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " final",
+      "logprobs": [],
+      "obfuscation": "vrS7HDcikO",
+      "sequence_number": 23
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "TNlP8G+zHyFWDfOR+qN/k8wSnIs1GKsNJzoIM1XR3IYgy/bVScBVijq01G916t/DxkKy6xaZ3plt9V58o+LrKaXWM1ckmZBStwZLpB2zXHSdCR3Rj07cSGzK7phtz/KQPkH+4g4L3C+3bIQ3e4OdcSQbG5grcGZ81d6on1Qu3XxrUs5YJwx9C5Q9N9lioOqRWJGOhE8I8Cu6anG3hIDkEGHcBb5hSCjXub9MTC3JXtr8b2zd7hUmWIbpi7iC8kxkOC2DLe97CagfS/MBZXQvftSFftZJdkvJs1NdNZ93nWWozWoEZw0P7WzlMXOcDK+lgj6V3GrIx41xo+ekjJbz/CbIvkLka2zZnQJE2wlm16eCVzs3NXSACBOyD5FvREGizTihbhOWc9F6tl0Dihh0He0=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " prompt",
+      "logprobs": [],
+      "obfuscation": "g2eDAmFFE",
+      "sequence_number": 24
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "MkdjCfxYqMTggd/3jsIswcCgAnnwP/PTjMMylGVJXEiTeLtegSqFxUcWeDKK6EJmUCiEMeISfFyklRO4cp6wUq4Ak/RhVDkCyaqg2UT1Rtx5Usb4ALAVABkvVII/Piteev3hSSmM4C+JZzqCUjiaDRW1BXn/+VVI842Opbe0GMzPDu7nNsqK0t6fIA3Q0aBubux9nwpjGdfI4DhKF5u5uYG/lS69Mr6OMpS29fbIGSt0KcFL+EmTL/CCayxJSeBvwx+1QBUJk+/Z/0zkWU2LQhezJ1Om+Z3lmLFGWvP3SnuvVoGS67iu3RLeN5+3a4/lSLLKrQ7KpXAwqi/x+IHpEczC3EFgQjK35X6JrB5ym+Dutd7MZVcA3mBhJFxYGcMMcrx5mTiPooOKi+prrNXndHs=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " text",
+      "logprobs": [],
+      "obfuscation": "DYgtGlRoXm3",
+      "sequence_number": 25
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "dHAk/iQADjwCU0/9ALQH9sdkDcC5HqLjjHH+3dWLM+tVD2skEQzi5PDOYUMENYOk0hRcKZQHLsc7cttZMEEpckFB/Wf39Gyv/GOnTIgcd9Q2ZD4Luz3d3TCHBB1Qeum0NzeU/+ZzdoAJv7+xKJ28amtroC79U1e02hVAqLhDP6HV/4JAIWueGeDR3CpxaHfflLHh/DueNfl+gJ2HoXypDO7b75ZySpXWiQBbyo6M989kn2IsoPCVU1TYJ1YIJ6nVR3L2LlzySv+ZvGMCYJmKPbmHN+w5h2GBF6q0rCQ9AynE4X2yqPAyw6ixo0C+1y2ED6YBEIUd+0NMxet+yDcN6DNCi3Kgd1mSXB4ECAR1QpDxsq+hRA14zIK/QegT35dEczn6BfTQJDH96VhogT+yDJQ=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " is",
+      "logprobs": [],
+      "obfuscation": "DhHGbsljYSWgW",
+      "sequence_number": 26
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "JJg+qdaqSBM1aUdin6eTkh0OAW/wQ8LPVps8aSLNhqaohJCSrxOnkywhr5/aI4hemrkS30WR7i4GZoYqyiPu/W4SI7W+Vqk5vcIMUGoFgcAJqvfEq0EHd2xZ+F7oueGJdckNqB/TfbyhuruD3Kc9NfWehyJXeBqJmrDIHYUGMQXUid+UVGKlkSfg0Y09O8hY2CgFEhd2eCUbiB7ZHFJpqMy406/x4jKRMmCarzkhuWTlTxSjDv+cxKJTIjUtPKPF/b6lpabSgGNlt9K1VtJgm0Q+edswJ65hv0rerNzv+r9Lqlhazlt6xQ72oKTTEsHr5zGe18wR5LodwZB/hvJfWaDZY2SqgT1pri/U2svhcRDygnSBglXrr1C1ZTNawFpr/140LQQVTJ85aqhjzrm1mjM=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " composed",
+      "logprobs": [],
+      "obfuscation": "lNr7Ho7",
+      "sequence_number": 27
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "x7pQVPOwnA4ZfjAvBndw7o7393nCRno1/TNmQNbOU4JrbksvSlTmZ4vmkRhyk95NBS0GZZjgfR0o0dVSeEKyVn2xSNl3jlPKQKSMXlADfTne19jMe1OABuTrA/y9dcApYBNOfBvLKBob6y83Pqb6WEcQmEgiZLogXZE6zygGc2unt/LuSY/nSHvAjAWv9+wEH5YCgg1oNPmL6wCRTfCob9zUnx8g2uU/RopcuuhYiEUgeespdOWJ/+xMNeqvIa2LjtM9EilWcf6tq1maMeZZLbg1A9leQh61MEeptBdazSRtOus+wHQVfHZnkVDl1HBGvETAF4k22quMTqIGv0uyvmz5TOx0My+7LMgAJdjgZ/CaZu9xyQvPKCUy5aazGmX3LouhR6ypFZQLLB5eHXVHo8s=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": ".",
+      "logprobs": [],
+      "obfuscation": "TLFOOn6duAQNO4t",
+      "sequence_number": 28
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "38cJefcbu/y41eYT9bXT9U/xMkO3VXKq2cTV39m3MRPt1jo9oG4Dtes6NovL3iNST/OdjJVA1l7wBH5/sKeuBL9wZ2rd9lisOJlxBBmB1RPK2keeHhKTBVVTpSOoUzq8VjgQRsngN6EVws09gPgMN/I6be0i89IdcpULAsvGWlG82TsT0hPp6wHizXXHuwsHYG+t7VbqnR9QbQ0jr13yYyMrmc4UjkWd+zDDvzX4e5T+L34aQvAwxytMEm5h7kO0QNHNxnRQobp+5E7I/L8YfgIBk1lOrhllynGiQddqsLG57PbAWit6DvhufYeyW5r1XDkASxQPMP9JG5XVZ0yjQsQBhex4yqksbFzogbIxqTY5Xiy5IluCOK1pk88TXq0WgT1ZX/ydvO5PPgBMZ9/b50M=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " I",
+      "logprobs": [],
+      "obfuscation": "Eb45BgOy7WUsed",
+      "sequence_number": 29
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "PWMQQmBz78AhIZlfN3S4WCInA0uj4UhIt5Gezf+o1RdqIxa4v1W2dli8Vxk6t2gY6nodiJJTrN7opqTzf19OaSJk+MjVuA75+YyzHGEFEMniWdxdVP7DGgNUSfECJTgvglNNYPhS9CH2EnMlzjOFx2CDkNJ8rEF/BEkLeD/JSNCXtL5gJk9Sv+H29bUw9W4LrESQCTl3Qd+DPDJHBg1bjpttlMU+5vRam2LbFsna2SgtGF9ZkzvoMU9dOvYTnkZrQaiM5giqNvN2DTo67NAH4myjLKl3niSB0p37g67JtBqydLAI1Tgm1FgBDdaemexYVVTL3ioUMbiGOw1IBYad+dCO1+/rMKRGWqUjhe6fZwF29Kuy7bRQ6a4znxrarurKSbXg8YapslRijsP48sNQJ3A=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "’ll",
+      "logprobs": [],
+      "obfuscation": "IZvd7H7uUKnFS",
+      "sequence_number": 30
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "eIJX6oWJ3Q3Zgd9CEDjKG3dxUppsDOGkg5v7sHMpf8Xxd7gNpnZDkbhKYvqtF+0nTB5vd2nLAjA9G+fnCt9oZyNMV6qsu2/Tewk99UsOIWSyfwScHsGob131UecIIOILbYHvWB5ABjSFx0b1CfjqNgOLvbAy5Fjbx6CS19vu1C0Hsz9Y3+3UKL2bzZVpCRiUcYB3y6TbmF8nZUKaVMoezTgAes2fM5BKRd8UHqRf53G6j0GhG+G14pEcN0kBzw5/1IsSwHt5IbDxW50eNTaW1PEGHMO9EjNEKckwxiXb5Fq7FwxixDZeBXLgZt5Jwjdtjdkr+I7cNdlb5rPNNguiPsI4tN6VrKMaqM/zkmLEur33fvmJrXKcr7NKNMhu1tRzOr/8hL97BCvH+Gx+Hewlr2o=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " inspect",
+      "logprobs": [],
+      "obfuscation": "gFaRn4ra",
+      "sequence_number": 31
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "m02QxCrrCNv9BcW8eFFSOiFF4PFcyHOTx8WHaJAVhhZ2V0Rh1L1aSYoEXVpwyKKAgzG1C93lT26V7G5jtywNfn6/4LWGfjpSz2e5wel4zYQLNKkxFx72I40MvnxeYej1SyAghZjrGLEblA6z5k5Fvw8mDvMXg5oH5tAcLZ/Lr2YrrxP2kPxvia6Cu+8wkA5w1k1bSBZZo9NAuY/GI5580pXN7QwINAvu8/sf5SrJ4Zs2uX3cFNs8hseeY3dJftb+E7EDqp2e+1/HX1U4iyDcZaS0YdJQqiylIKfMCFzsztWzhTkcGD24XgKMkiMgnkCnb2FxtF7WZx9gyFul3LLC8IEry2DrHaVg8aZpaEpmm2xrexpPUM8fxBNwXaM2P2Daz6qt0kx8tcPeaNhjSVhAkWw=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " the",
+      "logprobs": [],
+      "obfuscation": "XVnfmnOK6NCc",
+      "sequence_number": 32
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "6Zjozqf9mxK9Bq53Nx59TB5ALhR82CNlPf7v4UJ6lN1QcRZdtlhVzYb4Fosctqlza44AW6A/jJg2kDl3QRVMuilGtXg06p8z5YOAFRVDr0PalN+y7KOId1yG9dFcrRJikT+1GBlO4DXMRlro44j5dJi3pFWQnPxhPnBSOYIBqbF2/sIKRQM+eS4D/wM4838zplnnhzrzK8wr71M46CVj8vJQXbYOWwT5IKa521BO71EFuOUNOLa7BwM/QlwhHeIL9Kbq4JogapTcyxtM/K5labqu8QWk8iQy9gJg5KYXpTzdGWew0dyKJqP9cjXaYmxMlvgsEyMUF9DLMFP5eilfc3ZaxeRxpV9FqrgiliW8mhFENvxvZTLSHyE4zFE0ZSLlNSTa1F14cFuS/KItQ8EHswg=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " Rust",
+      "logprobs": [],
+      "obfuscation": "KiXDLUBWQrn",
+      "sequence_number": 33
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "gtQaoEhbQTddTY31R8gvEwsQo+TmzgwuBhqc9a4048mERXBS5NXaaRhZHKkm9De/r1HdIT33z3pxkB1IDS8j1XKrZhg7RvixAXlAhg02mdLxY+4dEn/Fwl5+E85WT0uE5LR7dLQ+3Y1vFFWeqWLgLwB5ewmkhKiUlQexda2iY4kZiIfE9W0bGFQ79ZDeRGghIhtDwlDpGIb18h1A3748RAztOF3hoMG/fqXT49YL+tCBF8bLt6hqhWM+OFVl0TQdQPDchncNceczj70Kn/31FqfRU69xLjihhq8EcPkLHx1psMe1gVRAIDTL8NJ5jEUSg5yGbN8ZgDpnAhFcaPCLrkpCRJj3/DN1m7Fl2cq5XlZgwNQ0Mu5poLA5nl8cQq/tldnoptCL9mxop33XfUsjgGo=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " code",
+      "logprobs": [],
+      "obfuscation": "ffm4NzOmYjR",
+      "sequence_number": 34
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "I+1hejJONU0kPE9erwfP7THenlIF/3pquF7z1C/MVhG1jzZqTdIIskgHL41dBI98MAbM68Yc/T+I01kZREyWu5R2M21AqCmItoNf4eLN3pSNIzeAP0/RuDRP7rxP6pQ5Qvwy5BC7bSX++qoKtvxckGaIocVkv+fTpOiBixBjEvljCnlQaPjNPszTnnn3MktGfyi/8gGU/35LNApWHwUfSw0DGc4oIzU7JbuHKeDMGklfpsVWC089mUvr9igbEvVSiw8gTW+TX3fiKGZgZP1+5TZjKemw5vU8D1Fghkidg2mKA1uPvV6+M/rKkmVDs5n6nV7f8hQA+A64x59abz9PZcQqt9WbGculL0+JdS0GhMhW/Ikjv2XLBSwhvze4WhYjPMSfmSJNWAJGr42pkj5/WeU=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "paths",
+      "logprobs": [],
+      "obfuscation": "ruAKRwu59oQ",
+      "sequence_number": 35
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "nkZbGjEnYiJpA9cwPGlEEs3ESNjYm1+eC2R7YwuMfFvMif5Gf5mkRFLitIs7QJoaChyQjpwJDjWTXH33g0FdC/IjlPov3eWa43Ha8leJqtP+DhYuF/1bU/NdlJAAco0Ebw4c2x+O/2boqdFJatU5tgMshJgG5uAStq9R2Qc98rULdGBqx+55ltHwQ65d5gl0OpAa2/VENPAcdAjUr1vKtia0DUqvl87TH9GTYC1mWXZ4xJWbuyVwftpocI50iTv+QlOEmLhx3XrMdudxctpZhYBD1g+2ECrJAPZ9R4lDs37LviOnH6bfz9fBno/RQcGNiIeparZbMRnB92vc3yxta/OS9xJGZpdFNU4WUFNNl2vF7KogbgKq2pTD4fKb4pdEROXi6PWAwhl9/qfEh7esLh8=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " that",
+      "logprobs": [],
+      "obfuscation": "dELOGpwFcRy",
+      "sequence_number": 36
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "PQ+m/csr46yUln7DDVvycuWEGGATLUwvlBlJejoEt7s/EBkOh+83orlE4RW991LsI2hjqLWt2TH/IA8HYE90WlHljj2P2y1lUX+FP9Aqpsrj1FedD+8UW06pdIqaYc0egf7ua0n3+eHpKWy9O/f+fMmsZEv83Ko/ZytstAfqq47HkwrRYuTZKGkjR9ae7lb4WkMn5Oj0X2y+lS5fKeceaHQtrWcQF5MscWFbTVF5QrX23INT7d51x+aaKxlk4ncgHEYXg8npQiA2EX4roiyhXnVr3mvQiXqAXVMfaja83RAkHJ8bDn2cuNVQY9BOLnQ1T6p46hnJbdry4Obbi8cEziq6TUsaOmLXoPcATjKdqs8EvuEVFdIcyLhP//DKPzRVu0MvvofCb+xag/CHB9M+TM8=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " build",
+      "logprobs": [],
+      "obfuscation": "Z6KpqTvdSx",
+      "sequence_number": 37
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "4MTyOEDUItXrkGZrlakcXpyOO/sTquV+KN+/HGPI/nGGAUoLKifipdm+4IQRqtSBYwaK52Ms8Hzu2l0p9aAs011XTgerBaev0eyNtlqK0ZSDMpNzvsNzNun5adDRFhTfCnDiXYw70D/mI3pvuXjnf1T4PR6X7DHo2F72pYetW82HlbROubpa6EVt/v7bO+OIr4pFUF3gYp1uwVqm7UfsE99tLPomCPC9qaKViUvWmMznMhly30d9lgDpIZqlQbkMOCODa6OYNsIrY8UyOXbQ76/l852br7LdQXZVjgJnyaoZfeNc6WynXR5eSMWruaVZpvmarolXdMmFC6zt4WJjFpZtcuDZOhUtLqUdXTbyc+AiJHqTTe50+1lG2FE9t1xNj150etaNEbidKCXBHK+M6fE=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " `",
+      "logprobs": [],
+      "obfuscation": "ymEFRvez4or0gZ",
+      "sequence_number": 38
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "3IlUVoyuyIAL+sU9Ycg2Wq/l2Gl8MD2DTek1QrqC58pNwG5plFbRpR2dnzulJRMf2aJ6wumFJcNYOSByp7TJDkHYzplPORUFKttHc1Xs7RB+qFH5Fk6p0bBsXsQO7L+CNL2HIKqF3wtqY6s7GOtDbM6zwfxLdjARRFvQ0jdf7bXZyNuFv7WMSZhp0dO5AnsW/eBBnaetOwL2Db+1sz/j8ojwJS+gsr1C//6xV0RaTmRGksQPx+fpx6TxzzHsQ55tx9xU/LbkGnsw6X4NowOgKlAAfHKIQ1l54NZKG0OvjTK0LMvrTitiam4nrzHoeTUoQrplxBqoQoazyf7IDwOozAhLsZIcDMmNFxPf3Txm9RVyDurx3qsWHPqh8jOTiibmAGkS50B98GjDsVgwTds9BXY=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "Responses",
+      "logprobs": [],
+      "obfuscation": "3tPqSAj",
+      "sequence_number": 39
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "7dDAPVyERGYihj0KGtDPLTKvfdKwIRbT2E4i23T6lhL9EbwGi7l8ZCFGBNhV1zhSxdVkcDf8WFVOaBy8Z/fINXziwu+ZgrUC7pwCPfUnfheXyqkVW/jH2zJYU6cn78bxjBtXlovOS1+3YbSN9/QkMuY1nxrUqlc66Fblr65rYikwfhr/PQg2ct2HFUQMZ8PGGI4iZeoUONo1nHf1Y281MjTch0Jv9YTwucZl7ej1FODfyv8CvPLSEDG0A5C8lmNT/PZPDnQZAN7XcTTnJNyaz2gemPA+mXY33sN0eedbyPv3703vWCRpTZe2TfiUilmO91asTcx5WnRZcubihiCRnWPzIrOtEuPlHjHdqVJEgr622Dptj8zwqNK7IJ3d74yLcatTgI7UKPMSMi7uuQ8Kto0=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "Request",
+      "logprobs": [],
+      "obfuscation": "plREco5Gd",
+      "sequence_number": 40
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "Tvc8MD4kkD9tLHUeI+976NpZTCJo5VzP2pz0IhsGLjRaJzV2KvIpwTzLf4EITA1IMP34Ya863smxoBpESmF3NzLu8JSsZFk2YEZjsFvhiIoCqjd9iXHQyAZrJs/YZ3HQTcK2EkJmrE5uWITWu+uWvLkPwfx8k0GJTlEz27c52GM9F20YBMGOXxk132SJKlBGnsh/2cTtBA87m0x7IOZHYJvrsXtbQATiHup20BviaScOA5l6G8YIzHsSxzGSz0d+gaCyzIcyEiMUz3OHgYc9REEvhAWg0CCrTJjp/mJ4Zh29KJK8JTkfLR/s9vIWIEjhNUd1TW/QdO0uYjdkysJYPq31PPHkKu8SmH0buNgru8YfvCTVls3hsLG/0COrpu0UsvIpz8+3Bd3WpYeG5ZucXTI=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "`",
+      "logprobs": [],
+      "obfuscation": "dwcOKWX6ITsdsMz",
+      "sequence_number": 41
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "9GKASK8LyGXoI6x1uCWu1j6Qw37g4x6D99EWMqx68mDFR8b+U7KIgRJTyWS3dFznieBxKW4ajAHi0ADcsSUquSYW88QZiH8IbdL31kWrU9MJrQkOPcDZaeUQncmgmIbSPIzl1inVY8avhZgOrQgGhgmdncoBK080gSE3AKNG1jARZFiwHZWvrbRctwbPpyOnWyOYitXUWC99d+N/qn9aqajnSJE/z9ZIIDFS4gBnjFKJltSkih4vuFjnRdp/2CHQOlWfvBGHwxQJ6IWkhrX7rVAUvJcdSzumFlc7+8WjL0qQJ/h1KFIkiYttHLbync5AY+aWo1kki2LFxuB8NaeCMzSoe2RQX8www9nXS8l73W1y4IUAcqML/Fi+FuTREAwvDQOoOQEMpqMAWG/oWzR4M3M=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " and",
+      "logprobs": [],
+      "obfuscation": "UQukyAJqD9t4",
+      "sequence_number": 42
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "4Y/4FRxzR9+JlE0e3r8c5sXilJmcnan1nRBZlwH/7viNW7NTMvNWmWtWEZXMN80cGnIKGcQx2CRdMB+UgkfXCkN8Jhiqyz/WrbVHG5OeTAHWusO6mrCGAqKHdcopV8L4pi95C9tSAtKgeXXcsK9wi4tx84ZAGH8D6ENNIUQYkeeNCjsp0uZ9ggt0D73lPKR08RIq0TjTYoY+w2/PV25TCfDHqTj5oexOd8dcl097bIzzKczu/TU3doXYHtrRjvxtFR3yaCj1rv2TPBbOAj2nH0ymgNHNB6Uas/G4hvvq9fiOXOELZe/azKp6JjfKO3n0heElVPbI1BADSsphVcBnQkkDD4hpkdNQ6/XYc5FfoZ/KTSg1uXPGu4MYKC1DUsC3Q0oYFwLKA7v1ydPB7QXMm0Q=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " the",
+      "logprobs": [],
+      "obfuscation": "rm1DZwLRic4m",
+      "sequence_number": 43
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "+u8YYwgFHfe3kUIkRcj+79+vn9441bSGnuK9GFPoPyPYvOP4Nsz5caE5JUYgZZwt+gJxHynIaMeTAds6rKObuGquGCAMF5gOrUCw8/x4O4ENgA3Y43D3vdmGP633j9AiacxVfhXKbuWy77A4qxXV+BY3J3Lq9WIa7OScHqsdKv1IO+Q5d5L1QpDlFbsmihaToT6iqgUhCiVUWIRpYi1avxyCHaJ1GynyKXIq5ymkyQJvuy7/2ST14nmoapCvtydH0aqY1fOolV0X5EsX+c/4x25TqozA2uqFWoprxRytWd22XQg/Wt/gQ4CvJ3l+UO9RilAcs9nm8HZe4G1ctGHGdtlFcrgjFR7slcDARRBeDMZCutHOliVIIdeXf5+OgAR6EnezzKo+IDK7atAVZk3vvy0=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " system",
+      "logprobs": [],
+      "obfuscation": "pCvZlMIfM",
+      "sequence_number": 44
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "rfexNjwS1IyrNKalHmMZ/taVWM1IDtSvjgBiqYw2PIhTtDQf1Ni46o11Kb+BmaKLkG7DGEXoJFHPSDem3Z/UQGgL2iv9anlixNzVNWZQhsAVAbFqsUpF5/AP7fNhG2niW8fcLvIi/i7GF+of+GpBzjrTl78P/Apht2s+vBQ8gGzxhjikNFuD9HyZWX1pv8IK5lj5shvF7oBZUybZyq+c1yhAiTogCDl+aCQlzrDgMMpEQVpXeLCy3L8CWLaIxja+LOePb9dtCeY6v3B5rNzNflBxT/EKpXgXcz+4MJbthtPv6waC9+R2GZWGco2NtS1ICG6APHYZxWzOF8YoCDj2inNfHPl5N7GeR9E7fbRaz/DwB8THOZZO0m0IJABGMkfA4jb2g8DCr1GN74iO4DDlUEg=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "/de",
+      "logprobs": [],
+      "obfuscation": "O31w7sOvueKBr",
+      "sequence_number": 45
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "w6Vf4uT9+RRuI/UuGldSjvXhRhqUlOxzcNBoiCyDFxqaRZ1bT2tz38Y9KFnhdloOWYKTQIZKPxwRK0YqcN9r+R8lykCmOa0e0UK7EtSHhkMKBGfipGy5LEF7W1FC9/gSyyIDlApuLIrluSLu/CX6gzOJ8fjAYdMv9YIGUKU5ezPiPfpBeyO0jdoWHzAbc9fbUWPUG65GxYu3xv9ZxTExJWMJ5tqbchMT4NLNYa/p8xxiJc0VozoLddyiDKb8HKl+wIXbZcXDk9NcUxUBtho7rF+Dl9D7+7+wK4VW+plzzdRyQiiQsb5zh1+Ugg7ms1GEvOX7nDClYJKeL1I1wVfPN5yRwas6nWNCg/P/nBEDchLCIzrUhACWtV/NwLN7CJJfuO05cMVht1p74vGII5y4Zeg=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "veloper",
+      "logprobs": [],
+      "obfuscation": "G79qHepwC",
+      "sequence_number": 46
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "cgk8fKPziBk6vBpSyqfpmLNVAOq7qBsk+u8EMvGeM3YGJaSDtnA0DMhYlyFgnz8bEzoAgcAS2+wvtxCx4/PYCi20RGX+2feT9gNUzJWc2UTf9Z/a7AEDEesesB6fwjPuXTX5cWgHFkaj9n8jtP+wNNe4tzAHiBEL0tdbd6ddYP8q3O6qYmb9SYMtDROCoEYcQB1JXFF+ZIkvx2H/wXSquOxDpN1UUGk/3D8XPF33oC+rNdVtn1aYfbnKFtnqRpKkMiDaoK8+b9hjoWEmNkDqYN8t9FdEnYIXITI1PP4qTn0yO/MinSKtUVaouUjln9U+djj/yYShopXteXEfJqvgY0QTGYH5PJnHssLnrKVqGCChCqGoEF4JXWwxDhJIeXD+Lri4wWtF58ZgxT/Yf8uYIA4=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": "/user",
+      "logprobs": [],
+      "obfuscation": "9B1pTPcQSZz",
+      "sequence_number": 47
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "j14NU2wU+ja/Ld27BTkLF/Ett4JDsOd8No+OF/FAiI6UFqXbaXRz1X/gS1fwcUgv63+MrffLR3jlCkWZSxLAUDosMnUT/6BswKmlqaMnqokH5ubSmkhJVriiLMgfmmZab13TI6DmtBsnSvfZGG7gyP0sZkexie/KFXZVBfxtXGSfrI0qqDd3syogRhEX+0QoKjeHQAQSfNpEiFGJ9gPfXIqB+HFlmIQZfy6Wd4Wl79E0LNtk4v5Ey9dZCIfv9JfeAQ59nnMDZqUUoX3+u5vItYaXP09L+DC6v5v+u9IMWDHgfI1ipG8WteH9KBD7eN9UU1rnJw0vtsA7qkGVBz4gttc7MfNa0c2yuV4PHm2zpnFQvZIxtIUbnc7c2jN+b/lmVZ1ajhUS2ZSSBQoGWG+6JOc=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " message",
+      "logprobs": [],
+      "obfuscation": "YXxRSRjl",
+      "sequence_number": 48
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "DR3szjNptxbAv6nvVG/lpUDKRQtIA0fFZyaXlcMKcrtlPDZz25yxgcFv0XxG+vH1wvO/mg+DLdHC/lC6C+kP3x60US5o3AA/HYODg4AoabZXxAgo9bRxkaiqPZrsYcO2gtiPqEWD92JUKpz62daOdzVf1+bMX/VQat3Io3IyjASiP2pbV960oi1ZCLaUN15bESBgDhOjbR3WtFkZElM3F8GlISY0gtOS9jwHn099F7wu01kT0ppt2lB4s5do9EaR4LmQNZN6gma2sChHAQ169Txcoi68y5HfHPr/vCvk3jTs5uBYuFpX+wkfR/wLybwgCE8edW6FCol8CW36th7VWwvGAZTGiDwObhpWDtWqL/3usEfqhbs5bycMbPDlh4KVrKhzpG+zLdS89E4/BQJcfKA=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " stack",
+      "logprobs": [],
+      "obfuscation": "jYS0POH9II",
+      "sequence_number": 49
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "kfWGb+30GjnIf+mzDvbnw9F9IgAOICAxA6BxPFdyiXgJ6dk+rPjD6L4cEkXpDvXltq0OLwNkcsaU27AV9t89bzWWTzwYjlYejriMqcnPY+iaiPdHoqFHMYFAKKlJCizizN9LKNVvcUxllppToO4u4qgM9mYd/55ptueO460oYvYe7Q034+wBcAyF5M5ZyfL2nkMOTKNRogELfCIJgG5NoCWwU1oa+N5XuYVY2pPOKgXqbR+qw5xYOXEVS/tTSjtmgL3Blk9XcKVcC7ndjS51KXLVHTaQbzELUteKPnWTRx6xon1ISn01J1zE7GjaUEynuSUsrxgFXq5JE8krOkSoGp+wG2RqvByoLAvr5rrrp2F0yUqHSbotnLz31xPBiOcjKv72hz8yN0jST1ibxiRcMHY=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": ",",
+      "logprobs": [],
+      "obfuscation": "BLpZw91apXvSjh3",
+      "sequence_number": 50
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "PfEjbUmHh8jS0MwP7xS6Mh0jsveXB0tQAHcKFnXq277303kwI41XQEd/s25kwX05SbTLUekILgn0u7uTtmK6RlLs3UyMTa8JRCuDlZYElAehC7WnvKPGdXy21xM1cJhjf0zhaRW6w0ROJqaLZH4OnjepAWihijoTnDW4Lw2h9TFxZNTpMTsaWliHZbrikuwoWTLcFv6l96zcq5fJsJ9hFrB/95LLV4vEy4oItvRPAi96PrjV73ndCes+2Yd38AfpGCsjkkwctBEdIJ7fjA+w5r6pN/PqQ2AeEVrceNuzKT7yIsHZIGjtSSnJcl7awW8XW5bII970p33OUvPc64jZ1RsRGzl+aPCKI4fnYXIAlFJg6SIfOKpKHIpc7Kq3QLr3/8eQI8tiUJiO13W2THpqnL0=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " then",
+      "logprobs": [],
+      "obfuscation": "0dv53pOuFLw",
+      "sequence_number": 51
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "b1hcNo/Bed93C+E3qhf9j4XiUwhrVtw4zJZrCoLkmSUw7oWNRCxxlARFOMLhwxvrQh7AiIhDlFqIDL3ACn7K1QVmXPqm5dUMs5PoirQEwTyTK7ruQRg07TcmCG5xwtCyUf+DleuLTpzj8vrkevmAt1ahs4p3vhEfy3i3+CIjs1G2bYvPSRCBJGjTk5QSiHb7PWL/XCo2NW5X6TO+5D1Ge3mZ8GyaXAUnjsCibz2LtUsVMUlv2CLYcXZ2yH7kKFXE09RL4qiuz+iU6j2EWZr7tqhW2Ja4zPjyV0RtyUuYE010b0frhV96Kjq2M2K3d+PlE0U8dOD2Oe9u9ltxgvYTv7ltz99Bdk07t6ISl76CrUrjov4D/JX7p35fyPCYnQpg5w5enSi/Pr9SfBAC7doQRtY=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " summarize",
+      "logprobs": [],
+      "obfuscation": "OvlvJL",
+      "sequence_number": 52
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "YaU+dWiFZgN3ctO8mHBRo627zYcf77oQYCwjgGx8Om0AryQQgUuGmc8fkM8MeUrmTD6j5iShoNVOXNtSoTbqS1S1K0ut6sVkS6B5Ne81FnuiOQXnJX4hrwIk4Q6+5oOIQXo8PUA6LP9zOamLIf37qRummXTrmlMsdxpZ2726yasolSgE2qja6HK/Q4SSpc7oEkg5J/eUUtUg1athcN0tlPRLSJkNOdbUgm8eLsH0rZZQBlfgiwgbDZjkudlcnx5TOKA5DGYrziotmAmMKbNPaT0+UsB0yESf0Mu1JBuAWDIrXiwn4yQsQUGBdHvHXWFedgxjBSG/gi9ujGQh4NgzDci7rqv/RpyO4CE3Q2pc5Z1kFn5gWC/AUV6dSKXcXiKYSR/wxqmBFRek4Ki9NBgaO84=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " the",
+      "logprobs": [],
+      "obfuscation": "fwJHcpnPwh4A",
+      "sequence_number": 53
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "vUEkt0EYHsHZu/NCbQT+3AVuxzxoS7qagpGk62W5N+lY9cBH5NoIrzCHWCNsrUR8ymXeyzlUptWFLOiOT67GT1EnqE8Fafp+8VG8FP19+zMWwn27szZuVC9q472XnkaNyOfRcaBfA3ZQ08We7seQMMyghTonSBOJALQeJJfi0YlkzQPz1tziaBPKqqTGaAo7mertM5dgWxQ3lgQeB8rE/WxddMXQdinVbuoYFSIueWvO8BAoI97ORxw0tfw+7qI+KdmVQuBeGWMC14zqB/Owrkn965sZ5ToFCsNlPpPq1bVhhSDzFmEAzEp1ScLsA3RJDrv6OqBIcj/aGovkrCiRHWsm1MStdnt7A7ciyHfwaMHyC/FxVxTmgzerOZzlc4vWRZMraivWE8bMxXXSbBWTjNc=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " splice",
+      "logprobs": [],
+      "obfuscation": "a6csVax4g",
+      "sequence_number": 54
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "b1WLsHqWPtwopColWv5Bf+URy0XUIcRLJgmsJCWSKLNjFtzoW+kTvs097/kDsYDf1nEE6gC+YojFkjhxnyq5aD8dksxiuch7nn/Xy238TjgUdu6RXNqzCkfeWUSzGEd/f9+rzwCbAjWaqBioJhfXw/zTQdedcn7pU9xmk1zzImXUHfKWs88XODSYH+/DGPwORxXrKePTcjOlubq0/28NsIsdu+wfQDXT/QGB59OiQy1poaIXjTEPkqC1g9xqp8/QN322YI3TnYeoi78G9MqWGvnJ/6kvmDw8KDNAoG5szVW0nutLyEa7A487vOil1l+sgvBndq3rW0NuoLtJA6NT2fTuLr1KpIeayX6/z2rZDzSg42l2y1xSvcrRddc48Of68rOWljTa8vIQEN5NtPBrzNI=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " points",
+      "logprobs": [],
+      "obfuscation": "pcusj0GIm",
+      "sequence_number": 55
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "HN22X94MeBjFJDJMg1Ob9lX47DLB8HNYLL1W06D/KXdHdQWGgCTrAogFZIN1pdDpzYlqmxdqb8OntBztexGt6u3NxZv3uUYR4/SDluDBPVWSb+4C2snAUuAshqL0y4yi3fb8v17PGBDWeP+BbunXrWJVyRwQl3hL8MSVn7urCiOgxv0pKgpab7j+kRelfy/Q1ecP4MrX+EKKE+BRnwvr9v9SSAAKmIGxyqL6UsiJCffKTEmRnNmVdySpl3xvhwhrK2Znc3cispYdETZHme47D4L0mlkrBcFICpFLPGRvpzX0UEvpCo2+79flSX5RH0SN2ObwQ33yiy7gIdUFvy/bYSX7P57tLGojeZt4ZEv1UZAyWXkgklc/loSdiJlwYNRflGcqFjKmAx12BChHPNHl80I=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " with",
+      "logprobs": [],
+      "obfuscation": "xdoo4nWfS3F",
+      "sequence_number": 56
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "D95fHkXiGIaNDfhjdo/qyFFOUEBy/G9QfPc9nVPgI3jAytQUYvTNCrcozT7TCjmUY5reYL7ZeAw8ReGnpY+HgbQA4K7aD0olssb7YeSadLdkBhfvlfOG3BQgaHTADmw/g+Rzu8Xzu38v8yGFqbrC35wbiJTbMdcv2CKxWrvG9bk49KrUn3mUc5SeZ4/24bqpA3HhT90JNTzaXOEybJDPo9T8+kQcwNryXngaoMjTt5fLklMyIwMjJtO0NSKa9KCSsBhhUDxQpzEdqCMjMIlQUXZDbfSKtLpusJBMSWNmPJvVp57J3Uj7ooaVeySjQ49CczaRZr1uLXrr1QtQ5jKvlcfKiF6dSjdHhRaSWWYUa77WugOF22cp3mZulpjeucQzjb+l+NVgnQi+wT9oz98GfT8=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " file",
+      "logprobs": [],
+      "obfuscation": "R1J3fzrqGiS",
+      "sequence_number": 57
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "dhzZ0VphwbqKaMcZw7CqoH4yE+I+w1ZMpeh57GtF63n9s/bhsKIOSynPFe9Cglm2HuXN1bg0Nsv+qQgcccMP+2JUjSbXXK50VVd/gn6PGk/g3eALv/NRbHlUGLCfTSsaSX78EGo0bnCySAp12T+1fcBpXP77tU4+Av8JOS/8D9rKh0ssou0ZOWeqRf8do3We40Ln72coa9j5wn7y8UkmNbKXKtge5XZMwNCJihrIFHD9ndTVK/Ct+iJybHiKD5fyizm5NtCyOQ7awoMpb+h2Md6vuJq53PHcOeZL7Fq3epK6KAHCBQ+OhrQe/3lDLgGapQHbkuHkp1n7YLWMgS21KVJPzHM/QtanTPoLZYan+DOfGS3q/jJsGucp/2c2eBkJfyW77BhiVjthgfz0gHVOWhc=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": " references",
+      "logprobs": [],
+      "obfuscation": "D18ee",
+      "sequence_number": 58
+    },
+    {
+      "type": "response.output_text.delta",
+      "item_id": "NIGwMj+dU/MN9iSL0nu9cTlV9fZemHY5BnvorfKFwXnoy3IG6Vjv9GXnsDUZ6AII1bRGPiREk6FtVTvVshyF8C7TfnANTXDtjHXAzfCjmz8kcA/86c7orH9HyI+md5y0sayzAgeLs5MNX1Sc68nR/XzTgRMOcr5Tj5Y7iYeQLduJvYTW3fbu9H3djAbfVm120Si9h+8X8P62GKOpfkadyHP0rnl58T9hY+aWNU3dTBtBSKi/AYslD1jlRSiC2F5hDmR8zFyb3Zxc4y4rCG7Ya+Yz35+JY4lvzBiofJV/J7/XfCLd1gX0Jo+tILu2vPSgpmEaYDed7V+EypNwH5+tftL/5iN36cOvlTtYcqr5kf+ptZfksBkaFkaRVYJ9qQoqrO6yWomsAG21YryUk3DzeLw=",
+      "output_index": 1,
+      "content_index": 0,
+      "delta": ".",
+      "logprobs": [],
+      "obfuscation": "7qiQX2EvKpySwW9",
+      "sequence_number": 59
+    },
+    {
+      "type": "response.output_text.done",
+      "item_id": "erA+EJU/2zLO25iQ9MsLLVGdAezz1ItXgIAFG5jmDI/bMY0l2IcEkgWiitiBwfNkqIQItDU/+mlq6mG6ghCSvq4cFlyg63o4JW3MVZ64zoQpoh17Ff7KHfct48SU/2PWy00FMzip+VDE6VvXQl1z+Wd8ABtEniZL3sTB6Nfcehs2rfF5WSDtmuUBGPmZKyz93OFbzl+ocNnLIsIwkKX3qXID+1++blbxQl1VmFD432SMDGJJm5Xr6O6rhkfUVrDTxkC+M6T1qqRfqBjjhQbmwuYbz6BM9/GyEowRkGMsDWcAC6ssDSGO+oMfeSWD0v2eE3ljgE6kCkokhX/Qg0jOBu226RZA0rpnuv7Re4owcsvBvyXFnDEV64TP5uLg3IMnzmKQFy+ivEvF1P3JyOumjbs=",
+      "output_index": 1,
+      "content_index": 0,
+      "text": "I’m tracing where Codex assembles the request payload for the model and where the final prompt text is composed. I’ll inspect the Rust codepaths that build `ResponsesRequest` and the system/developer/user message stack, then summarize the splice points with file references.",
+      "logprobs": [],
+      "sequence_number": 60
+    },
+    {
+      "type": "response.content_part.done",
+      "item_id": "P0Nb/sUvc1To2ZX8cIrVAuAWogZ4rEdqY5y11vVT8dPPx/lj1tqEnl5xz8LNxMIiZsRJexEy2I/NNWItyZ9ufrxcGCoydAUCAmH1K9EUGwklEpEcpAa8znBy6Q2eZn4+HRT0XlIgAJl2aqHdpcffp5OeUEbJyjFzuv8nr8kXrAi1Vi0C2n3li9HtqDv6XaY4OiYPZNACfpL8JgvvU7bWkLf8Lnk01ZvaI0cmdb14SwCXgVK3e6z62PG79HrDIuKHVvTaMBfaoo4mthCPiVAtTXYPM6pKynP3LiUj6trOSWnhmEBni2dKCcN6xGtuXmzCHkWO0kWIbzTv1auRjuQmvzyGQFfnxLisWQlk98MIs40rbd9+pyHSNVxbjyfA7WD2t/7RUz0xKWmMTXXQ/cxhKK8=",
+      "output_index": 1,
+      "content_index": 0,
+      "part": {
+        "type": "output_text",
+        "text": "I’m tracing where Codex assembles the request payload for the model and where the final prompt text is composed. I’ll inspect the Rust codepaths that build `ResponsesRequest` and the system/developer/user message stack, then summarize the splice points with file references.",
+        "annotations": [],
+        "logprobs": []
+      },
+      "sequence_number": 61
+    },
+    {
+      "type": "response.output_item.done",
+      "output_index": 1,
+      "sequence_number": 62,
+      "item": {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "I’m tracing where Codex assembles the request payload for the model and where the final prompt text is composed. I’ll inspect the Rust codepaths that build `ResponsesRequest` and the system/developer/user message stack, then summarize the splice points with file references.",
+            "type": "output_text"
+          }
+        ],
+        "id": "0WTY7yG9PsCRayLH/0Ql8eBJDKe4obBNBclBSg3oDN2WSvBS2crzzEJ7awMS45/dk63IVeFhm3/D3UJLA6RchQGvdb7XVQqZiBRr37+sQwXxkviKaFD0S+PMjXHOVBL2CI3OX0pfVW6+x11ntZ6SLkehzf2ufnk37RlukiJcoG5NoreI73U7i96t8UGYswvTJNipZD3uFVqUHROdgrw6KqaAf1v2ooc0UenEvTW4+kVFZLTGyrb3BQyOEwX/SLlwUKpmqTjVYoNHROWh8hc+wlC0fLU6knLveIqXOeaH+MlL3viDwRPepcRMNUHZjdTIrd2TvlrBuekJzR8n3KTCXHerYs04bXzoOdGFvxvsNCdorktVpey4/cKZYW62/4tPkWsOxOOEriGJqa1TawkqqfA=",
+        "phase": "commentary",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    },
+    {
+      "type": "response.output_item.added",
+      "output_index": 2,
+      "item": {
+        "arguments": "",
+        "call_id": "call_yxGFBHkbmPV8Fu2pandPPmT6",
+        "id": "RRvxEZ0YDibMY1gdMKZ6Dm/kpetCo1MVyQdcwKS3bwQhgHP6UFk2EUsDBu0jstbFB1cUwKxlgftguflb0f4UMznM8wZjqRKP+Ulgk7Zk+DUhMWS8dWRJjrxv2A1J/Y4MqBmbcr2BP/nYyv0BmH5jhQJtI5ZGFKOBCVBFekRNgfJAJ4jTt7Q7grRUdpB2YN+oIT74w8kbt0OwCc6ukpNr3oQg0sU+zkDVXdt4Pd3BqqM0I5dY2dAIPSYOAV/4/+NMeWKncqKFwLUZEfTYEJeP3kpfFZxaCNBb3uvrm2ZxHlL2U8/gPoJH3IhQtGnLDk8mwRgD8Ip1dgwmuRrEY1YkIVUktlxv707cN5Ql057nzLqkMIYgKGIXJ2+AmpCO8/QHZpD6T3gIeus7L/RZimnVwQ==",
+        "name": "shell_command",
+        "status": "in_progress",
+        "type": "function_call"
+      },
+      "sequence_number": 63
+    },
+    {
+      "type": "response.function_call_arguments.delta",
+      "item_id": "dsN1SPUOBAZEIy/CMRFq+B8HCU8dtmrlXuon9hspneRUQwRx8RjqTUqAGGaH8dpvTEAZ1Q1Tlg7/BnqIHfD+XlvOAwODS1P49HO1s5sH0eUFFpNaeac8RWnL9GwWU3ZNx3nMtwQOhTU6tXk5Hy6yNneTWToikBHzreqVNb0QRxwyAvzKOWmn4+v1CY+YEBCuo2T/DbBN395zTmv1kqwOhth0+ycDvbre942x+Xgi0nkuf3++R5xqV0vJDO/q8+j9RlDrq3ah4+DT4Etr1pcVf2gpsqdFkOK0XC+e9J0f+wW3avCC0w6S3uileP4blYLeeWuM7BmyPtyIljvOkzeAm/Ev/qlYyNDTJgxoeAeKbKh5b40H7SM3m4ZmdCV0+4K+N9zlB4ufFk7X2sNXNRgeUA==",
+      "output_index": 2,
+      "delta": "{\"command\":\"rg -n \\\"ResponsesRequest|responses::|input\\\\s*:|system prompt|developer prompt|instructions|AGENTS.md|OpenAI API|response_create|response created|InputItem|ResponseInputItem\\\" C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\",\"workdir\":\"C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\\\\target\\\\debug\",\"timeout_ms\":20000}",
+      "obfuscation": "zDS",
+      "sequence_number": 64
+    },
+    {
+      "type": "response.function_call_arguments.done",
+      "item_id": "kcYPh+pyyD3WmzGBJUeGdbZ9/mogePOYegBPIlwJr1gNWkNPfl6H75x6pqvn3i/WaCwyj0GKO0xFGxllHUL4KEpkXu6j4+CL6AzcwqvEyB8q2ZBdN0MubJxFA0acCSKHImTYej3B9rsCHti4m6Lx4tdgpDD+3gFLNaQF+Q56e0sdVLOYs0HqdgXx5imZqFlyvsogVOgggeofx8OxeKwQURWhQx01yAg+2jANqKUxF3mYPwwNZXmyqcD70epS/BQqunnVVcNADcV7N9Xf0/NzMOhUOG/5xAPn4SpXEPngxJLUjx+FFXxf4tfJShfSUtMh4RK+kfMzdZY7DfO8MPgoWH4V1KbAr8ckpp7fjBfB9LMr8vm0t0OYvzKiXN2P/DNVKhZtFkpWdseYt+iHZSl9WA==",
+      "output_index": 2,
+      "arguments": "{\"command\":\"rg -n \\\"ResponsesRequest|responses::|input\\\\s*:|system prompt|developer prompt|instructions|AGENTS.md|OpenAI API|response_create|response created|InputItem|ResponseInputItem\\\" C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\",\"workdir\":\"C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\\\\target\\\\debug\",\"timeout_ms\":20000}",
+      "sequence_number": 65
+    },
+    {
+      "type": "response.output_item.done",
+      "output_index": 2,
+      "sequence_number": 66,
+      "item": {
+        "arguments": "{\"command\":\"rg -n \\\"ResponsesRequest|responses::|input\\\\s*:|system prompt|developer prompt|instructions|AGENTS.md|OpenAI API|response_create|response created|InputItem|ResponseInputItem\\\" C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\",\"workdir\":\"C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\\\\target\\\\debug\",\"timeout_ms\":20000}",
+        "call_id": "call_yxGFBHkbmPV8Fu2pandPPmT6",
+        "id": "S8VTiDsKdWPD0C5od+bODy7SYx085084QSOwm5JTBdEpSEOEE4Uab6AnSisvMiQx8yeZY+1qW3bQF4nNn4+0voB4ODpVOPRq1I1ZHQ68nUQwXnt/j+I7sif32d8iTqE2EqwU7w3+lzLkitp1LzsFaP6ICa27zIkwXp1nWCjYrm/UbkDmFjfbSPa3INxz4IQaT1dtiNqn38i9iDVJigLburTBVkylnZuV94BdKGviIMIoWHIgFrYFallEye29nXviWRVRXJhZXGYGg9IttBxQOQpSV6GEl+9jPuxdnctgeD+t6AZwf3BFPrln+E9zcXGF7gGOb/1Gycb1VECNzPN6f+4cd2wML5uLxdyNXiIN/bq8N+sG3raivHbNNfF5g0IP+9yzMR9u27Z5gyFfmw2yOw==",
+        "name": "shell_command",
+        "status": "completed",
+        "type": "function_call"
+      }
+    },
+    {
+      "type": "response.output_item.added",
+      "output_index": 3,
+      "item": {
+        "arguments": "",
+        "call_id": "call_01kXbuoamDZlwhiT57W8S1Vb",
+        "id": "Nq1Hp4NFDQT1IC4PHTXYaQ+jLGw7UDQnQdjMezAIDA93WxMA66Ef3coiehM+Xx4HT7DbhShrJcsnHgauXE71KK7nnWIX+jo+tBnBvsgmKVjvZrJniPU6frQfh254Rj7K+0fCX9m1sQTSKNd01MkWlxn1Bd/GuniTojR6/QVCatOy36WqZ93OvkW6WYlD8NJba18mHsjAYmEmkPYPM64Ln5yr9sRFuz21T+3xR2Ne83J6h+ySjYU20O1RS9x4b5YZtP64PIOwSAlOn8xruauLoN1eFS4lKF4caTRnHxfQJiv8QvLzMiY7HY4u/81QwnPL/8uyhn1jz3OI3nq93pFla+Jq5x4b2lNa1SX5v1lTazjClWKWHriDtvrLuOOOtK+mIONrWNrPZnwmhrUO+5hTnw==",
+        "name": "shell_command",
+        "status": "in_progress",
+        "type": "function_call"
+      },
+      "sequence_number": 67
+    },
+    {
+      "type": "response.function_call_arguments.delta",
+      "item_id": "ORU9E9rbozrufi29FScq3a700NniTF9lgPcCzIFB066cBR1f5Bfc/KKxyZx3c5JPAM+jrx7zIFa5RT1GjQmoMkTkSIMQ3ETKOg4yOp4TImuaJoM0mYbGUbFiOqlZUYHQozO6dhvNIf6sf1gnwa0Eblw6kj08JrVxllQDmVK7pbdsCVsDydZ1G4VteVR5M5v/QVMQAz3DJqXASGZ2EwmubCjFV9FcSW9BQva1XDVaREVj48M+UCl+9bHA+d8kVKrqOue6UWcpP+gRbhZbqScKiW0s8uZT8DUwpJoXiOEq+Lxg4HeJFy+tN4iKfRKO2sPW93Xu5qgJJcFVRf/nk1w9cTRgGF08qX6c++ARpqzXkOj1PyIHoHtMqztbCridHCJ739KwIwIuljhbE/mYLGv3aw==",
+      "output_index": 3,
+      "delta": "{\"command\":\"rg --files C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs | rg \\\"(core|protocol|tui|cli|common|client|responses|model_family|conversation|prompt|instructions)\\\"\",\"workdir\":\"C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\\\\target\\\\debug\",\"timeout_ms\":20000}",
+      "obfuscation": "x",
+      "sequence_number": 68
+    },
+    {
+      "type": "response.function_call_arguments.done",
+      "item_id": "V754tU3Vu91Suq0jt32in+uUzf3cwPKr1PD/3VA5aLEDv/EtCABuXZMk7pFTU6ZeatmAP9+Fy0Mv/BnUA9eLKAXPc/wyx5TXIcg8IT6GffuWsSGiWJA+7hfjvPCV/LQ/hNnzgEr72X4RBbF5Jmi/KZHXcvPMxGgOT7yddEve3I+j4XXpFW788xGjTnqMZ0UhBqroK95n5e5+aUtBAK+efvBpL0lmg5NNX1OmjgYa9bV1fbSbpWx2IoyudoDxSp9LE2ER9gqe8QYMVAGmhwGem3O5b3SSL4gSpoPKt/Tv+M7KQO//Txn1tmnLbjotBxMvNCuGp8XSAw6De43OYOXOR9ccVJiyrvC/1zqj1y4XHaoO+sEv0Fm7B+PS5jOdRhKeV2UBlsFNfb2DZTucByWWNw==",
+      "output_index": 3,
+      "arguments": "{\"command\":\"rg --files C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs | rg \\\"(core|protocol|tui|cli|common|client|responses|model_family|conversation|prompt|instructions)\\\"\",\"workdir\":\"C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\\\\target\\\\debug\",\"timeout_ms\":20000}",
+      "sequence_number": 69
+    },
+    {
+      "type": "response.output_item.done",
+      "output_index": 3,
+      "sequence_number": 70,
+      "item": {
+        "arguments": "{\"command\":\"rg --files C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs | rg \\\"(core|protocol|tui|cli|common|client|responses|model_family|conversation|prompt|instructions)\\\"\",\"workdir\":\"C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\\\\target\\\\debug\",\"timeout_ms\":20000}",
+        "call_id": "call_01kXbuoamDZlwhiT57W8S1Vb",
+        "id": "dNjK2LFLw7aGliFJp+H4kxx9HtPQMXZ5z1g6Ito6e2Z+05NYwoS7Vkzy+q4aqp11tOZI9wFcci9KANBf567mbxOVVfydFNtTTCXehrM2WtnZL4mjii+pR2Xjaf/v1P0SOK9x9zAWpcXELsjq1C/7SB6PGn4kmupMkTEkDwYMvPSwxAYZHgpN9laVKKQizMWfw4nHaqlj8WrMFfm2+ejbO0MHShdpJ9OIGGaloTbem92Vj4c5sSt3Z1PFSEK1SXIw9Pp1t+RZ1RdoXfttwhIZtsiLXp117yBBSA2sHL0cUG80RMRZTkUeF3kzVearkNlL8aP+76XkfFHskswJegPiZq7GjJiFwN3I/zW8wLM+ZLPO03j20O1SMK3J1bhmYp8oHSwsJyuYM4msdDu6Ni/FbQ==",
+        "name": "shell_command",
+        "status": "completed",
+        "type": "function_call"
+      }
+    },
+    {
+      "type": "response.completed",
+      "response": {
+        "id": "resp_V7frbWrUX0Hnbl-v4dW5Iavj_OFfG2pJ5unzpiCSsER66tfdJbeeOZDm2RxlxSGx4cSiau0kMb4AWUfcPiP92-T4dqz_NR8svr2Q57ajYxd-rkP-r7sqDwjlPzkr9WXgqkWI5hyBltxoBQpNz3eeVDIsQPlG1-KsfyHCO_kwl2S3ipaFPzYgE2FNm68dSSNKlkF3uby-lcAseRKuCd-PeJQr5TCZ5RukolYWVIaAD1SvQj9N73UwAK3OJ3-p2Zrwh0gawXBik4fKpH56ZVKucs0PmxuqnWwO7xg_avzKo9_X1LtxJE1tpTstb_MX6jDW6xWBD9ccjGrp0rIiDnZVoQV8fLi9_lQp8qAPaI2IN89C7kdd7RBGCta37UJaliHeMpECV2Pe-ifOnaiR2lt4XLZbuUxUSxPiPvvj4FTo7jpEq5MiKvdB1j0lfPAEoYbWkuXVVPqnEpb_1uBaT4FADr_hbRC_frA7akR_WZXxtnhND32sfVQyUvC8Ecx5Mzis3fGMJwSW_h-uCR0W97mD1--A3mjdIEbWwi_IrhTAxLhnFykowiKBHzu_5OwJlHSwbOcF_Vkh2oYaSUGEGbbMy72okGf9BM3hU5Bd9DzJBRdyetfe_PBHmU1Tu1Gi449W4uKjIDCeIdzQIPVLDxcNytpIEo7alDL976NidMGDkbHpIteYFtvq5OCUS4-kb3jsbwaPyzyBxqUMQpAXjMkUCS-mJJboCl-aycAn781McreeRZkkJfGHy8jBIOEU-SETJNCnDZ90K_XfQWQPMyFGaFqLzXwcpF7wJcBhbwZryzUhcfZjAmMVSRNg-1psHqsV09My5CpOqQ0aObtVT6HBUHTYTl7ET5KAApL62DqPC22ubh5jdUZUtbIvkhA9KvWE-zDqS6J2eDMlN5OZqiYPVqWt_dEw_R2haI9Af1fc3poOy6qbeQZ-j1riqWveVYnSdJLfteL68aMAMunxjIQU8hIKC4ZU7ixrYyKjzUPRdWe15z92bHkme258gsBQT62VLWnOt2TamnhXk_65TCU1hCmZve2AiTURY01j1BolatvvFq1YVM4cjxogjy0U--kxgd9nY-zVQLpQrtmNkoQsE7pW",
+        "created_at": 1774503132,
+        "instructions": "You are Codex, a coding agent based on GPT-5. You and the user share the same workspace and collaborate to achieve the user's goals.\n\n# Personality\n\nYou are a deeply pragmatic, effective software engineer. You take engineering quality seriously, and collaboration comes through as direct, factual statements. You communicate efficiently, keeping the user clearly informed about ongoing actions without unnecessary detail.\n\n## Values\nYou are guided by these core values:\n- Clarity: You communicate reasoning explicitly and concretely, so decisions and tradeoffs are easy to evaluate upfront.\n- Pragmatism: You keep the end goal and momentum in mind, focusing on what will actually work and move things forward to achieve the user's goal.\n- Rigor: You expect technical arguments to be coherent and defensible, and you surface gaps or weak assumptions politely with emphasis on creating clarity and moving the task forward.\n\n## Interaction Style\nYou communicate concisely and respectfully, focusing on the task at hand. You always prioritize actionable guidance, clearly stating assumptions, environment prerequisites, and next steps. Unless explicitly asked, you avoid excessively verbose explanations about your work.\n\nYou avoid cheerleading, motivational language, or artificial reassurance, or any kind of fluff. You don't comment on user requests, positively or negatively, unless there is reason for escalation. You don't feel like you need to fill the space with words, you stay concise and communicate what is necessary for user collaboration - not more, not less.\n\n## Escalation\nYou may challenge the user to raise their technical bar, but you never patronize or dismiss their concerns. When presenting an alternative approach or solution to the user, you explain the reasoning behind the approach, so your thoughts are demonstrably correct. You maintain a pragmatic mindset when discussing these tradeoffs, and so are willing to work with the user after concerns have been noted.\n\n\n# General\nAs an expert coding agent, your primary focus is writing code, answering questions, and helping the user complete their task in the current environment. You build context by examining the codebase first without making assumptions or jumping to conclusions. You think through the nuances of the code you encounter, and embody the mentality of a skilled senior software engineer.\n\n- When searching for text or files, prefer using `rg` or `rg --files` respectively because `rg` is much faster than alternatives like `grep`. (If the `rg` command is not found, then use alternatives.)\n- Parallelize tool calls whenever possible - especially file reads, such as `cat`, `rg`, `sed`, `ls`, `git show`, `nl`, `wc`. Use `multi_tool_use.parallel` to parallelize tool calls and only this. Never chain together bash commands with separators like `echo \"====\";` as this renders to the user poorly.\n\n## Editing constraints\n\n- Default to ASCII when editing or creating files. Only introduce non-ASCII or other Unicode characters when there is a clear justification and the file already uses them.\n- Add succinct code comments that explain what is going on if code is not self-explanatory. You should not add comments like \"Assigns the value to the variable\", but a brief comment might be useful ahead of a complex code block that the user would otherwise have to spend time parsing out. Usage of these comments should be rare.\n- Always use apply_patch for manual code edits. Do not use cat or any other commands when creating or editing files. Formatting commands or bulk edits don't need to be done with apply_patch.\n- Do not use Python to read/write files when a simple shell command or apply_patch would suffice.\n- You may be in a dirty git worktree.\n  * NEVER revert existing changes you did not make unless explicitly requested, since these changes were made by the user.\n  * If asked to make a commit or code edits and there are unrelated changes to your work or changes that you didn't make in those files, don't revert those changes.\n  * If the changes are in files you've touched recently, you should read carefully and understand how you can work with the changes rather than reverting them.\n  * If the changes are in unrelated files, just ignore them and don't revert them.\n- Do not amend a commit unless explicitly requested to do so.\n- While you are working, you might notice unexpected changes that you didn't make. It's likely the user made them, or were autogenerated. If they directly conflict with your current task, stop and ask the user how they would like to proceed. Otherwise, focus on the task at hand.\n- **NEVER** use destructive commands like `git reset --hard` or `git checkout --` unless specifically requested or approved by the user.\n- You struggle using the git interactive console. **ALWAYS** prefer using non-interactive git commands.\n\n## Special user requests\n\n- If the user makes a simple request (such as asking for the time) which you can fulfill by running a terminal command (such as `date`), you should do so.\n- If the user asks for a \"review\", default to a code review mindset: prioritise identifying bugs, risks, behavioural regressions, and missing tests. Findings must be the primary focus of the response - keep summaries or overviews brief and only after enumerating the issues. Present findings first (ordered by severity with file/line references), follow with open questions or assumptions, and offer a change-summary only as a secondary detail. If no findings are discovered, state that explicitly and mention any residual risks or testing gaps.\n\n## Autonomy and persistence\nPersist until the task is fully handled end-to-end within the current turn whenever feasible: do not stop at analysis or partial fixes; carry changes through implementation, verification, and a clear explanation of outcomes unless the user explicitly pauses or redirects you.\n\nUnless the user explicitly asks for a plan, asks a question about the code, is brainstorming potential solutions, or some other intent that makes it clear that code should not be written, assume the user wants you to make code changes or run tools to solve the user's problem. In these cases, it's bad to output your proposed solution in a message, you should go ahead and actually implement the change. If you encounter challenges or blockers, you should attempt to resolve them yourself.\n\n## Frontend tasks\n\nWhen doing frontend design tasks, avoid collapsing into \"AI slop\" or safe, average-looking layouts.\nAim for interfaces that feel intentional, bold, and a bit surprising.\n- Typography: Use expressive, purposeful fonts and avoid default stacks (Inter, Roboto, Arial, system).\n- Color & Look: Choose a clear visual direction; define CSS variables; avoid purple-on-white defaults. No purple bias or dark mode bias.\n- Motion: Use a few meaningful animations (page-load, staggered reveals) instead of generic micro-motions.\n- Background: Don't rely on flat, single-color backgrounds; use gradients, shapes, or subtle patterns to build atmosphere.\n- Ensure the page loads properly on both desktop and mobile\n- For React code, prefer modern patterns including useEffectEvent, startTransition, and useDeferredValue when appropriate if used by the team. Do not add useMemo/useCallback by default unless already used; follow the repo's React Compiler guidance.\n- Overall: Avoid boilerplate layouts and interchangeable UI patterns. Vary themes, type families, and visual languages across outputs.\n\nException: If working within an existing website or design system, preserve the established patterns, structure, and visual language.\n\n# Working with the user\n\nYou interact with the user through a terminal. You have 2 ways of communicating with the users:\n- Share intermediary updates in `commentary` channel. \n- After you have completed all your work, send a message to the `final` channel.\nYou are producing plain text that will later be styled by the program you run in. Formatting should make results easy to scan, but not feel mechanical. Use judgment to decide how much structure adds value. Follow the formatting rules exactly.\n\n## Formatting rules\n\n- You may format with GitHub-flavored Markdown.\n- Structure your answer if necessary, the complexity of the answer should match the task. If the task is simple, your answer should be a one-liner. Order sections from general to specific to supporting.\n- Never use nested bullets. Keep lists flat (single level). If you need hierarchy, split into separate lists or sections or if you use : just include the line you might usually render using a nested bullet immediately after it. For numbered lists, only use the `1. 2. 3.` style markers (with a period), never `1)`.\n- Headers are optional, only use them when you think they are necessary. If you do use them, use short Title Case (1-3 words) wrapped in **…**. Don't add a blank line.\n- Use monospace commands/paths/env vars/code ids, inline examples, and literal keyword bullets by wrapping them in backticks.\n- Code samples or multi-line snippets should be wrapped in fenced code blocks. Include an info string as often as possible.\n- File References: When referencing files in your response follow the below rules:\n  * Use markdown links (not inline code) for clickable file paths.\n  * Each reference should have a stand alone path. Even if it's the same file.\n  * For clickable/openable file references, the path target must be an absolute filesystem path. Labels may be short (for example, `[app.ts](/abs/path/app.ts)`).\n  * Optionally include line/column (1‑based): :line[:column] or #Lline[Ccolumn] (column defaults to 1).\n  * Do not use URIs like file://, vscode://, or https://.\n  * Do not provide range of lines\n- Don’t use emojis or em dashes unless explicitly instructed.\n\n## Final answer instructions\n\nAlways favor conciseness in your final answer - you should usually avoid long-winded explanations and focus only on the most important details. For casual chit-chat, just chat. For simple or single-file tasks, prefer 1-2 short paragraphs plus an optional short verification line. Do not default to bullets. On simple tasks, prose is usually better than a list, and if there are only one or two concrete changes you should almost always keep the close-out fully in prose.\n\nOn larger tasks, use at most 2-4 high-level sections when helpful. Each section can be a short paragraph or a few flat bullets. Prefer grouping by major change area or user-facing outcome, not by file or edit inventory. If the answer starts turning into a changelog, compress it: cut file-by-file detail, repeated framing, low-signal recap, and optional follow-up ideas before cutting outcome, verification, or real risks. Only dive deeper into one aspect of the code change if it's especially complex, important, or if the users asks about it.\n\nRequirements for your final answer:\n- Prefer short paragraphs by default.\n- Use lists only when the content is inherently list-shaped: enumerating distinct items, steps, options, categories, comparisons, ideas. Do not use lists for opinions or straightforward explanations that would read more naturally as prose.\n- Do not turn simple explanations into outlines or taxonomies unless the user asks for depth. If a list is used, each bullet should be a complete standalone point.\n- Do not begin responses with conversational interjections or meta commentary. Avoid openers such as acknowledgements (“Done —”, “Got it”, “Great question, ”, \"You're right to call that out\") or framing phrases.\n- The user does not see command execution outputs. When asked to show the output of a command (e.g. `git show`), relay the important details in your answer or summarize the key lines so the user understands the result.\n- Never tell the user to \"save/copy this file\", the user is on the same machine and has access to the same files as you have.\n- If the user asks for a code explanation, include code references as appropriate.\n- If you weren't able to do something, for example run tests, tell the user.\n- Never use nested bullets. Keep lists flat (single level). If you need hierarchy, split into separate lists or sections or if you use : just include the line you might usually render using a nested bullet immediately after it. For numbered lists, only use the `1. 2. 3.` style markers (with a period), never `1)`.\n\n## Intermediary updates \n\n- Intermediary updates go to the `commentary` channel.\n- User updates are short updates while you are working, they are NOT final answers.\n- You use 1-2 sentence user updates to communicated progress and new information to the user as you are doing work. \n- Do not begin responses with conversational interjections or meta commentary. Avoid openers such as acknowledgements (“Done —”, “Got it”, “Great question, ”) or framing phrases.\n- Before exploring or doing substantial work, you start with a user update acknowledging the request and explaining your first step. You should include your understanding of the user request and explain what you will do. Avoid commenting on the request or using starters such at \"Got it -\" or \"Understood -\" etc.\n- You provide user updates frequently, every 30s.\n- When exploring, e.g. searching, reading files you provide user updates as you go, explaining what context you are gathering and what you've learned. Vary your sentence structure when providing these updates to avoid sounding repetitive - in particular, don't start each sentence the same way.\n- When working for a while, keep updates informative and varied, but stay concise.\n- After you have sufficient context, and the work is substantial you provide a longer plan (this is the only user update that may be longer than 2 sentences and can contain formatting).\n- Before performing file edits of any kind, you provide updates explaining what edits you are making.\n- As you are thinking, you very frequently provide updates even if not taking any actions, informing the user of your progress. You interrupt your thinking and send multiple updates in a row if thinking for more than 100 words.\n- Tone of your updates MUST match your personality.\n",
+        "metadata": {},
+        "model": "gpt-5.4-2026-03-05",
+        "object": "response",
+        "output": [
+          {
+            "id": "zwoMh0YlNga8/Q2GnPfcKT+wGA4QPJtsnEwBe8KDVgsRNr5QZ4FAmMMc4GB/k6cUEP9/94t0TEotURoQBv7tDnwdpuvLzZi9nyMdN4TmoWXpNyLPjcoUzEuusmjGGsMEMJVuTTTHgtNMVOuHRU5cWFWGb+pgmnuwOx/yNs1wFwV5yVuLYL8cmLAYMCy+Dx/boWJzGlfJAibADh8A9aCG6820GeCwjTKAsudRs86a+sAPn7gRJAPH/D+2Dbx43qlP0jD04MaKIczmwVgtVciRzexiurvEqMpqF3fIFQ5TZPuVs/ZgKfMnWUjj2FoAZ9cAHaC2AUwt7qEzbrasqoaYN4ptO6PWYpZptzYFWGYUCskMYRuwcCrsYVoKPiPPkOrTxgW6ANxj/XYGFg80xT1DQA==",
+            "summary": [],
+            "type": "reasoning",
+            "encrypted_content": "dOxDcnvHYFOAy0FpdSG1uvrx8y6slRiBMsSr2wNF156GF6aLgOyXf9kaarqw2B/1aOy/NxmsNWTU55e74pjYSo7fzk8nKGWSVyGn436URll7DpUFx947bvVoU1+Npn27nyn36zfTSGH7SibDAR9uLpV0QhjibVTyO/a/bG1Hnmn5DG1dtOcUOR04XMzD32LKILxN1WHWt5KM/si0HKyTGJTDwnPoUjJTbvdhwzXjDVfUhh7WrYosaa56rii5k95ywm5i/N2rjVuyMRqlyG+fkzwNtBJhPxZJLydh5o0xi2xUa+Fy+/M8O4CoqrqBjX4NDXFqDqZ1p2bq61weM5B7mAmJY5vTjyHrWOu2IlU0IXgIbn+J6yyUgyP58uEaHDXWUj5I3SpvhBRfmSM6e8YcjpVAzRculWUqOI6fG17mfAriZzQKRuNJnzCJ45+1W0lV2oXlriYfyne/Hv/RjFN8dgDfFgzKxPnjR1fVEX0zkHreMqqQQeHl/8o+7dJPWruxhqQ0IbSPeXtcTds58kRISRvcOiiuJmPMa+peieKKqWfOwP4EqaxaYk28b6MofUDUSMpdCuLfjaBbepbmNFyMTZRMuh4xZdHLXad8A3PNnX+nUHUnWXutUIlTwn9Vim4+7bmiw9cyDG70JBgMapnGsciFBsGMJQja5HE/ukr6oaXHrd8a1fkvf31d2NbH8u655OLxkYOFn+7jU2vbvUvOnQoXGG+69MySvPS7ARQCezshrR7rAhCMpFHBRIB7XMJQoUGmqTxANYKzBhn7ZBDIgu8/lrvCkiQGuhBFTEydkBxA533bNpStq8Wk2gxPwcJ4uf/qHA4CcspiLIWBz+84LUeGD1fqOD34O4dBXZfY7NFjAsBzbk9ewdOKGcVIrrAyPkeYjGYIVJWKoilylX+aHMhD96dKSIArtRntH1OWawD2SQZDDn4Bip9Tze8YLvOAj/ANew/nQiEhMK9l/K4av/UIfFYoTTGdu10KTvx4rzPA34mKkjWJnPYGEJmk96l6R3Jo6EErHvYr/EGDjPAsQFqyYdqhp0GdMZyuxHpMZv7mwjwQzcq8xF/7OIi5s4vIjqlcu+BWx2g17gaWiwK46nopj5oVJawKvBOXTASIjco/vTVtLs6mqjzTkrRLFWI7FLxow/e3j6Hw3eZVC4K0Oj7gQWSeF8b8pf/CWU5xqDIKOwT/MYFzmqTFhCJWLZcKSHWfrRqVDEi/MJa7u1/S1esYkjCEwlk9uS/+9+DvFHPjeMnlEs8qz+QTKp53FHhD0Otqey2GoHtQuR/44in3+w0gmzBhsihH7+i7j2cpGgWX1W0nSpmc1o4tE/f7uEnuLGsAb+FwH9klAit+HYq8MzP5PdQoZ4Avpl0ZdNs7IpwkWivgTmJXDaYNUiZQq2B8+PF/GhlQ5p8zZ0y92KFfUghSKdiNrKHWNJ0kdnKev4y9i/tPErLDsjz6KyPhstG0vnovxWQJ1saKqJ4BQBsH/EAq9xF43Tul5Mbiivm75i9hY81C0aFDyWgZJup7Xisk75LLMdSY6NCfn9paC8iqwkuwyfEBg43yDdtUjBaUfRzoJ7gWE+6x4j+C4EMj7gyd63CU825VpJDR1W5SlVn0gIoPVdUcXvXgMesNye64eTUDk6B1vCmwfdpzmJ7zHkPaFwxbjhpOinC6CshsDWb1qC5vTFNveTHcvtGjST0OYrP8Mcg9W1Qa/1KnchnToNmNWgimjDdv2n6OfmBycapmWl4QNvbx2RC/SBrwPoh69QfRe1OrDLrDQaXIw6cW+5LHBjekatQBrjn9jOdepLk8OXp1LjC/XYntoA74AThaq8RG/gEmwL3nvTlyxjV+aj81wp+w2tGdB+np001wq2dmxlMp1YZvSBnwzQA0RdMMv/rW4wE/ATy7Wqw7zwfz6IWB8Zw3XTBHfIuEIoXdacAcUjjvp2BbtMAHIj1sCpv4W4jWucdXQfSL+6kZ2+8fwO2iQELfTQ6WU7aMRbfHCf1rX3CVx3cPjxIDY0uP7mjTvnkrOcCrywDKHjKP698dhuBLDVQKggpsGFjajRE9+ru/BzG/8nj7tXCvK8g1w2rg9bYtSCu+U9c/pcrFP/KY7+ex1Xac+CTZ6VHlavFXATeui1F52REe2+1lFVc+SII5WhmVHwvuXDe/2+w7KlzEtRB4Htm6jgyhT99YpwfIPSVwFKBNTKRbm8BBLa2BuyuWXvCs+I/xfODrm75w0QjbxsMdg+7mL7VCZVmHzs2UAcBtx5Xt41Uya300OzVmrwHG8v5Mx5lA0oKJsyicMt5ziWF4JEcqYD1SZFSfrvuNlvAIY5UvTOwwIymBIOqA9tMNeFFMK8eWvvWOzAsYBfBFdRrjuXMQKk0FtTtWKPTjkU+alJ0zkXomBKoz3VRGtQoRtWaDugTDD4r7j1QWgeBcrg37YFjNwZD4nF4+SEXpTE9KxEj0U6yFzSkZlWeu11UzPUs1a6Yd0ja+fHt2UmkPoQLVGxGdkSNW6zAkdQ8dbL8ZdoSpc56+Wirh07HbUVQMFXDkgg0OOTCQCRqtAKmEgoZG13lGG6LgFUx3v+y88TUc0fUqZuWFs+StniOn8cvOic8+c0hsOOSzKMlJZDi22p/5vC7FOjJIt74bkx9CHYPcuceY0sEiZEWr8IvSJ5PDC5ezYU0LjJEZBMqVYR2YuD8ZbsQPVqGy8rF8CY6tCjk="
+          },
+          {
+            "id": "46qGA4sqZLMBGaWM+qyu1R/ZDe1+r8nCMM643If+iTTNWW5K+L+xzzD33Iu2STL/0qMAysyyUMG/GU8DOP6HAk2j2V4SnPAiP4VO+bNrtbmsf7EZccJTMPVLeXnyEbJRJUSAO7E5dGtr7bL5YlQnG4uJGtgSLEXNbp5el4CfpEiyo6gnq1ddYiDYe8kSJg/rZaUr38CNbuCeoJQOpJP2cW7un5UqTOb55MxXZfS21Qwt6mCPU30qEXlpIH0RqmlbcaEalissqdh/5wpc6qNQcYmxjVqBqOxjVz5deSMkJ5qnVpXWTm3o4SMJTxBzsS/SzhTL8v84mYKlODjsJMN7pGNCJJjj3KZtqmbsjai9NKtojKfU7GzTLEhjMmiVAoHW1fWiD95JAk4Sn5MHRCBpCNc=",
+            "content": [
+              {
+                "annotations": [],
+                "text": "I’m tracing where Codex assembles the request payload for the model and where the final prompt text is composed. I’ll inspect the Rust codepaths that build `ResponsesRequest` and the system/developer/user message stack, then summarize the splice points with file references.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "commentary"
+          },
+          {
+            "arguments": "{\"command\":\"rg -n \\\"ResponsesRequest|responses::|input\\\\s*:|system prompt|developer prompt|instructions|AGENTS.md|OpenAI API|response_create|response created|InputItem|ResponseInputItem\\\" C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\",\"workdir\":\"C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\\\\target\\\\debug\",\"timeout_ms\":20000}",
+            "call_id": "call_yxGFBHkbmPV8Fu2pandPPmT6",
+            "name": "shell_command",
+            "type": "function_call",
+            "id": "M+kjLxVpnQTLQBnQuhcubzqXp+GturGSPPGqQjVbk2R0Ud+8gwfeEXC8eTfhWDXWEpHK3ML27KiI+7rK/dxUJFvUvUweQqr4DPamgUDqItMuWw7pt3KSReYRUCo1oPDm3NLBl9qfvFmhUGXXVm+d9aCr7kYlJiaX6sKgG2/hP7vmBZHwuzed9rV6D83duIVZ4lw4w3HdCeSQiLON7AU0d/TGW27IH7VFa0ENvPpNVgNJ8ZJ93rcOZgD0UeN0se8Rl046S/AhSbbZTitXBKFKj13TQiUfDt1f0qb9u+FY5rsSifWMsguXCozZee9f1uftszHWAhEjUxXxf11EYDL/x3NjrC0WCH6QBox8U1GcSRNL38qphjf8Y4mpYUrwYM/WZZIhMrutmpKEaJ7YwRYuFQ==",
+            "status": "completed"
+          },
+          {
+            "arguments": "{\"command\":\"rg --files C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs | rg \\\"(core|protocol|tui|cli|common|client|responses|model_family|conversation|prompt|instructions)\\\"\",\"workdir\":\"C:\\\\Users\\\\wedesi\\\\repo\\\\codex\\\\codex-rs\\\\target\\\\debug\",\"timeout_ms\":20000}",
+            "call_id": "call_01kXbuoamDZlwhiT57W8S1Vb",
+            "name": "shell_command",
+            "type": "function_call",
+            "id": "sioAyW8G9chjX8J//7JUZ6hNRsfjesPKXei3VfoNrvvZ7s+RXbBWtdPOr6550Bm9wuPDQxYs3e1Q3e9B7mT9YnhPzUUqZMT1XY8Vav9+61j+06KYJ5+Znn70FbFZllBca0fSoceVP45mtQNeYf3Gn49DUOHWGhX/Qnn8K6JrxHpmMvrYQ3LO4z2MSroVeeKdPt4EngFYGGimlb+abHnqshtr/og6O4EV2DpkbRkL/VluFw2mQaz2Qur5EywqpUDvCbO6UTvWL5m3CF5QV/9aCGba7t3PAViMjRMB5uvtmjsXYAchL0HhCQ4ELtCSAkCRmW1nEASoMFQ9Wc5nBeiw2q60En+nEqQDEuCU9sLzwYYHRUv48ri6IU0ClrppLOjEd9TBH5F5kannKPa7lPlSAA==",
+            "status": "completed"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [
+          {
+            "name": "shell_command",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "command": {
+                  "description": "The shell script to execute in the user's default shell",
+                  "type": "string"
+                },
+                "justification": {
+                  "description": "Only set if sandbox_permissions is \\\"require_escalated\\\".\n                    Request approval from the user to run this command outside the sandbox.\n                    Phrased as a simple question that summarizes the purpose of the\n                    command as it relates to the task at hand - e.g. 'Do you want to\n                    fetch and pull the latest version of this git branch?'",
+                  "type": "string"
+                },
+                "login": {
+                  "description": "Whether to run the shell with login shell semantics. Defaults to true.",
+                  "type": "boolean"
+                },
+                "prefix_rule": {
+                  "description": "Only specify when sandbox_permissions is `require_escalated`.\n                        Suggest a prefix command pattern that will allow you to fulfill similar requests from the user in the future.\n                        Should be a short but reasonable prefix, e.g. [\\\"git\\\", \\\"pull\\\"] or [\\\"uv\\\", \\\"run\\\"] or [\\\"pytest\\\"].",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "sandbox_permissions": {
+                  "description": "Sandbox permissions for the command. Set to \"require_escalated\" to request running without sandbox restrictions; defaults to \"use_default\".",
+                  "type": "string"
+                },
+                "timeout_ms": {
+                  "description": "The timeout for the command in milliseconds",
+                  "type": "number"
+                },
+                "workdir": {
+                  "description": "The working directory to execute the command in",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "command"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Runs a Powershell command (Windows) and returns its output.\n\nExamples of valid command strings:\n\n- ls -a (show hidden): \"Get-ChildItem -Force\"\n- recursive find by name: \"Get-ChildItem -Recurse -Filter *.py\"\n- recursive grep: \"Get-ChildItem -Path C:\\\\myrepo -Recurse | Select-String -Pattern 'TODO' -CaseSensitive\"\n- ps aux | grep python: \"Get-Process | Where-Object { $_.ProcessName -like '*python*' }\"\n- setting an env var: \"$env:FOO='bar'; echo $env:FOO\"\n- running an inline Python script: \"@'\\\\nprint('Hello, world!')\\\\n'@ | python -\"\n\nWindows safety rules:\n- Do not compose destructive filesystem commands across shells. Do not enumerate paths in PowerShell and then pass them to `cmd /c`, batch builtins, or another shell for deletion or moving. Use one shell end-to-end, prefer native PowerShell cmdlets such as `Remove-Item` / `Move-Item` with `-LiteralPath`, and avoid string-built shell commands for file operations.\n- Before any recursive delete or move on Windows, verify the resolved absolute target paths stay within the intended workspace or explicitly named target directory. Never issue a recursive delete or move against a computed path if the final target has not been checked."
+          },
+          {
+            "name": "update_plan",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "explanation": {
+                  "type": "string"
+                },
+                "plan": {
+                  "description": "The list of steps",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "description": "One of: pending, in_progress, completed",
+                        "type": "string"
+                      },
+                      "step": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "step",
+                      "status"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "plan"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Updates the task plan.\nProvide an optional explanation and a list of plan items, each with a step and status.\nAt most one step can be in_progress at a time.\n"
+          },
+          {
+            "name": "request_user_input",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "questions": {
+                  "description": "Questions to show the user. Prefer 1 and do not exceed 3",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "header": {
+                        "description": "Short header label shown in the UI (12 or fewer chars).",
+                        "type": "string"
+                      },
+                      "id": {
+                        "description": "Stable identifier for mapping answers (snake_case).",
+                        "type": "string"
+                      },
+                      "options": {
+                        "description": "Provide 2-3 mutually exclusive choices. Put the recommended option first and suffix its label with \"(Recommended)\". Do not include an \"Other\" option in this list; the client will add a free-form \"Other\" option automatically.",
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "description": {
+                              "description": "One short sentence explaining impact/tradeoff if selected.",
+                              "type": "string"
+                            },
+                            "label": {
+                              "description": "User-facing label (1-5 words).",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "label",
+                            "description"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "question": {
+                        "description": "Single-sentence prompt shown to the user.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "header",
+                      "question",
+                      "options"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "questions"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Request user input for one to three short questions and wait for the response. This tool is only available in Plan mode."
+          },
+          {
+            "name": "view_image",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "description": "Local filesystem path to an image file",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "View a local image from the filesystem (only use if given a full filepath by the user, and the image isn't already attached to the thread context within <image ...> tags)."
+          },
+          {
+            "name": "spawn_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "agent_type": {
+                  "description": "Optional type name for the new agent. If omitted, `default` is used.\nAvailable roles:\ndefault: {\nDefault agent.\n}\nexplorer: {\nUse `explorer` for specific codebase questions.\nExplorers are fast and authoritative.\nThey must be used to ask specific, well-scoped questions on the codebase.\nRules:\n- In order to avoid redundant work, you should avoid exploring the same problem that explorers have already covered. Typically, you should trust the explorer results without additional verification. You are still allowed to inspect the code yourself to gain the needed context!\n- You are encouraged to spawn up multiple explorers in parallel when you have multiple distinct questions to ask about the codebase that can be answered independently. This allows you to get more information faster without waiting for one question to finish before asking the next. While waiting for the explorer results, you can continue working on other local tasks that do not depend on those results. This parallelism is a key advantage of delegation, so use it whenever you have multiple questions to ask.\n- Reuse existing explorers for related questions.\n}\nworker: {\nUse for execution and production work.\nTypical tasks:\n- Implement part of a feature\n- Fix tests or bugs\n- Split large refactors into independent chunks\nRules:\n- Explicitly assign **ownership** of the task (files / responsibility). When the subtask involves code changes, you should clearly specify which files or modules the worker is responsible for. This helps avoid merge conflicts and ensures accountability. For example, you can say \"Worker 1 is responsible for updating the authentication module, while Worker 2 will handle the database layer.\" By defining clear ownership, you can delegate more effectively and reduce coordination overhead.\n- Always tell workers they are **not alone in the codebase**, and they should not revert the edits made by others, and they should adjust their implementation to accommodate the changes made by others. This is important because there may be multiple workers making changes in parallel, and they need to be aware of each other's work to avoid conflicts and ensure a cohesive final product.\n}",
+                  "type": "string"
+                },
+                "fork_context": {
+                  "description": "When true, fork the current thread history into the new agent before sending the initial prompt. This must be used when you want the new agent to have exactly the same context as you.",
+                  "type": "boolean"
+                },
+                "items": {
+                  "description": "Structured input items. Use this to pass explicit mentions (for example app:// connector paths).",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "image_url": {
+                        "description": "Image URL when type is image.",
+                        "type": "string"
+                      },
+                      "name": {
+                        "description": "Display name when type is skill or mention.",
+                        "type": "string"
+                      },
+                      "path": {
+                        "description": "Path when type is local_image/skill, or structured mention target such as app://<connector-id> or plugin://<plugin-name>@<marketplace-name> when type is mention.",
+                        "type": "string"
+                      },
+                      "text": {
+                        "description": "Text content when type is text.",
+                        "type": "string"
+                      },
+                      "type": {
+                        "description": "Input item type: text, image, local_image, skill, or mention.",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "message": {
+                  "description": "Initial plain-text task for the new agent. Use either message or items.",
+                  "type": "string"
+                },
+                "model": {
+                  "description": "Optional model override for the new agent. Replaces the inherited model.",
+                  "type": "string"
+                },
+                "reasoning_effort": {
+                  "description": "Optional reasoning effort override for the new agent. Replaces the inherited reasoning effort.",
+                  "type": "string"
+                },
+                "task_name": {
+                  "description": "Optional task name for the new agent. Use lowercase letters, digits, and underscores.",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "\n        Only use `spawn_agent` if and only if the user explicitly asks for sub-agents, delegation, or parallel agent work.\n        Requests for depth, thoroughness, research, investigation, or detailed codebase analysis do not count as permission to spawn.\n        Agent-role guidance below only helps choose which agent to use after spawning is already authorized; it never authorizes spawning by itself.\n        Spawn a sub-agent for a well-scoped task. Returns the canonical task name when the spawned agent was named, otherwise the agent id, plus the user-facing nickname when available. This spawn_agent tool provides you access to smaller but more efficient sub-agents. A mini model can solve many tasks faster than the main model. You should follow the rules and guidelines below to use this tool.\n\n- gpt-5.3-codex (`gpt-5.3-codex`): Latest frontier agentic coding model. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.4 (`gpt-5.4`): Latest frontier agentic coding model. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.2-codex (`gpt-5.2-codex`): Frontier agentic coding model. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.1-codex-max (`gpt-5.1-codex-max`): Codex-optimized flagship for deep and fast reasoning. Default reasoning effort: medium. Supported reasoning efforts: low (Fast responses with lighter reasoning), medium (Balances speed and reasoning depth for everyday tasks), high (Greater reasoning depth for complex problems), xhigh (Extra high reasoning depth for complex problems).\n- gpt-5.2 (`gpt-5.2`): Latest frontier model with improvements across knowledge, reasoning and coding Default reasoning effort: medium. Supported reasoning efforts: low (Balances speed with some reasoning; useful for straightforward queries and short explanations), medium (Provides a solid balance of reasoning depth and latency for general-purpose tasks), high (Maximizes reasoning depth for complex or ambiguous problems), xhigh (Extra high reasoning for complex problems).\n- gpt-5.1-codex-mini (`gpt-5.1-codex-mini`): Optimized for codex. Cheaper, faster, but less capable. Default reasoning effort: medium. Supported reasoning efforts: medium (Dynamically adjusts reasoning based on the task), high (Maximizes reasoning depth for complex or ambiguous problems).\n### When to delegate vs. do the subtask yourself\n- First, quickly analyze the overall user task and form a succinct high-level plan. Identify which tasks are immediate blockers on the critical path, and which tasks are sidecar tasks that are needed but can run in parallel without blocking the next local step. As part of that plan, explicitly decide what immediate task you should do locally right now. Do this planning step before delegating to agents so you do not hand off the immediate blocking task to a submodel and then waste time waiting on it.\n- Use the smaller subagent when a subtask is easy enough for it to handle and can run in parallel with your local work. Prefer delegating concrete, bounded sidecar tasks that materially advance the main task without blocking your immediate next local step.\n- Do not delegate urgent blocking work when your immediate next step depends on that result. If the very next action is blocked on that task, the main rollout should usually do it locally to keep the critical path moving.\n- Keep work local when the subtask is too difficult to delegate well and when it is tightly coupled, urgent, or likely to block your immediate next step.\n\n### Designing delegated subtasks\n- Subtasks must be concrete, well-defined, and self-contained.\n- Delegated subtasks must materially advance the main task.\n- Do not duplicate work between the main rollout and delegated subtasks.\n- Avoid issuing multiple delegate calls on the same unresolved thread unless the new delegated task is genuinely different and necessary.\n- Narrow the delegated ask to the concrete output you need next.\n- For coding tasks, prefer delegating concrete code-change worker subtasks over read-only explorer analysis when the subagent can make a bounded patch in a clear write scope.\n- When delegating coding work, instruct the submodel to edit files directly in its forked workspace and list the file paths it changed in the final answer.\n- For code-edit subtasks, decompose work so each delegated task has a disjoint write set.\n\n### After you delegate\n- Call wait_agent very sparingly. Only call wait_agent when you need the result immediately for the next critical-path step and you are blocked until it returns.\n- Do not redo delegated subagent tasks yourself; focus on integrating results or tackling non-overlapping work.\n- While the subagent is running in the background, do meaningful non-overlapping work immediately.\n- Do not repeatedly wait by reflex.\n- When a delegated coding task returns, quickly review the uploaded changes, then integrate or refine them.\n\n### Parallel delegation patterns\n- Run multiple independent information-seeking subtasks in parallel when you have distinct questions that can be answered independently.\n- Split implementation into disjoint codebase slices and spawn multiple agents for them in parallel when the write scopes do not overlap.\n- Delegate verification only when it can run in parallel with ongoing implementation and is likely to catch a concrete risk before final integration.\n- The key is to find opportunities to spawn multiple independent subtasks in parallel within the same round, while ensuring each subtask is well-defined, self-contained, and materially advances the main task."
+          },
+          {
+            "name": "send_input",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "interrupt": {
+                  "description": "When true, stop the agent's current task and handle this immediately. When false (default), queue this message.",
+                  "type": "boolean"
+                },
+                "items": {
+                  "description": "Structured input items. Use this to pass explicit mentions (for example app:// connector paths).",
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "image_url": {
+                        "description": "Image URL when type is image.",
+                        "type": "string"
+                      },
+                      "name": {
+                        "description": "Display name when type is skill or mention.",
+                        "type": "string"
+                      },
+                      "path": {
+                        "description": "Path when type is local_image/skill, or structured mention target such as app://<connector-id> or plugin://<plugin-name>@<marketplace-name> when type is mention.",
+                        "type": "string"
+                      },
+                      "text": {
+                        "description": "Text content when type is text.",
+                        "type": "string"
+                      },
+                      "type": {
+                        "description": "Input item type: text, image, local_image, skill, or mention.",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "message": {
+                  "description": "Legacy plain-text message to send to the agent. Use either message or items.",
+                  "type": "string"
+                },
+                "target": {
+                  "description": "Agent id or canonical task name to message (from spawn_agent).",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "target"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Send a message to an existing agent. Use interrupt=true to redirect work immediately. You should reuse the agent by send_input if you believe your assigned task is highly dependent on the context of a previous task."
+          },
+          {
+            "name": "resume_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "description": "Agent id to resume.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Resume a previously closed agent by id so it can receive send_input and wait_agent calls."
+          },
+          {
+            "name": "wait_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "targets": {
+                  "description": "Agent ids or canonical task names to wait on. Pass multiple targets to wait for whichever finishes first.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "timeout_ms": {
+                  "description": "Optional timeout in milliseconds. Defaults to 30000, min 10000, max 3600000. Prefer longer waits (minutes) to avoid busy polling.",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "targets"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Wait for agents to reach a final status. Completed statuses may include the agent's final message. Returns empty status when timed out. Once the agent reaches a final status, a notification message will be received containing the same completed status."
+          },
+          {
+            "name": "close_agent",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "target": {
+                  "description": "Agent id or canonical task name to close (from spawn_agent).",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "target"
+              ],
+              "type": "object"
+            },
+            "strict": false,
+            "type": "function",
+            "description": "Close an agent and any open descendants when they are no longer needed, and return the target agent's previous status before shutdown was requested. Don't keep agents open for too long if they are not needed anymore."
+          },
+          {
+            "type": "web_search",
+            "search_context_size": "medium",
+            "user_location": {
+              "country": "US",
+              "type": "approximate"
+            }
+          },
+          {
+            "name": "apply_patch",
+            "type": "custom",
+            "description": "Use the `apply_patch` tool to edit files. This is a FREEFORM tool, so do not wrap the patch in JSON.",
+            "format": {
+              "definition": "start: begin_patch hunk+ end_patch\r\nbegin_patch: \"*** Begin Patch\" LF\r\nend_patch: \"*** End Patch\" LF?\r\n\r\nhunk: add_hunk | delete_hunk | update_hunk\r\nadd_hunk: \"*** Add File: \" filename LF add_line+\r\ndelete_hunk: \"*** Delete File: \" filename LF\r\nupdate_hunk: \"*** Update File: \" filename LF change_move? change?\r\n\r\nfilename: /(.+)/\r\nadd_line: \"+\" /(.*)/ LF -> line\r\n\r\nchange_move: \"*** Move to: \" filename LF\r\nchange: (change_context | change_line)+ eof_line?\r\nchange_context: (\"@@\" | \"@@ \" /(.+)/) LF\r\nchange_line: (\"+\" | \"-\" | \" \") /(.*)/ LF\r\neof_line: \"*** End of File\" LF\r\n\r\n%import common.LF\r\n",
+              "syntax": "lark",
+              "type": "grammar"
+            }
+          }
+        ],
+        "top_p": 0.98,
+        "reasoning": {
+          "effort": "medium"
+        },
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "low"
+        },
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 17002,
+          "input_tokens_details": {
+            "cached_tokens": 16896
+          },
+          "output_tokens": 420,
+          "output_tokens_details": {
+            "reasoning_tokens": 143
+          },
+          "total_tokens": 17422
+        },
+        "store": false,
+        "background": false,
+        "completed_at": 1774503138,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "safety_identifier": "a240bba6c4d247b51b9ab7368adcee98dd9407a7243c39fff9ae4f9527311502",
+        "service_tier": "priority",
+        "top_logprobs": 0
+      },
+      "sequence_number": 71
+    },
+    "[DONE]"
+  ]
+}
