@@ -5,48 +5,80 @@ title: Home
 
 <!-- Hero Section -->
 <section class="hero">
-  <div class="hero-content">
-    <h1 class="hero-title">Hey, I'm Desi 👋</h1>
-    <p class="hero-subtitle">AI 时代的追随者 — 一个对大模型、智能体和 AI 工程化充满热情的探索者。</p>
-    <p class="hero-description">在这里，我记录自己在 AI 浪潮中的学习、实践与思考。每一篇文章都是一次认真的对话 — 与技术，与自己。</p>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="hero-title">探索 AI 工程与大模型架构的实践笔记</h1>
+      <p class="hero-subtitle">探索前沿深度技术背后的真实设计思路。</p>
+    </div>
+    <div class="hero-illustration">
+      <div class="hero-icon-grid">
+        <span class="hero-dot hero-dot--1"></span>
+        <span class="hero-dot hero-dot--2"></span>
+        <span class="hero-dot hero-dot--3"></span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Coming Soon: Codex Deep Dive -->
-<section class="preview-banner">
-  <div class="preview-icon">🔭</div>
-  <div class="preview-text">
-    <h3>正在深入：OpenAI Codex</h3>
-    <p>我正在深入探索 Codex — OpenAI 的云端软件工程智能体。从底层架构到设计原理，持续更新中，敬请关注。</p>
+<!-- Topic Navigation -->
+<nav class="topic-nav">
+  <a href="#series" class="topic-nav-item active">
+    <span class="topic-nav-icon">&#x1F4A1;</span> 深入技术探索
+  </a>
+  <a href="{{ '/archive' | relative_url }}" class="topic-nav-item">
+    全部文章 <span class="topic-nav-arrow">&rarr;</span>
+  </a>
+</nav>
+
+<!-- Series Cards -->
+<section id="series" class="series-section">
+  {% for series in site.data.series %}
+  <div class="series-card{% if forloop.first %} series-card--featured{% endif %}">
+    <div class="series-card-icon series-card-icon--{{ series.icon }}">
+      {% if series.icon == "codex" %}
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" fill="#E8F0FE"/><text x="24" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#4A6CF7">C</text></svg>
+      {% elsif series.icon == "agents" %}
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="12" width="32" height="24" rx="6" fill="#E8F0FE"/><circle cx="18" cy="24" r="3" fill="#4A6CF7"/><circle cx="30" cy="24" r="3" fill="#4A6CF7"/><rect x="16" y="30" width="16" height="3" rx="1.5" fill="#4A6CF7"/></svg>
+      {% elsif series.icon == "engineering" %}
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="32" height="32" rx="6" fill="#E8F0FE"/><path d="M16 24l4 4 8-8" stroke="#4A6CF7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      {% endif %}
+    </div>
+    <h3 class="series-card-title">{{ series.title }}</h3>
+    <p class="series-card-desc">{{ series.description }}</p>
+
+    {% assign series_posts = site.posts | where_exp: "post", "post.tags contains series.tag" %}
+    {% if series_posts.size > 0 %}
+    <ul class="series-card-posts">
+      {% for post in series_posts limit:4 %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          <span class="series-post-bullet">&bull;</span>
+          <span class="series-post-title">{{ post.title }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <a href="{{ series.cta_url | relative_url }}" class="series-card-cta">
+      {{ series.cta_text }} <span class="cta-arrow">&rsaquo;</span>
+    </a>
   </div>
-</section>
-
-<!-- Recent Posts -->
-<div class="home">
-  <h2 class="section-title">最近的文章</h2>
-
-  {% for post in paginator.posts %}
-    {% include post-card.html %}
   {% endfor %}
+</section>
 
-  {% if paginator.posts.size == 0 %}
-    {% for post in site.posts %}
-      {% include post-card.html %}
-    {% endfor %}
-  {% endif %}
-
-  <!-- Pagination -->
-  {% if paginator.total_pages > 1 %}
-  <nav class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
-    {% endif %}
-    <span class="page-number">
-      Page {{ paginator.page }} of {{ paginator.total_pages }}
-    </span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>
-    {% endif %}
-  </nav>
-  {% endif %}
-</div>
+<!-- Featured Series Banner -->
+{% assign featured = site.data.series | first %}
+{% if featured %}
+<section class="featured-banner">
+  <div class="featured-banner-inner">
+    <div class="featured-banner-text">
+      <h3>{{ featured.title }}</h3>
+      <p>{{ featured.description }}</p>
+    </div>
+    <a href="{{ featured.cta_url | relative_url }}" class="featured-banner-cta">
+      {{ featured.cta_text }} <span class="cta-arrow">&rsaquo;</span>
+    </a>
+  </div>
+</section>
+{% endif %}
