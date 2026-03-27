@@ -194,10 +194,95 @@
   }
 }
 
+// Hero Section
+.hero {
+  background: linear-gradient(135deg, $color-primary 0%, $color-accent 100%);
+  border-radius: 12px;
+  padding: $spacing-unit * 2.5 $spacing-unit * 2;
+  margin-bottom: $spacing-unit * 2;
+  color: #ffffff;
+
+  .hero-title {
+    margin: 0 0 $spacing-unit * 0.5;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: $spacing-unit * 0.5;
+    opacity: 0.95;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.88;
+    margin-bottom: 0;
+  }
+}
+
+// Preview Banner
+.preview-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-unit;
+  background-color: $color-background-alt;
+  border-left: 4px solid $color-accent;
+  border-radius: 6px;
+  padding: $spacing-unit * 1.2 $spacing-unit * 1.5;
+  margin-bottom: $spacing-unit * 2.5;
+
+  .preview-icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .preview-text {
+    h3 {
+      margin: 0 0 $spacing-unit * 0.3;
+      font-size: 1.1rem;
+      color: $color-primary;
+    }
+
+    p {
+      margin: 0;
+      font-size: $font-size-small;
+      color: $color-text-light;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Section Title
+.section-title {
+  font-size: 1.3rem;
+  color: $color-text-light;
+  margin-bottom: $spacing-unit * 1.2;
+  padding-bottom: $spacing-unit * 0.4;
+  border-bottom: 2px solid $color-border;
+}
+
 // Responsive
 @media (max-width: 600px) {
   html {
     font-size: 16px;
+  }
+
+  .hero {
+    padding: $spacing-unit * 1.5 $spacing-unit;
+
+    .hero-title {
+      font-size: 1.6rem;
+    }
+  }
+
+  .preview-banner {
+    flex-direction: column;
+    gap: $spacing-unit * 0.5;
   }
 
   .site-header .container {
