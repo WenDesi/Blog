@@ -172,6 +172,7 @@ Permissions instructions 用来控制权限，其由三个模块组成
 > permissions instructions example: [request_developer_permissions_instructions.md](https://github.com/WenDesi/Blog/blob/main/_brain_dump/codex/message/request_developer_permissions_instructions.md)
 
 Sandbox 是用来告诉LLM目前workspace的执行边界，避免其做一些无畏的尝试，例如用户设置了read only模式，LLM就不要去生成写指令了，反正也执行不了。它包括以下三种模式：
+
 | 模式 | Notes |
 | --- | --- | 
 | [workspace write](https://github.com/openai/codex/blob/7ef3cfe63e435ee03812cfb818c4ba8a063a6833/codex-rs/protocol/src/prompts/permissions/sandbox_mode/workspace_write.md?plain=1) | 可读全部，可写 cwd + writable_roots|
@@ -179,6 +180,7 @@ Sandbox 是用来告诉LLM目前workspace的执行边界，避免其做一些无
 | [danger full access](https://github.com/openai/codex/blob/7ef3cfe63e435ee03812cfb818c4ba8a063a6833/codex-rs/protocol/src/prompts/permissions/sandbox_mode/danger_full_access.md) | 无限制 |
 
 Approval Policy 则是用来约束用户的审批流程
+
 | 模式 | Notes |
 | --- | --- | 
 | [on request](https://github.com/openai/codex/blob/7ef3cfe63e435ee03812cfb818c4ba8a063a6833/codex-rs/protocol/src/prompts/permissions/approval_policy/on_request.md) | 按需请求审批 |
