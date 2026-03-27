@@ -7,7 +7,7 @@
     "x-codex-turn-metadata": "{\"session_id\":\"019d28a0-1002-7860-926c-94667c9dde85\",\"turn_id\":\"019d28a0-e450-73a2-b320-d4aa10a62986\",\"sandbox\":\"windows_elevated\"}",
     "x-client-request-id": "019d28a0-1002-7860-926c-94667c9dde85",
     "session_id": "019d28a0-1002-7860-926c-94667c9dde85",
-    "authorization": "Bearer sk-1t0UQSCaksfr3bBbkzbyr8JiTb977oDI",
+    "authorization": "Bearer sk-REDACTED",
     "accept": "text/event-stream",
     "content-type": "application/json",
     "user-agent": "codex_cli_rs/0.0.0 (Windows 10.0.26200; x86_64) WindowsTerminal",
