@@ -7,7 +7,7 @@
     "server": "uvicorn",
     "x-litellm-call-id": "c8ff5845-e6c8-4589-a182-3f8b389ef41c",
     "x-litellm-model-id": "cd2c794173a729da86d2884ace66743eee1f771712a2d47e12298891f542d84d",
-    "x-litellm-model-api-base": "https://api.enterprise.githubcopilot.com",
+    "x-litellm-model-api-base": "https://api.example.com",
     "x-litellm-version": "1.81.0",
     "x-litellm-response-cost-original": "0.0",
     "x-litellm-response-cost-discount-amount": "0.0",
