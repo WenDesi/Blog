@@ -3,7 +3,28 @@ layout: default
 title: Home
 ---
 
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Hey, I'm Desi 👋</h1>
+    <p class="hero-subtitle">AI 时代的追随者 — 一个对大模型、智能体和 AI 工程化充满热情的探索者。</p>
+    <p class="hero-description">在这里，我记录自己在 AI 浪潮中的学习、实践与思考。每一篇文章都是一次认真的对话 — 与技术，与自己。</p>
+  </div>
+</section>
+
+<!-- Coming Soon: Codex Deep Dive -->
+<section class="preview-banner">
+  <div class="preview-icon">🔭</div>
+  <div class="preview-text">
+    <h3>正在深入：OpenAI Codex</h3>
+    <p>我正在深入探索 Codex — OpenAI 的云端软件工程智能体。从底层架构到设计原理，持续更新中，敬请关注。</p>
+  </div>
+</section>
+
+<!-- Recent Posts -->
 <div class="home">
+  <h2 class="section-title">最近的文章</h2>
+
   {% for post in paginator.posts %}
     {% include post-card.html %}
   {% endfor %}
