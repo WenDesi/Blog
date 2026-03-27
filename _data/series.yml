@@ -1,0 +1,23 @@
+- id: codex
+  title: "深入 OpenAI Codex"
+  icon: "codex"
+  description: "探索 OpenAI 的云端代码生成模型 Codex，透析工作原理、架构与运用技巧。"
+  tag: codex
+  cta_text: "查看系列"
+  cta_url: "/archive/"
+
+- id: agents
+  title: "智能体与大模型"
+  icon: "agents"
+  description: "探讨智能体和大模型的技术原理和应用，探索 AI 如何解决复杂任务。"
+  tag: agents
+  cta_text: "查看系列"
+  cta_url: "/archive/"
+
+- id: ai-engineering
+  title: "AI 工程化实践"
+  icon: "engineering"
+  description: "学习如何将 AI 技术实际运用到工程实践中，分享经验和优化技巧。"
+  tag: ai-engineering
+  cta_text: "查看系列"
+  cta_url: "/archive/"
