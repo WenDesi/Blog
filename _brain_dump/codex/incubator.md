@@ -23,3 +23,11 @@
 聚焦 Windows 平台，讲解 Codex 如何利用 Windows 沙盒机制（如 Windows Sandbox、Job Objects、AppContainer 等）实现代码的隔离执行与权限限制。
 
 **状态：** 💡 构思中
+
+## 4. Guardian 是什么
+ Guardian 是一个独立的子 Agent（子 Codex 会话）
+ Guardian 是安全审计员，独立坐在旁边，只能看、不能改，用自己的标准判断这个操作安不安全。
+
+审计员不能用员工的权限卡，也不看员工自己写的"我可以做 XXX"的清单——否则审计就没意义了。
+
+需要看他是怎么样保护的。

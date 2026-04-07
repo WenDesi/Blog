@@ -1,0 +1,134 @@
+
+# Overview
+CodeX的 Agent Loop我觉得没有什么好讲的，目前看下来所有的Agent Loop都差不多，都是LLM推理，使用工具，将观察到的结果添加到message当中，继续交给LLM，直到LLM没有新的工具调用为止，这一段可以参考 OpenAI 2月份的博文。
+
+我比较好奇 CodeX 是如何实现 Multi Agent的，所以本文着重讲一下 CodeX multi agent的设计。
+
+CodeX 将Agent的对话抽象成 Thread，但是从实际实现来看，更像是借鉴了操作系统中的Process的概念，将Agent之间的调度抽象成了OS process之间的调度，也就是说它是以 Agent OS的思想来抽象 Multi Agent的。
+
+下面让我们展开说一说。
+
+# CodeX Thread 结构
+
+顺着 Agent OS 的设计理念，CodeX 并没有把 Agent 仅仅看作是一个简单的 prompt 加上 LLM 推理，而是将其抽象成了一个拥有独立生命周期和上下文的 Thread。
+
+了更直观地理解这种抽象，我们可以通过下面这张图来看看 CodeX 内部的层次结构与包含关系：
+
+![alt text](image.png)
+
+Agent registry是用来记录相同session tree的所有agent。
+
+# Multi Agent的工作方式
+
+## Multi Agent的分类
+
+CodeX一共支持三种Mutli Agent
+
+ - **Foreground Agent**： 属于是让用户和模型可以感知到的subagent，例如用户主动要求启动一个agent
+ - **Delegate 模式**：对于用户不可感知，且不与父agent共享context的一种agent，目前主要是给内部sub agent使用，例如做review, compact,guardian等
+ - **Batch Agent**: batch启动agent，从csv中读取任务，并行处理
+
+我们这里主要说一下Foreground Agent
+
+## Agent tool
+
+Agent是由LLM来决定是否要触发一个sub agent，并且agent的增删改查也是通过tool来实现的，目前codex中一共包含了以下7个和agent相关的tools：
+
+| name | description |
+| --- | --- | 
+| spawn_agent | 创建新的sub agent来委派任务 |
+| wait_agent | 阻塞等待sub agent完成，可以等待多个sub agent，但只要有一个完成就返回 |
+| send_message | 向sub agent发送消息（不触发新轮次） |
+| assign_task | 向代理发送消息并触发新轮次 |
+| resume_agent | 恢复之前关闭的代理 |
+| close_agent | 关闭sub agent以及由其派生出来的所有sub agents |
+| list_agents | 列出当前线程树中所有存活的代理 |
+
+
+### Spawn agent
+创建sub agent的方式 和操作系统fork一个process的过程非常类似。
+
+他并不是创建一个全新session的agent，而是clone父agent的session创建一个新的session。
+
+父agent会做以下几个事情：
+1. 检查 spawn 配额 & 深度限制
+2. 构建子代理配置（继承 model、shell、策略等）
+3. 创建新 thread
+4. 注册到 AgentRegistry
+5. send_input() 提交初始任务 ──→  开始执行任务
+
+Step 3 之后
+
+| 父 agent thread | sub agent thread |
+| --- | --- |
+| ... | ... |
+| function_call(spawn_agent, {"prompt": "Analyze code..."}) | function_call(spawn_agent, {"prompt": "Analyze code..."})|
+| | tool result: "You are the newly spawned agent. |
+
+Step 5 之后
+| 父 agent thread | sub agent thread |
+| --- | --- |
+| ... | ... |
+| function_call(spawn_agent, {"prompt": "Analyze code..."}) | function_call(spawn_agent, {"prompt": "Analyze code..."})|
+|tool_result: {"agent_id": null, "task_name": "root/analyze_code", "nickname": "Atlas"} | tool result: "You are the newly spawned agent. |
+| (父 agent 继续工作)| user: "Analyze code..." ← send_input 注入 |
+| | (sub agent 基于完整上下文开始执行) |
+
+ 
+
+在sub agent启动后，父agent会创建一个backend job，等待sub agent执行结束。
+于此同时父agent会返回function call的执行结果，即创建sub agent成功，并且把agent的metadata作为function call的result返回给大模型，由大模型决定下一步动作。
+
+而sub agent做完任务后 **不是** 通过send message通知父agent任务完成，而是把结果写入到output channel和自己的conversation中之后就结束了。
+
+父agent启动的backend job在检测到sub agent执行完毕后，会把sub agent的last ai message拿出来，放到pending message里面，在父agent在ReAct loop执行的时候加入到message当中。
+
+> 为什么是父agent去监听，而不是让sub agent主动发送它结束？
+像 OS 里，子进程退出后是内核通知父进程，而不是子进程自己发信号——因为子进程可能是异常退出的，没机会发。
+
+## Agent之间的通信
+就像进程间通信IPC一样，agent之间通信是依赖send_inter_agent_communication 函数，他会根据发送消息的接收者路径，从AgentRegistry中查找接收者对应的thread id，然后从thread manager中找到对应的thread，最后把消息发送到对应agent的input channel。
+
+```
+pub struct InterAgentCommunication {
+    pub author: AgentPath,              // 发送者路径，如 /root/researcher
+    pub recipient: AgentPath,           // 接收者路径，如 /root/coder
+    pub other_recipients: Vec<AgentPath>, // 广播给其他接收者（预留，暂未暴露）
+    pub content: String,                // 消息内容
+    pub trigger_turn: bool,             // 是否唤醒接收者
+}
+```
+
+CodeX对于发送消息的限制比较宽松，唯一限制的就是不允许跨agent session tree发送给不属于当前session tree的agent。除此之外在session tree内任何两个agent都可以互相发送消息。
+
+但是根据实际体验，sub agent还是倾向于不发送消息，而是让父agent启动的background job将消息发送给父agent。
+
+在我看来这个multi agent的合作方式应该属于任务分配的方式，由一个leader agent将任务分配给各个agent，结果再统一汇总给learder agent，进行下一步调度。
+
+# Summary：Agent 就是进程
+
+总的来说，CodeX 的 Multi Agent 模型和操作系统的进程模型高度相似：
+
+| OS 进程模型 | Codex Agent 模型 |
+| --- | --- |
+| 操作系统 | ThreadManager |
+| 进程 | CodexThread（Agent） |
+| 进程 ID (PID) | ThreadId (UUID) |
+| 进程表 | threads: HashMap\<ThreadId, CodexThread\> |
+| fork() | fork_thread_with_source() |
+| exec() | send_input(initial_operation) |
+| 进程间通信 (IPC) | InterAgentCommunication |
+| 进程树 (parent/child) | AgentRegistry 树（/root/write-tests/lint） |
+| kill() | close_agent |
+| waitpid() | wait_agent |
+| 资源限制 (ulimit) | agent_max_threads、agent_max_depth |
+
+连 fork 的行为都很像：
+
+```
+OS:    fork() → 复制父进程的内存       → 子进程继续执行
+Codex: fork_thread_with_source() → 复制父 Agent 的对话历史 → 子 Agent 继续工作
+```
+
+而这个与claude code不谋而合。
+Claude之前的sub agent采用的是独立的context，但是有一个新的feature flag，这个flag是控制是否打开fork模式的，在打开后sub agent也有和父agent一样的context.
