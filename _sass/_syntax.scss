@@ -1,0 +1,52 @@
+// GitHub-style syntax highlighting for Rouge
+.highlighter-rouge {
+  margin-bottom: $spacing-unit;
+}
+
+.highlight {
+  pre {
+    margin-bottom: 0;
+  }
+
+  // Comments
+  .c, .c1, .cm, .cs, .ch { color: #6a737d; font-style: italic; }
+
+  // Strings
+  .s, .s1, .s2, .sb, .sc, .sh, .sx, .dl { color: #032f62; }
+
+  // Keywords
+  .k, .kc, .kd, .kn, .kp, .kr, .kt { color: #d73a49; }
+
+  // Names / Functions
+  .nf, .nx { color: #6f42c1; }
+  .nc, .nn { color: #6f42c1; }
+  .na { color: #005cc5; }
+
+  // Numbers
+  .mi, .mf, .mh, .mo, .il, .mb, .mx { color: #005cc5; }
+
+  // Operators
+  .o, .ow { color: #d73a49; }
+
+  // Punctuation
+  .p { color: $color-text; }
+
+  // Variables
+  .vi, .vg, .vc { color: #e36209; }
+
+  // Built-in / Constants
+  .nb, .bp { color: #005cc5; }
+  .no { color: #005cc5; }
+
+  // Entity / Tags (HTML/XML)
+  .nt { color: #22863a; }
+
+  // Error
+  .err { color: #cb2431; }
+
+  // Generic
+  .gd { color: #cb2431; background-color: #ffeef0; }
+  .gi { color: #22863a; background-color: #f0fff4; }
+  .ge { font-style: italic; }
+  .gs { font-weight: bold; }
+}
