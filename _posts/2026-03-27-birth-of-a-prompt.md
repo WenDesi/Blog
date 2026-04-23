@@ -26,15 +26,15 @@ Talk is cheap, let's peek at the payload. 既然是“诞生”，那我们就�
 | :---- | :---- | :---- |
 | **model** | gpt-5.4 | 用户选择的模型 |
 | **instructions** | "You are Codex..." | OpenAI Responses API 的结构，约等于 system prompt |
-| **input** | \[{"type": "message",... | OpenAI Responses API 的结构，等同于 messages |
-| **tools** | \[{"type": "function"... | 提供的工具 |
-| **tool\_choice** | auto | 控制模型是否/如何调用工具 |
-| **parallel\_tool\_calls** | true | 是否允许并行调用多个工具 |
+| **input** | [{"type": "message",... | OpenAI Responses API 的结构，等同于 messages |
+| **tools** | [{"type": "function"... | 提供的工具 |
+| **tool_choice** | auto | 控制模型是否/如何调用工具 |
+| **parallel_tool_calls** | true | 是否允许并行调用多个工具 |
 | **reasoning** | {"effort": "medium"} | 控制推理的强度 |
 | **store** | false | 控制是否在 OpenAI 存储 response |
 | **stream** | true | 决定打包返回还是流式返回 |
-| **include** | \["reasoning.encrypted\_content"\] | 控制返回哪些额外内容 |
-| **prompt\_cache\_key** | "xxxx" | 用来控制缓存的标识 |
+| **include** | ["reasoning.encrypted_content"] | 控制返回哪些额外内容 |
+| **prompt_cache_key** | "xxxx" | 用来控制缓存的标识 |
 | **text** | {"verbosity":"low"} | 控制返回文本的输出格式（冗余度控制） |
 
 > 完整的request 路径： [1_request.json](https://github.com/WenDesi/Blog/blob/main/_brain_dump/codex/message/1_request.json)
@@ -60,9 +60,9 @@ Instructions（AKA system prompt）对 CodeX agent 做了一些约束，例如�
 你可以通过配置文件使用自己的 Instructions，也可以根据模型使用默认的配置。
 
 * OpenAI 模型专属 Instructions：[models.json](https://github.com/openai/codex/blob/main/codex-rs/core/models.json)
-* 兜底的 Instructions：[default.md](https://github.com/openai/codex/blob/main/codex-rs/protocol/src/prompts/base\_instructions/default.md)
+* 兜底的 Instructions：[default.md](https://github.com/openai/codex/blob/main/codex-rs/protocol/src/prompts/base_instructions/default.md)
 
-> 吐槽一下：Prompt 的位置和文件类型感觉毫无规律啊\!\!
+> 吐槽一下：Prompt 的位置和文件类型感觉毫无规律啊!!
 
 下面是各模型和 default instructions 的差别，这里有非常详尽的数据对比：
 
@@ -85,7 +85,7 @@ Instructions（AKA system prompt）对 CodeX agent 做了一些约束，例如�
 从中可以发现一些有意思的点：
 
 * **gpt-5.4 之前**，codex 模型和 gpt 通用模型的 instructions 差别很大，并且 codex 的 instructions 要短得多，怀疑是 codex 训练的时候就已经把 instructions 的内容训练进去了。  
-* **gpt-5.4 是一个全新的模型**，包含了 codex 模型的能力，这一点也可以从 models.json 的设置中看出来，例如 gpt 等通用模型 truncation\_policy 都设置是 byte，但是 codex 模型设置的都是 token，gpt-5.4 设置的也是 token。
+* **gpt-5.4 是一个全新的模型**，包含了 codex 模型的能力，这一点也可以从 models.json 的设置中看出来，例如 gpt 等通用模型 truncation_policy 都设置是 byte，但是 codex 模型设置的都是 token，gpt-5.4 设置的也是 token。
 
 Instructions 预留了两种性格配置：
 
@@ -218,7 +218,6 @@ collaboration mode 是用来指导LLM的编程模式，目前有两种模式 Def
 
 > 吐槽加疑问：为啥在代码中自己拼接，而不是用例如liquid等package呢？
 
-> 我们会在后续blog中详细介绍skill的工作原理
 
 ### User
 
